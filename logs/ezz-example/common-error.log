@@ -1,0 +1,116 @@
+2017-09-19 15:37:20,424 ERROR 16594 [-/::1/-/11ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find dist/index.html from 
+    at Map.resolve (/Users/caigehui/Documents/ezz-example/node_modules/egg-view/lib/view_manager.js:74:5)
+    at resolve.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+generatedMessage: false
+name: 'AssertionError [ERR_ASSERTION]'
+code: 'ERR_ASSERTION'
+actual: undefined
+expected: true
+operator: '=='
+pid: 16594
+hostname: Mac-mini.local
+
+2017-09-19 15:44:29,186 ERROR 16780 [-/::1/-/13ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find viewEngine for /Users/caigehui/Documents/ezz-example/app/view/dist/index.html
+    at ContextView.[contextView#render] (/Users/caigehui/Documents/ezz-example/node_modules/egg-view/lib/context_view.js:71:5)
+    at options.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+generatedMessage: false
+name: 'AssertionError [ERR_ASSERTION]'
+code: 'ERR_ASSERTION'
+actual: ''
+expected: true
+operator: '=='
+pid: 16780
+hostname: Mac-mini.local
+
+2017-09-19 15:45:26,904 ERROR 16839 [-/::1/-/11ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find viewEngine for /Users/caigehui/Documents/ezz-example/app/view/dist/index.html
+    at ContextView.[contextView#render] (/Users/caigehui/Documents/ezz-example/node_modules/egg-view/lib/context_view.js:71:5)
+    at options.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+generatedMessage: false
+name: 'AssertionError [ERR_ASSERTION]'
+code: 'ERR_ASSERTION'
+actual: ''
+expected: true
+operator: '=='
+pid: 16839
+hostname: Mac-mini.local
+
+2017-09-19 16:02:59,384 ERROR 17325 [-/::1/-/3ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find dist/index.html from /Users/caigehui/Documents/ezz-example/app/view
+    at Map.resolve (/Users/caigehui/Documents/ezz-example/node_modules/egg-view/lib/view_manager.js:74:5)
+    at resolve.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+generatedMessage: false
+name: 'AssertionError [ERR_ASSERTION]'
+code: 'ERR_ASSERTION'
+actual: undefined
+expected: true
+operator: '=='
+pid: 17325
+hostname: Mac-mini.local
+
+2017-09-20 08:52:14,544 ERROR 1541 [-/127.0.0.1/-/6ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (/Users/caigehui/Documents/ezz-example/app/controller/home.js:6:13)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 1541
+hostname: Mac-mini.local
+
+2017-09-20 08:52:54,124 ERROR 1730 [-/127.0.0.1/-/14ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (/Users/caigehui/Documents/ezz-example/app/controller/home.js:6:35)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 1730
+hostname: Mac-mini.local
+
+2017-09-20 08:53:50,826 ERROR 1730 [-/127.0.0.1/-/4ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (/Users/caigehui/Documents/ezz-example/app/controller/home.js:6:35)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 1730
+hostname: Mac-mini.local
+
+2017-09-20 08:54:23,011 ERROR 1787 [-/127.0.0.1/-/29ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find public/index.html from /Users/caigehui/Documents/ezz-example/app/view
+    at Map.resolve (/Users/caigehui/Documents/ezz-example/node_modules/egg-view/lib/view_manager.js:74:5)
+    at resolve.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+generatedMessage: false
+name: 'AssertionError [ERR_ASSERTION]'
+code: 'ERR_ASSERTION'
+actual: undefined
+expected: true
+operator: '=='
+pid: 1787
+hostname: Mac-mini.local
+
