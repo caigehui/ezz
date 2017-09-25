@@ -4,8 +4,8 @@ const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
 
 export default ({ children, match }) => (
-    <Content style={{ padding: '0 50px' }}>
-        <Layout style={{ padding: '24px 0', background: '#fff' }}>
+    <Content style={{ padding: '20px 50px', flex: 1 }}>
+        <Layout style={{ padding: '24px 0', background: '#fff', height: '100%' }}>
             <Sider width={200} style={{ background: '#fff' }}>
                 <Menu
                     selectedKeys={[match.url]}

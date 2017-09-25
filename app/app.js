@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route } from 'dva/router';
+import { Router, Switch, Route, Redirect } from 'dva/router';
 import dynamic from 'dva/dynamic';
 import dva from 'dva';
 import { message } from 'antd';
@@ -33,7 +33,7 @@ class App {
 			<Router history={history}>
 				<Switch>
 					<Route path="/:bookId" component={Home} />
-					<Route component={NoMatch}/>
+					<Route component={NoMatch} />
 				</Switch>
 			</Router>
 		);

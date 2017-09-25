@@ -3,3 +3,7 @@ html, body, :global(#root) {
   height: 100%;
 }
 
+:global(.ant-menu-horizontal > .ant-menu-item > a, .ant-menu-horizontal > .ant-menu-submenu > a) {
+  display: block;
+  color: blue;
+}
