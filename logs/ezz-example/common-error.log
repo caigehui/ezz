@@ -114,3 +114,47 @@ operator: '=='
 pid: 1787
 hostname: Mac-mini.local
 
+2017-09-26 08:45:31,587 ERROR 1315 [-/::1/-/9ms GET /] nodejs.ReferenceError: fs is not defined
+    at HomeController.index (/Users/caigehui/Documents/ezz-example/app/controller/home.js:10:23)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 1315
+hostname: Mac-mini.local
+
+2017-09-26 08:47:39,115 ERROR 1397 [-/::1/-/10ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find index.html from /Users/caigehui/Documents/ezz-example/app/view
+    at Map.resolve (/Users/caigehui/Documents/ezz-example/node_modules/egg-view/lib/view_manager.js:74:5)
+    at resolve.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+generatedMessage: false
+name: 'AssertionError [ERR_ASSERTION]'
+code: 'ERR_ASSERTION'
+actual: undefined
+expected: true
+operator: '=='
+pid: 1397
+hostname: Mac-mini.local
+
+2017-09-26 11:04:06,198 ERROR 3783 [-/::1/-/232ms PUT /api/apiTest/hhhhh] nodejs.TypeError: Cannot read property 'length' of undefined
+    at sjcl.cipher.aes (/Users/caigehui/Documents/ezz-example/node_modules/sjcl/sjcl.js:2:97)
+    at Object.ia (/Users/caigehui/Documents/ezz-example/node_modules/sjcl/sjcl.js:55:467)
+    at Object.decrypt (/Users/caigehui/Documents/ezz-example/node_modules/sjcl/sjcl.js:56:300)
+    at ApiTestController.update (/Users/caigehui/Documents/ezz-example/app/controller/apiTest.js:12:31)
+    at update.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+
+pid: 3783
+hostname: Mac-mini.local
+

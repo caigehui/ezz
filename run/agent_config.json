@@ -101,7 +101,7 @@
       "dir": "/Users/caigehui/Documents/ezz-example/app/public",
       "dynamic": true,
       "preload": false,
-      "buffer": false,
+      "buffer": true,
       "maxFiles": 1000,
       "maxAge": 31536000
     },
@@ -131,7 +131,7 @@
     },
     "env": "local",
     "name": "ezz-example",
-    "keys": "<String len: 30>",
+    "keys": "<String len: 27>",
     "proxy": false,
     "protocolHeaders": "x-forwarded-proto",
     "ipHeaders": "x-forwarded-for",
@@ -157,21 +157,26 @@
         "install-node": "6.11.1"
       },
       "dependencies": {
-        "babel-plugin-react-css-modules": "^3.3.0",
+        "antd": "^2.13.2",
         "babel-runtime": "^6.9.2",
-        "dva": "^2.0.1",
+        "classnames": "^2.2.5",
+        "dva": "^2.0.3",
+        "dva-loading": "^1.0.2",
         "egg": "^1.7.0",
+        "egg-mongoose": "^2.1.1",
         "egg-scripts": "^1.1.1",
         "egg-view-nunjucks": "^2.1.4",
         "history": "^4.7.2",
         "react": "^15.4.0",
-        "react-dom": "^15.4.0"
+        "react-dom": "^15.4.0",
+        "sjcl": "^1.0.7"
       },
       "devDependencies": {
         "egg-bin": "^4.2.0",
         "egg-ci": "^1.8.0",
         "egg-mock": "^3.10.0",
         "babel-eslint": "^7.1.1",
+        "babel-plugin-import": "^1.4.0",
         "babel-plugin-dva-hmr": "^0.3.2",
         "babel-plugin-transform-runtime": "^6.9.0",
         "eslint": "^3.12.2",
@@ -183,7 +188,7 @@
         "expect": "^1.20.2",
         "husky": "^0.12.0",
         "redbox-react": "^1.4.3",
-        "roadhog-ezz": "1.2.2"
+        "roadhog-ezz": "^1.3.1"
       }
     },
     "baseDir": "/Users/caigehui/Documents/ezz-example",
@@ -270,6 +275,7 @@
         "hostname": ""
       }
     },
+    "encryptKey": "Dn2OjAzKUdejXnq",
     "coreMiddlewares": [
       "meta",
       "siteFile",

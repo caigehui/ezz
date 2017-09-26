@@ -30,7 +30,8 @@
     "egg-view-nunjucks": "^2.1.4",
     "history": "^4.7.2",
     "react": "^15.4.0",
-    "react-dom": "^15.4.0"
+    "react-dom": "^15.4.0",
+    "sjcl": "^1.0.7"
   },
   "devDependencies": {
     "egg-bin": "^4.2.0",

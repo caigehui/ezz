@@ -1,0 +1,32 @@
+2017-09-26 10:59:34,016 WARN 3696 [-/::1/-/34ms PUT /api/apiTest/hhhhh] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-09-26 10:59:34,019 WARN 3696 [-/::1/-/36ms PUT /api/apiTest/hhhhh] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:148:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'invalid csrf token'
+pid: 3696
+hostname: Mac-mini.local
+
+2017-09-26 11:01:48,779 WARN 3696 [-/::1/-/1ms PUT /api/apiTest/hhhhh] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-09-26 11:01:48,780 WARN 3696 [-/::1/-/2ms PUT /api/apiTest/hhhhh] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:148:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'invalid csrf token'
+pid: 3696
+hostname: Mac-mini.local
+
