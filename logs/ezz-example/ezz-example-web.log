@@ -30,3 +30,36 @@ message: 'invalid csrf token'
 pid: 3696
 hostname: Mac-mini.local
 
+2017-09-26 16:53:51,306 WARN 12275 [-/::1/-/32ms POST /api/login] nodejs.SyntaxError: Unexpected token u in JSON at position 4
+    at JSON.parse (<anonymous>)
+    at parse (/Users/caigehui/Documents/ezz-example/node_modules/co-body/lib/json.js:62:17)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co-body/lib/json.js:45:22
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+status: 400
+body: '{\n  username: "蔡戈辉",\n  password: "ssss"\n}'
+pid: 12275
+hostname: Mac-mini.local
+
+2017-09-26 17:47:48,364 WARN 13709 [-/::1/-/45ms POST /api/login] nodejs.ForbiddenError: Forbidden
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: 'Forbidden'
+pid: 13709
+hostname: Mac-mini.local
+
+2017-09-26 17:50:02,665 WARN 13819 [-/::1/-/45ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 13819
+hostname: Mac-mini.local
+

@@ -62,7 +62,15 @@
       "policy": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js"
     }
   },
+  "middleware": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+  "errorHandler": {
+    "match": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
+  },
   "encryptKey": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+  "mongoose": {
+    "url": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+    "options": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
+  },
   "onerror": {
     "errorPageUrl": "/Users/caigehui/Documents/ezz-example/node_modules/egg-onerror/config/config.default.js",
     "appErrorFilter": "/Users/caigehui/Documents/ezz-example/node_modules/egg-onerror/config/config.default.js"
@@ -139,7 +147,7 @@
     "private": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
     "scripts": {
       "start": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "start-be": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "prod": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "dev": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "debug": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "build": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
@@ -162,6 +170,7 @@
       "egg": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-mongoose": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-scripts": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-view-nunjucks": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "history": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",

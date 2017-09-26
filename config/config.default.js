@@ -4,10 +4,11 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
     const config = {};
 
     config.keys = appInfo.name + '_SWozwDMxSRLQCZ0';
+
     config.view = {
         defaultViewEngine: 'nunjucks',
         mapping: {
-          '.tpl': 'nunjucks',
+            '.tpl': 'nunjucks',
         }
     }
     config.static = {
@@ -26,7 +27,18 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
         }
     }
 
+    config.middleware = ['errorHandler']
+
+    config.errorHandler = {
+        match: '/api'
+    }
+
     config.encryptKey = 'Dn2OjAzKUdejXnq'
+
+    config.mongoose = {
+        url: 'mongodb://localhost:27017/ezz',
+        options: {}
+    }
 
     return config;
 };

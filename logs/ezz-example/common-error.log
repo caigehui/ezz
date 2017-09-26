@@ -158,3 +158,98 @@ hostname: Mac-mini.local
 pid: 3783
 hostname: Mac-mini.local
 
+2017-09-26 14:39:39,411 ERROR 8337 [-/::1/-/9ms GET /api/apsiTest/hhhhh] nodejs.ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+    at NomatchController (/Users/caigehui/Documents/ezz-example/app/controller/nomatch.js:6:9)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+
+pid: 8337
+hostname: Mac-mini.local
+
+2017-09-26 14:43:59,565 ERROR 8474 [-/::1/-/10ms GET /api/apsiTest/hhhhh] nodejs.TypeError: Cannot set property 'status' of undefined
+    at NomatchController (/Users/caigehui/Documents/ezz-example/app/controller/nomatch.js:6:26)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+
+pid: 8474
+hostname: Mac-mini.local
+
+2017-09-26 14:44:16,947 ERROR 8493 [-/::1/-/22ms GET /api/apsiTest/hhhhh] nodejs.TypeError: Cannot set property 'status' of undefined
+    at NomatchController (/Users/caigehui/Documents/ezz-example/app/controller/nomatch.js:7:26)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+
+pid: 8493
+hostname: Mac-mini.local
+
+2017-09-26 14:51:17,983 ERROR 8662 [-/::1/-/133ms GET /api/apiTest/hhhhh] nodejs.Error: json decode: this isn't json!
+    at Object.app.context.onerror (/Users/caigehui/Documents/ezz-example/node_modules/koa-onerror/index.js:36:24)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8662
+hostname: Mac-mini.local
+
+2017-09-26 14:51:43,046 ERROR 8662 [-/::1/-/1ms GET /api/apiTest/hhhhh] nodejs.Error: json decode: this isn't json!
+    at Object.app.context.onerror (/Users/caigehui/Documents/ezz-example/node_modules/koa-onerror/index.js:36:24)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 8662
+hostname: Mac-mini.local
+
+2017-09-26 15:00:42,908 ERROR 8982 [-/::1/-/166ms GET /api/apiTest/hhhhh] invalid {
+  toString: [Function],
+  message: 'json decode: this isn\'t json!' }
+2017-09-26 16:55:08,449 ERROR 12275 [-/::1/-/7ms POST /api/login] nodejs.ReferenceError: ctx is not defined
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:40)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 12275
+hostname: Mac-mini.local
+
+2017-09-26 17:44:12,180 ERROR 13557 [-/::1/-/53ms POST /api/login] nodejs.ReferenceError: ctx is not defined
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:9:9)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 13557
+hostname: Mac-mini.local
+

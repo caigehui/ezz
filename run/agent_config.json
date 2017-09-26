@@ -40,7 +40,7 @@
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
-        "enable": true,
+        "enable": false,
         "useSession": false,
         "ignoreJSON": false,
         "cookieName": "csrfToken",
@@ -142,7 +142,7 @@
       "private": true,
       "scripts": {
         "start": "roadhog server",
-        "start-be": "egg-scripts start --daemon --port=80",
+        "prod": "egg-scripts start --daemon --port=8080 --env=prod ",
         "dev": "egg-bin dev",
         "debug": "egg-bin debug",
         "build": "roadhog build",
@@ -165,6 +165,7 @@
         "egg": "^1.7.0",
         "egg-mongoose": "^2.1.1",
         "egg-scripts": "^1.1.1",
+        "egg-validate": "^1.0.0",
         "egg-view-nunjucks": "^2.1.4",
         "history": "^4.7.2",
         "react": "^15.4.0",
@@ -442,6 +443,17 @@
       "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
       "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-view-nunjucks",
       "version": "2.1.4"
+    },
+    "validate": {
+      "enable": true,
+      "package": "egg-validate",
+      "name": "validate",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
+      "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-validate",
+      "version": "1.0.0"
     }
   }
 }

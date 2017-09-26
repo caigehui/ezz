@@ -31,6 +31,8 @@
         "/Users/caigehui/Documents/ezz-example/node_modules/egg-jsonp/config/locales",
         "/Users/caigehui/Documents/ezz-example/node_modules/egg-view/config/locales",
         "/Users/caigehui/Documents/ezz-example/node_modules/egg-view-nunjucks/config/locales",
+        "/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/config/locales",
+        "/Users/caigehui/Documents/ezz-example/node_modules/egg-mongoose/config/locales",
         "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/locales",
         "/Users/caigehui/Documents/ezz-example/config/locales"
       ],
@@ -160,6 +162,10 @@
       "lstripBlocks": false,
       "cache": false
     },
+    "mongoose": {
+      "url": "mongodb://localhost:27017/ezz",
+      "options": {}
+    },
     "env": "local",
     "name": "ezz-example",
     "keys": "<String len: 27>",
@@ -173,7 +179,7 @@
       "private": true,
       "scripts": {
         "start": "roadhog server",
-        "start-be": "egg-scripts start --daemon --port=80",
+        "prod": "egg-scripts start --daemon --port=8080 --env=prod ",
         "dev": "egg-bin dev",
         "debug": "egg-bin debug",
         "build": "roadhog build",
@@ -196,6 +202,7 @@
         "egg": "^1.7.0",
         "egg-mongoose": "^2.1.1",
         "egg-scripts": "^1.1.1",
+        "egg-validate": "^1.0.0",
         "egg-view-nunjucks": "^2.1.4",
         "history": "^4.7.2",
         "react": "^15.4.0",
@@ -311,6 +318,12 @@
         "hostname": ""
       }
     },
+    "middleware": [
+      "errorHandler"
+    ],
+    "errorHandler": {
+      "match": "/api"
+    },
     "encryptKey": "Dn2OjAzKUdejXnq",
     "coreMiddlewares": [
       "meta",
@@ -323,8 +336,12 @@
       "i18n",
       "securities"
     ],
-    "appMiddlewares": [],
-    "appMiddleware": [],
+    "appMiddlewares": [
+      "errorHandler"
+    ],
+    "appMiddleware": [
+      "errorHandler"
+    ],
     "multipartParseOptions": {
       "autoFields": false,
       "defCharset": "utf8",
@@ -494,6 +511,28 @@
       "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
       "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-view-nunjucks",
       "version": "2.1.4"
+    },
+    "validate": {
+      "enable": true,
+      "package": "egg-validate",
+      "name": "validate",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
+      "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-validate",
+      "version": "1.0.0"
+    },
+    "mongoose": {
+      "enable": true,
+      "package": "egg-mongoose",
+      "name": "mongoose",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
+      "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-mongoose",
+      "version": "2.1.1"
     }
   }
 }

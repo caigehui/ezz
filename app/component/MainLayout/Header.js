@@ -11,7 +11,7 @@ export default ({ url }) => (
 			<Col xs={24} sm={4} className={styles.height}>
 				<Link to="/quickstart">
 					<div className={styles.left}>
-						<img src={require('../../assets/logo.svg')} className={styles.logo} />
+						<img src={require('../../asset/logo.svg')} className={styles.logo} />
 						WxDocs
 					</div>
 				</Link>

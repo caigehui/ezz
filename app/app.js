@@ -26,7 +26,7 @@ class App {
 
 		const Home = dynamic({
 			app,
-			component: () => import('./routes/Home'),
+			component: () => import('./route/Home'),
 		});
 
 		return (
