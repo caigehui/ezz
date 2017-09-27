@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Dropdown, Row, Col, Icon } from 'antd';
 import { Link } from 'dva/router';
-import styles from './Header.css'
+import styles from './Header.css';
 const { Header } = Layout;
 const { SubMenu, ItemGroup } = Menu;
 
@@ -74,4 +74,4 @@ export default ({ url }) => (
 			<Icon className={styles.menuMobile} type="bars" />
 		</Dropdown>
 	</Header>
-)
+);

@@ -183,7 +183,7 @@
         "dev": "egg-bin dev",
         "debug": "egg-bin debug",
         "build": "roadhog build",
-        "lint": "eslint --ext .js src test",
+        "lint": "eslint --ext .js app --fix",
         "stop": "egg-scripts stop",
         "test": "npm run lint -- --fix && npm run test-local",
         "test-local": "egg-bin test",
@@ -319,7 +319,8 @@
       }
     },
     "middleware": [
-      "errorHandler"
+      "errorHandler",
+      "saveSession"
     ],
     "errorHandler": {
       "match": "/api"
@@ -337,10 +338,12 @@
       "securities"
     ],
     "appMiddlewares": [
-      "errorHandler"
+      "errorHandler",
+      "saveSession"
     ],
     "appMiddleware": [
-      "errorHandler"
+      "errorHandler",
+      "saveSession"
     ],
     "multipartParseOptions": {
       "autoFields": false,

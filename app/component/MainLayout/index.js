@@ -14,5 +14,5 @@ export default ({ children, match }) => (
             Copyright © 2000-2017 WxSoft ZhuHai Inc. All Rights Reserved
         </Footer>
     </Layout>
-)
+);
 

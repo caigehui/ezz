@@ -1,6 +1,6 @@
-import React from 'react'
-import classNames from 'classnames'
-import styles from './Loader.less'
+import React from 'react';
+import classNames from 'classnames';
+import styles from './Loader.less';
 
 const Loader = ({ spinning, fullScreen }) => {
   return (<div className={classNames(styles.loader, {
@@ -12,13 +12,13 @@ const Loader = ({ spinning, fullScreen }) => {
       <div className={styles.inner} />
       <div className={styles.text} >LOADING</div>
     </div>
-  </div>)
-}
+  </div>);
+};
 
 
 Loader.propTypes = {
   spinning: React.PropTypes.bool,
   fullScreen: React.PropTypes.bool,
-}
+};
 
-export default Loader
+export default Loader;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route, Redirect } from 'dva/router';
+import { Router, Switch, Route } from 'dva/router';
 import dynamic from 'dva/dynamic';
 import dva from 'dva';
 import { message } from 'antd';
@@ -7,7 +7,7 @@ import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
 const ERROR_MSG_DURATION = 3;
 
-const NoMatch = () => <h1>NoMatch</h1>
+const NoMatch = () => <h1>NoMatch</h1>;
 
 class App {
 
@@ -17,7 +17,7 @@ class App {
 			onError(e) {
 				message.error(e.message, ERROR_MSG_DURATION);
 			}
-		})
+		});
 		this.app.use(createLoading({ effects: true }));
 		this.app.router(this.routerConfig);
 	}

@@ -129,6 +129,10 @@
       "lstripBlocks": false,
       "cache": false
     },
+    "mongoose": {
+      "url": "mongodb://localhost:27017/ezz",
+      "options": {}
+    },
     "env": "local",
     "name": "ezz-example",
     "keys": "<String len: 27>",
@@ -276,6 +280,13 @@
         "hostname": ""
       }
     },
+    "middleware": [
+      "errorHandler",
+      "saveSession"
+    ],
+    "errorHandler": {
+      "match": "/api"
+    },
     "encryptKey": "Dn2OjAzKUdejXnq",
     "coreMiddlewares": [
       "meta",
@@ -284,8 +295,14 @@
       "bodyParser",
       "overrideMethod"
     ],
-    "appMiddlewares": [],
-    "appMiddleware": []
+    "appMiddlewares": [
+      "errorHandler",
+      "saveSession"
+    ],
+    "appMiddleware": [
+      "errorHandler",
+      "saveSession"
+    ]
   },
   "plugins": {
     "onerror": {
@@ -454,6 +471,17 @@
       "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
       "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-validate",
       "version": "1.0.0"
+    },
+    "mongoose": {
+      "enable": true,
+      "package": "egg-mongoose",
+      "name": "mongoose",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/caigehui/Documents/ezz-example/config/plugin.js",
+      "path": "/Users/caigehui/Documents/ezz-example/node_modules/egg-mongoose",
+      "version": "2.1.1"
     }
   }
 }

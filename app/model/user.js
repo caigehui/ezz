@@ -8,4 +8,4 @@ module.exports = app => {
     });
 
     return mongoose.model('User', UserSchema);
-}
+};

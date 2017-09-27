@@ -5,7 +5,7 @@ module.exports = app => class NomatchController extends app.Controller {
     constructor(ctx) {
         super(ctx);
         ctx.status = 404;
-        ctx.body = { error: `API NOT FOUND: ${this.ctx.request.url}` }
+        ctx.body = { error: `API NOT FOUND: ${this.ctx.request.url}` };
     }
     * index() {
         // empty
@@ -28,4 +28,4 @@ module.exports = app => class NomatchController extends app.Controller {
     * destroy() {
         // empty
     }
-}
+};

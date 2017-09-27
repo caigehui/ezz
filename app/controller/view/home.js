@@ -6,4 +6,4 @@ module.exports = app => class HomeController extends app.Controller {
     const ctx = this.ctx;
     ctx.body = yield ctx.renderView('index.html');
   }
-}
+};

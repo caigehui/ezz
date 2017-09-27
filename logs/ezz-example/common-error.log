@@ -253,3 +253,34 @@ hostname: Mac-mini.local
 pid: 13557
 hostname: Mac-mini.local
 
+2017-09-27 09:01:41,510 ERROR 1666 [egg-mongoose] mongodb://localhost:27017/ezz disconnected
+2017-09-27 09:01:41,513 ERROR 1666 nodejs.MongoError: [egg-mongoose]failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+    at Pool.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+    at emitOne (events.js:115:13)
+    at Pool.emit (events.js:210:7)
+    at Connection.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+    at Object.onceWrapper (events.js:318:30)
+    at emitTwo (events.js:125:13)
+    at Connection.emit (events.js:213:7)
+    at Socket.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/connection/connection.js:187:49)
+    at Object.onceWrapper (events.js:316:30)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+name: 'MongoError'
+message: '[egg-mongoose]failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]'
+pid: 1666
+hostname: Mac-mini.local
+
+2017-09-27 09:16:41,904 ERROR 2050 [-/::1/-/16ms GET /api/users] nodejs.TypeError: Cannot set property 'body' of undefined
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/app/middleware/save_session.js:8:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 2050
+hostname: Mac-mini.local
+

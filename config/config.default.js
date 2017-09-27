@@ -27,7 +27,7 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
         }
     }
 
-    config.middleware = ['errorHandler']
+    config.middleware = ['errorHandler', 'saveSession']
 
     config.errorHandler = {
         match: '/api'

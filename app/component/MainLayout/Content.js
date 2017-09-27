@@ -22,4 +22,4 @@ export default ({ children, match }) => (
             </Content>
         </Layout>
     </Content>
-)
+);
