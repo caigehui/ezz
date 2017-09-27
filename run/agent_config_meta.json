@@ -185,6 +185,7 @@
       "babel-plugin-import": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "babel-plugin-dva-hmr": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "babel-plugin-transform-runtime": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-decorators-legacy": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-config-egg": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-config-airbnb": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",

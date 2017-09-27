@@ -175,6 +175,7 @@
       "history": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react-dom": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "redux-persist": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "sjcl": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
@@ -185,6 +186,7 @@
       "babel-plugin-import": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "babel-plugin-dva-hmr": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "babel-plugin-transform-runtime": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-decorators-legacy": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-config-egg": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-config-airbnb": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",

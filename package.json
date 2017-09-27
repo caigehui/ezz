@@ -32,6 +32,7 @@
     "history": "^4.7.2",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
+    "redux-persist": "^4.10.1",
     "sjcl": "^1.0.7"
   },
   "devDependencies": {
@@ -42,6 +43,7 @@
     "babel-plugin-import": "^1.4.0",
     "babel-plugin-dva-hmr": "^0.3.2",
     "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "eslint": "^3.12.2",
     "eslint-config-egg": "^5.1.1",
     "eslint-config-airbnb": "^13.0.0",
