@@ -63,3 +63,453 @@ message: '用户名或者密码错误'
 pid: 13819
 hostname: Mac-mini.local
 
+2017-09-28 16:39:31,032 WARN 17274 [-/127.0.0.1/-/51ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17274
+hostname: Mac-mini.local
+
+2017-09-28 16:40:52,944 WARN 17338 [-/127.0.0.1/-/32ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17338
+hostname: Mac-mini.local
+
+2017-09-28 16:41:45,868 WARN 17357 [-/127.0.0.1/-/29ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17357
+hostname: Mac-mini.local
+
+2017-09-28 16:42:40,850 WARN 17390 [-/127.0.0.1/-/28ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17390
+hostname: Mac-mini.local
+
+2017-09-28 16:44:15,755 WARN 17475 [-/127.0.0.1/-/31ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17475
+hostname: Mac-mini.local
+
+2017-09-28 16:46:12,610 WARN 17614 [-/127.0.0.1/-/28ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17614
+hostname: Mac-mini.local
+
+2017-09-28 16:47:14,479 WARN 17656 [-/127.0.0.1/-/31ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17656
+hostname: Mac-mini.local
+
+2017-09-28 16:47:27,152 WARN 17667 [-/127.0.0.1/-/38ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17667
+hostname: Mac-mini.local
+
+2017-09-28 16:47:47,635 WARN 17682 [-/127.0.0.1/-/29ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17682
+hostname: Mac-mini.local
+
+2017-09-28 16:53:22,081 WARN 17902 [-/127.0.0.1/-/41ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17902
+hostname: Mac-mini.local
+
+2017-09-28 16:53:37,555 WARN 17932 [-/127.0.0.1/-/33ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17932
+hostname: Mac-mini.local
+
+2017-09-28 16:55:21,375 WARN 17996 [-/127.0.0.1/-/67ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 17996
+hostname: Mac-mini.local
+
+2017-09-28 16:56:43,279 WARN 18045 [-/127.0.0.1/-/42ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18045
+hostname: Mac-mini.local
+
+2017-09-28 16:59:23,301 WARN 18169 [-/127.0.0.1/-/50ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18169
+hostname: Mac-mini.local
+
+2017-09-28 17:01:28,050 WARN 18365 [-/127.0.0.1/-/33ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18365
+hostname: Mac-mini.local
+
+2017-09-28 17:04:32,011 WARN 18449 [-/127.0.0.1/-/78ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18449
+hostname: Mac-mini.local
+
+2017-09-28 17:07:44,769 WARN 18616 [-/127.0.0.1/-/36ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18616
+hostname: Mac-mini.local
+
+2017-09-28 17:08:03,846 WARN 18642 [-/127.0.0.1/-/19ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18642
+hostname: Mac-mini.local
+
+2017-09-28 17:11:49,970 WARN 18761 [-/127.0.0.1/-/59ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 18761
+hostname: Mac-mini.local
+
+2017-09-28 17:30:21,530 WARN 19461 [-/127.0.0.1/-/50ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:8:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 19461
+hostname: Mac-mini.local
+
+2017-09-28 17:50:30,416 WARN 20408 [-/127.0.0.1/-/36ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20408
+hostname: Mac-mini.local
+
+2017-09-28 17:59:33,947 WARN 20642 [-/127.0.0.1/-/75ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20642
+hostname: Mac-mini.local
+
+2017-09-28 18:00:12,495 WARN 20697 [-/127.0.0.1/-/31ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20697
+hostname: Mac-mini.local
+
+2017-09-28 18:00:42,094 WARN 20732 [-/127.0.0.1/-/40ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20732
+hostname: Mac-mini.local
+
+2017-09-28 18:01:27,170 WARN 20751 [-/127.0.0.1/-/50ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20751
+hostname: Mac-mini.local
+
+2017-09-28 18:03:47,272 WARN 20843 [-/127.0.0.1/-/39ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20843
+hostname: Mac-mini.local
+
+2017-09-28 18:04:43,420 WARN 20895 [-/127.0.0.1/-/35ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20895
+hostname: Mac-mini.local
+
+2017-09-28 18:05:26,452 WARN 20943 [-/127.0.0.1/-/40ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20943
+hostname: Mac-mini.local
+
+2017-09-28 18:05:40,816 WARN 20960 [-/127.0.0.1/-/40ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20960
+hostname: Mac-mini.local
+
+2017-09-28 18:06:32,929 WARN 20990 [-/127.0.0.1/-/48ms POST /api/login] nodejs.UnprocessableEntityError: Validation Failed
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.validate (/Users/caigehui/Documents/ezz-example/node_modules/egg-validate/app/extend/context.js:14:17)
+    at new LoginController (/Users/caigehui/Documents/ezz-example/app/controller/login.js:14:13)
+    at Object.classControllerMiddleware (/Users/caigehui/Documents/ezz-example/node_modules/egg-core/lib/loader/mixin/controller.js:76:26)
+    at classControllerMiddleware.next (<anonymous>)
+    at Object.dispatch (/Users/caigehui/Documents/ezz-example/node_modules/koa-router/lib/router.js:334:12)
+    at dispatch.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+message: 'Validation Failed'
+code: 'invalid_param'
+errors: [ { message: 'required', field: 'username', code: 'missing_field' }, { message: 'required', field: 'password', code: 'missing_field' }, { message: 'required', field: 'remember', code: 'missing_field' } ]
+pid: 20990
+hostname: Mac-mini.local
+

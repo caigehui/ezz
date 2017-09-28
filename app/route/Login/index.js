@@ -57,7 +57,7 @@ function Login({
                             <Button type="primary"
                                 size="large"
                                 onClick={onLogin}
-                                loading={loading.effects.login}>
+                                loading={loading.effects['app/login']}>
                                 登录
                         </Button>
                         </FormItem>

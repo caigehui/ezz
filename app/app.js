@@ -5,26 +5,52 @@ import dva from 'dva';
 import { message } from 'antd';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
-const ERROR_MSG_DURATION = 3;
+import { persistStore, autoRehydrate } from 'redux-persist';
+import { asyncSessionStorage } from 'redux-persist/storages';
+import { REHYDRATE } from 'redux-persist/constants';
+import { isReactComponent } from './util/isReact';
+import invariant from 'invariant';
+import { ERROR_MSG_DURATION } from './constant';
 
-const NoMatch = () => <h1>NoMatch</h1>;
+function NoMatch(props){
+	return	<h1>404 NOT FOUND</h1>;
+};
 
 export default class App {
 
-	constructor({ routes }) {
+	constructor({
+		routes,
+		otherMiddlewares = [],
+		noMatchComponent = NoMatch,
+	}) {
 		this.app = dva({
+			onAction: [rehydrateMiddleware, errorHandlerMiddleware, ...otherMiddlewares],
 			history: createHistory(),
+			extraEnhancers: [autoRehydrate()],
 			onError(e) {
 				message.error(e.message, ERROR_MSG_DURATION);
 			}
 		});
+		invariant(Array.isArray(routes), 'routes must be an instance of Array!');
+		invariant(isReactComponent(noMatchComponent), `noMatchComponent must be a react component！`);
 		this.routes = routes;
+		this.noMatchComponent = noMatchComponent;
 		this.app.use(createLoading({ effects: true }));
+		this.addModel();
 		this.app.router(this.routerConfig);
 	}
 
+	addModel() {
+		for(let route of this.routes) {
+			if(!route.models) continue;
+			invariant(Array.isArray(route.models), 'models must be an instance of Array!');
+			for(let model of route.models) {
+				this.app.model(model);
+			}
+		}
+	}
+
 	routerConfig = ({ app, history }) => {
-		console.log(app._store.getState());
 		return (
 			<Router history={history}>
 				<Switch>
@@ -32,40 +58,41 @@ export default class App {
 						this.routes.map((route, index) => (
 							<Route key={index} path={route.path} exact={route.exact} component={dynamic({
 								app,
-								models: () => route.models || [],
 								component: () => route.component,
 							})} />
 						))
 					}
-					<Route component={NoMatch} />
+					<Route component={this.noMatchComponent} />
 				</Switch>
 			</Router>
 		);
 	}
 
 	persist() {
-        // 获取白名单
-        let whitelist = [];
-        for (let route of this.routes) {
-            const { models } = route;
-            if (!models) continue;
-			for (let i of model) {
-				if (i.disablePersist) {
-					blacklist.push(i.namespace);
+		// 获取白名单
+		let whitelist = [];
+		for (let route of this.routes) {
+			const { models } = route;
+			if (!models) continue;
+			for (let i of models) {
+				if (!i.disablePersist) {
+					whitelist.push(i.namespace);
 				}
 			}
-        }
-        persistStore(this.app._store, {
-            whitelist
-        });
-    }
+		}
+		persistStore(this.app._store, {
+			whitelist,
+			storage: asyncSessionStorage
+		});
+	}
 
 	start() {
 		this.app.start('#root');
+		this.persist();
 	}
 }
 
-export const rehydrateMiddleware = store => next => action => {
+const rehydrateMiddleware = store => next => action => {
 	if (action.type === REHYDRATE) {
 		// 恢复数据
 		for (let i in action.payload) {
@@ -76,76 +103,10 @@ export const rehydrateMiddleware = store => next => action => {
 	next(action);
 };
 
-export const routingMiddleware = store => next => action => {
-	const state = store.getState();
-	if (action.type !== '@@router/LOCATION_CHANGE') return next(action);
-	next(action);
-
-	for (let model in state) {
-		if (model === 'routing' || model === '@@dva') continue;
-		if (!state.routing.locationBeforeTransitions) {
-			state[model]._pathname === action.payload.pathname && store.dispatch({
-				type: `${model}/onPushToRoute`,
-				payload: {
-					current: action.payload,
-					before: null
-				}
-			});
-			continue;
-		}
-		if (state[model]._pathname === state.routing.locationBeforeTransitions.pathname) {
-			if (action.payload.action === 'POP') {
-				store.dispatch({
-					type: `${model}/routeDidPop`,
-					payload: {
-						current: state.routing.locationBeforeTransitions,
-						next: action.payload
-					}
-				});
-			} else if (action.payload.action === 'PUSH') {
-				store.dispatch({
-					type: `${model}/routeDidPush`,
-					payload: {
-						current: state.routing.locationBeforeTransitions,
-						next: action.payload
-					}
-				});
-			} else if (action.payload.action === 'REPLACE') {
-				store.dispatch({
-					type: `${model}/routeDidReplace`,
-					payload: {
-						current: state.routing.locationBeforeTransitions,
-						next: action.payload
-					}
-				});
-			}
-		}
-		if (state[model]._pathname === action.payload.pathname) {
-			if (action.payload.action === 'POP') {
-				store.dispatch({
-					type: `${model}/onPopToRoute`,
-					payload: {
-						current: action.payload,
-						before: state.routing.locationBeforeTransitions
-					}
-				});
-			} else if (action.payload.action === 'REPLACE') {
-				store.dispatch({
-					type: `${model}/onReplaceToRoute`,
-					payload: {
-						current: action.payload,
-						before: state.routing.locationBeforeTransitions
-					}
-				});
-			} else {
-				store.dispatch({
-					type: `${model}/onPushToRoute`,
-					payload: {
-						current: action.payload,
-						before: state.routing.locationBeforeTransitions
-					}
-				});
-			}
-		}
+const errorHandlerMiddleware = store => next => action => {
+	try {
+		next(action);
+	} catch(err) {
+		console.error(err);
 	}
 };
