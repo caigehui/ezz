@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { Button, Row, Form, Input, Icon, Checkbox } from 'antd';
 import styles from './index.less';
-import { Loader } from '../../component';
+import { Loader } from 'component';
 
 const FormItem = Form.Item;
 
@@ -18,13 +18,14 @@ function Login({
         if (errors) return;
         dispatch({ type: 'app/login', payload: values });
     })
+
     return (
         <div>
             <Loader spinning={loading.effects['app/init']}/>
             <div className={styles.container}>
                 <div className={styles.form}>
                     <div className={styles.logo}>
-                        <img alt={'logo'} src={require('../../asset/logo.svg')} />
+                        <img alt={'logo'} src={require('asset/logo.svg')} />
                         <span>WxDocs</span>
                     </div>
                     <form>

@@ -71,6 +71,17 @@
     "url": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
     "options": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
   },
+  "multipart": {
+    "fileSize": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+    "fileExtensions": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+    "autoFields": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js"
+  },
   "onerror": {
     "errorPageUrl": "/Users/caigehui/Documents/ezz-example/node_modules/egg-onerror/config/config.default.js",
     "appErrorFilter": "/Users/caigehui/Documents/ezz-example/node_modules/egg-onerror/config/config.default.js"
@@ -94,17 +105,6 @@
       "default": "/Users/caigehui/Documents/ezz-example/node_modules/egg-watcher/config/config.default.js",
       "development": "/Users/caigehui/Documents/ezz-example/node_modules/egg-watcher/config/config.default.js"
     }
-  },
-  "multipart": {
-    "autoFields": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "defaultCharset": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "fieldNameSize": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "fieldSize": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "fields": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "fileSize": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "files": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "fileExtensions": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
-    "whitelist": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js"
   },
   "helper": {
     "shtml": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js"
@@ -181,17 +181,18 @@
       "sjcl": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
+      "babel-eslint": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-dva-hmr": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-import": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-module-resolver": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-decorators-legacy": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-runtime": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-bin": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-ci": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-mock": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "babel-eslint": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "babel-plugin-import": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "babel-plugin-dva-hmr": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "babel-plugin-transform-runtime": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "babel-plugin-transform-decorators-legacy": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "eslint-config-egg": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-config-airbnb": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-plugin-import": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-plugin-jsx-a11y": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "eslint-plugin-react": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",

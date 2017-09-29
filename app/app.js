@@ -8,9 +8,9 @@ import createLoading from 'dva-loading';
 import { persistStore, autoRehydrate } from 'redux-persist';
 import { asyncSessionStorage } from 'redux-persist/storages';
 import { REHYDRATE } from 'redux-persist/constants';
-import { isReactComponent } from './util/isReact';
+import { isReactComponent } from 'util/isReact';
 import invariant from 'invariant';
-import { ERROR_MSG_DURATION } from './constant';
+import { ERROR_MSG_DURATION } from 'constant';
 
 function NoMatch(props){
 	return	<h1>404 NOT FOUND</h1>;

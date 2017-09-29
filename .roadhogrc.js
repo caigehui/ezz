@@ -8,7 +8,16 @@ export default {
         'dva-hmr',
         'transform-runtime',
         'transform-decorators-legacy',
-        ["import", { "libraryName": "antd", "style": "css" }]
+        ['import', { 'libraryName': 'antd', 'style': 'css' }],
+        ['module-resolver', {
+          'root': ['./app'],
+          'alias': {
+            'component': './component',
+            'asset': './asset',
+            'util': './util',
+            'constant': './constant'
+          }
+        }]
       ],
       proxy: {
         '/api': {
@@ -22,7 +31,16 @@ export default {
       'extraBabelPlugins': [
         'transform-runtime',
         'transform-decorators-legacy',
-        ["import", { "libraryName": "antd", "style": "css" }]
+        ['import', { 'libraryName': 'antd', 'style': 'css' }],
+        ['module-resolver', {
+          'root': ['./app'],
+          'alias': {
+            'component': './component',
+            'asset': './asset',
+            'util': './util',
+            'constant': './constant'
+          }
+        }]
       ]
     }
   },

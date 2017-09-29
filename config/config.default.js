@@ -10,7 +10,8 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
         mapping: {
             '.tpl': 'nunjucks',
         }
-    }
+    };
+
     config.static = {
         prefix: "/public/",
         dir: path.join(appInfo.baseDir, 'app/public'),
@@ -25,20 +26,28 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
         csrf: {
             enable: false
         }
-    }
+    };
 
-    config.middleware = ['errorHandler', 'saveSession']
+    config.middleware = ['errorHandler', 'saveSession'];
 
     config.errorHandler = {
         match: '/api'
-    }
+    };
 
-    config.encryptKey = 'Dn2OjAzKUdejXnq'
+    config.encryptKey = 'Dn2OjAzKUdejXnq';
 
     config.mongoose = {
         url: 'mongodb://localhost:27017/ezz',
         options: {}
-    }
+    };
+
+    config.multipart = {
+        fileSize: '20mb',
+        fileExtensions: [
+            '.doc',
+            '.docx',
+        ]
+    };
 
     return config;
 };

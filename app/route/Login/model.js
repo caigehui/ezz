@@ -1,7 +1,7 @@
-import delay from '../../util/delay';
-import request from '../../util/request';
+import delay from 'util/delay';
+import request from 'util/request';
 import sjcl from 'sjcl';
-import { ENCRYPT_KEY } from '../../constant';
+import { ENCRYPT_KEY } from 'constant';
 
 export default {
     namespace: 'app',

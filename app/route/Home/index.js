@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { MainLayout } from '../../component';
+import { MainLayout } from 'component';
 
 function Home({ match }) {
     return (
