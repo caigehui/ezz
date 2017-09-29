@@ -7,7 +7,7 @@
     "prod": "egg-scripts start --daemon --port=8080 --env=prod ",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
-    "build": "roadhog build",
+    "build": "roadhog build && mv app/public/index.html app/view/index.html",
     "lint": "eslint --ext .js app --fix",
     "stop": "egg-scripts stop",
     "test": "npm run lint -- --fix && npm run test-local",
@@ -29,13 +29,15 @@
     "egg-scripts": "^1.1.1",
     "egg-validate": "^1.0.0",
     "egg-view-nunjucks": "^2.1.4",
+    "gm": "^1.23.0",
     "history": "^4.7.2",
     "invariant": "^2.2.2",
+    "prop-types": "^15.6.0",
     "react": "^15.6.0",
     "react-dom": "^15.6.0",
-    "prop-types": "^15.6.0",
     "redux-persist": "~4.8.0",
-    "sjcl": "^1.0.7"
+    "sjcl": "^1.0.7",
+    "stream-wormhole": "^1.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -56,6 +58,6 @@
     "expect": "^1.20.2",
     "husky": "^0.12.0",
     "redbox-react": "^1.4.3",
-    "roadhog-ezz": "^1.3.1"
+    "roadhog-ezz": "^1.3.2"
   }
 }

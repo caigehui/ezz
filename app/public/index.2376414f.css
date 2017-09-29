@@ -8361,7 +8361,7 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 }
 .container___jdU-v::before {
   position: fixed;
-  background-image: url(/public/static/background.06abedeb.jpg);
+  background-image: url(/public/static/bg.df8f8d1c.jpg);
   background-size: cover;
   background-position: 50%;
   display: block;
@@ -8418,9 +8418,11 @@ form .ant-input-group-addon .ant-cascader-picker:only-child {
 .button___lTirh a {
   float: right;
 }
-.ant-spin-container___EvAje,
-.ant-spin-nested-loading___1WS63 {
-  height: 100%;
+@media only screen and (max-width: 768px) and (min-width: 0) {
+  .form___29bTs {
+    left: 50%;
+    margin: -160px 0 0 -160px;
+  }
 }
 .loader___3lbmI {
   display: block;

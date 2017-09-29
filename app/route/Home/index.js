@@ -5,7 +5,11 @@ import { MainLayout } from 'component';
 function Home({ match }) {
     return (
         <MainLayout match={match}>
-            {match.url}
+            <form method="POST" action="/api/files" encType="multipart/form-data">
+                title: <input name="title" />
+                file: <input name="file" type="file" />
+                <button type="submit">Upload</button>
+            </form>
         </MainLayout>
     );
 }

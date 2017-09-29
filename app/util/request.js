@@ -29,7 +29,7 @@ export default function request(url, options) {
 
   let method = (() => {
     for(let key in options) {
-      if(verb.includes(key.toUpperCase())) {
+      if(verb.indexOf(key.toUpperCase()) > -1) {
         return key.toUpperCase();
       } 
     }
@@ -40,6 +40,7 @@ export default function request(url, options) {
     headers: {
 			'Content-Type': 'application/json'
     },
+    credentials: 'include',
     body: JSON.stringify(options[method.toLowerCase()] || {})
   })
     .then(checkStatus)

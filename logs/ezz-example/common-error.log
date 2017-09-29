@@ -305,3 +305,74 @@ message: '[egg-mongoose]failed to connect to server [localhost:27017] on first c
 pid: 16784
 hostname: Mac-mini.local
 
+2017-09-29 15:29:43,540 ERROR 12432 [-/127.0.0.1/-/20ms POST /api/files] nodejs.ReferenceError: stream is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/files.js:39:38)
+    at create.throw (<anonymous>)
+    at onRejected (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:81:24)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:101:14)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 12432
+hostname: Mac-mini.local
+
+2017-09-29 15:37:50,501 ERROR 12615 [-/127.0.0.1/-/21ms POST /api/files] nodejs.ReferenceError: stream is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/files.js:42:38)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 12615
+hostname: Mac-mini.local
+
+2017-09-29 15:38:41,007 ERROR 12639 [-/127.0.0.1/-/21ms POST /api/files] nodejs.ReferenceError: stream is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/files.js:42:38)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 12639
+hostname: Mac-mini.local
+
+2017-09-29 15:39:42,357 ERROR 12676 [-/127.0.0.1/-/28ms POST /api/files] nodejs.TypeError: part.write is not a function
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/files.js:38:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 12676
+hostname: Mac-mini.local
+
+2017-09-29 16:45:29,776 ERROR 14953 [-/127.0.0.1/-/18ms POST /api/files] nodejs.TypeError: Cannot read property 'getUploadDirPath' of undefined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/files.js:35:54)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 14953
+hostname: Mac-mini.local
+
+2017-09-29 16:45:42,665 ERROR 14978 [-/127.0.0.1/-/22ms POST /api/files] nodejs.TypeError: Cannot read property 'getUploadPath' of undefined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/files.js:35:54)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 14978
+hostname: Mac-mini.local
+
+2017-09-29 16:47:24,355 ERROR 15078 [-/127.0.0.1/-/18ms POST /api/files] nodejs.TypeError: You may only yield a function, promise, generator, array, or object, but the following object was passed: "[object Object]"
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:101:25)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 15078
+hostname: Mac-mini.local
+

@@ -1,6 +1,6 @@
 'use strict';
-const path = require('path');
-module.exports = (appInfo = { name: '', baseDir: '' }) => {
+var path = require('path');
+module.exports = function (appInfo) {
     const config = {};
 
     config.keys = appInfo.name + '_SWozwDMxSRLQCZ0';
@@ -34,6 +34,10 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
         match: '/api'
     };
 
+    config.saveSession = {
+        ignore: '/api/login'
+    };
+
     config.encryptKey = 'Dn2OjAzKUdejXnq';
 
     config.mongoose = {
@@ -48,7 +52,7 @@ module.exports = (appInfo = { name: '', baseDir: '' }) => {
             '.docx',
         ]
     };
-
+        
     return config;
 };
 

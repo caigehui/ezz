@@ -66,6 +66,9 @@
   "errorHandler": {
     "match": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
   },
+  "saveSession": {
+    "ignore": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
+  },
   "encryptKey": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
   "mongoose": {
     "url": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
@@ -172,13 +175,15 @@
       "egg-scripts": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-validate": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "egg-view-nunjucks": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "gm": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "history": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "invariant": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "prop-types": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react-dom": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "prop-types": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "redux-persist": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
-      "sjcl": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js"
+      "sjcl": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "stream-wormhole": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {
       "babel-eslint": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",

@@ -2,6 +2,7 @@ export default {
   entry: 'app/index.js',
   publicPath: '/public/',
   outputPath: './app/public',
+  hash: true,
   env: {
     'development': {
       'extraBabelPlugins': [
