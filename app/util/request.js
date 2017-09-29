@@ -2,6 +2,8 @@ import fetch from 'dva/fetch';
 import { message } from 'antd';
 import { ERROR_MSG_DURATION } from '../constant';
 
+const verb = 'HEAD OPTIONS GET PUT POST PATCH DELETE';
+
 function parseJSON(response) {
   return response.json();
 }
@@ -24,12 +26,21 @@ async function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
+
+  let method = (() => {
+    for(let key in options) {
+      if(verb.includes(key.toUpperCase())) {
+        return key.toUpperCase();
+      } 
+    }
+  })() || 'GET';
+
   return fetch(url, {
-    method: options.method || 'GET',
+    method,
     headers: {
 			'Content-Type': 'application/json'
     },
-    body: JSON.stringify(options.data || {})
+    body: JSON.stringify(options[method.toLowerCase()] || {})
   })
     .then(checkStatus)
     .then(parseJSON)
