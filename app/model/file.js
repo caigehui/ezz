@@ -3,7 +3,7 @@
 module.exports = app => {
     const mongoose = app.mongoose;
     const FileSchema = new mongoose.Schema({
-        filename: { type: String, required: true },
+        filenames: [String],
         filesize: { type: Number, required: true },
         hash: { type: String, required: true },
         temp: { type: Boolean, default: true }

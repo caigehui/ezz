@@ -344,6 +344,7 @@
       "match": "/^\\/api(?!\\/login).*$/gi"
     },
     "encryptKey": "ezz-example_Dn2OjAzKUdejXnq",
+    "getUploadPath": "<Function anonymous>",
     "coreMiddlewares": [
       "meta",
       "siteFile",

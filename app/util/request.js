@@ -57,5 +57,5 @@ export default function request(url, options) {
 		.then(checkStatus)
 		.then(parseJSON)
 		.then(data => ({ data }))
-		.catch(error => ({ error }));
+		.catch(err => ({ err }));
 }

@@ -1,27 +1,27 @@
 'use strict';
 const sendToWormhole = require('stream-wormhole');
-const fs = require('fs');
 
 module.exports = app => class FilesController extends app.Controller {
 	* index() {
 		this.ctx.body = yield this.ctx.model.File.find({});
-		this.ctx.status = 200;
 	}
 	* create() {
 		const ctx = this.ctx;
 		const parts = ctx.multipart();
-		let part;
-		while ((part = yield parts)) {
-			if (part.length) {
-				// arrays are busboy fields, don't need to handle
+		let rs;
+		while ((rs = yield parts)) {
+			if (rs.length) {
+				// 其他表单field
 			} else {
-				if (!part.filename) ctx.throw(400, '上传的文件为空');
-				const ret = yield ctx.helper.getFileHash(part);
-				ctx.body = { ret };
-				let stream = fs.createWriteStream(ctx.helper.getUploadPath(part.filename));
-				part.pipe(stream);
-				// end stream
-				yield sendToWormhole(part);
+				if (!rs.filename) ctx.throw(400, '上传的文件为空');
+				const filename = rs.filename;
+				const filesize = rs.filesize;
+				const filepath = this.config.getUploadPath(filename);
+				// 写入临时文件
+				yield ctx.helper.writeFile(rs, filepath);
+				// 创建文件的数据库记录，如果是尺寸大的图片则裁剪
+				yield ctx.service.base.file.createFile({ filepath, filesize, filename });
+				yield sendToWormhole(rs);
 			}
 		}
 		ctx.status = 200;

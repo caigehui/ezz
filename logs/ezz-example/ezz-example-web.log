@@ -846,3 +846,35 @@ message: '用户未登录'
 pid: 3578
 hostname: Mac-mini.local
 
+2017-09-30 13:21:02,659 WARN 5791 [-/::1/-/6ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.BadRequestError: 上传的文件为空
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:16:32)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '上传的文件为空'
+pid: 5791
+hostname: Mac-mini.local
+
+2017-09-30 14:02:56,790 WARN 6540 [-/::1/-/24ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: Invalid filename: favicon.ico
+    at checkFile (/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/app.js:73:23)
+    at Busboy.onFile (/Users/caigehui/Documents/ezz-example/node_modules/co-busboy/index.js:92:17)
+    at emitMany (events.js:146:13)
+    at Busboy.emit (events.js:223:7)
+    at Busboy.emit (/Users/caigehui/Documents/ezz-example/node_modules/busboy/lib/main.js:38:33)
+    at PartStream.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/busboy/lib/types/multipart.js:213:13)
+    at emitOne (events.js:115:13)
+    at PartStream.emit (events.js:210:7)
+    at HeaderParser.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/dicer/lib/Dicer.js:51:16)
+    at emitOne (events.js:115:13)
+    at HeaderParser.emit (events.js:210:7)
+    at HeaderParser._finish (/Users/caigehui/Documents/ezz-example/node_modules/dicer/lib/HeaderParser.js:68:8)
+    at SBMH.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/dicer/lib/HeaderParser.js:40:12)
+    at emitMany (events.js:146:13)
+    at SBMH.emit (events.js:223:7)
+    at SBMH._sbmh_feed (/Users/caigehui/Documents/ezz-example/node_modules/streamsearch/lib/sbmh.js:159:14)
+status: 400
+pid: 6540
+hostname: Mac-mini.local
+

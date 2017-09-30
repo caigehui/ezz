@@ -45,6 +45,10 @@ module.exports = function (appInfo) {
         ]
     };
         
+    config.getUploadPath = filename => {
+        return path.join(__dirname, '..', '..', 'upload', filename)
+    }
+
     return config;
 };
 

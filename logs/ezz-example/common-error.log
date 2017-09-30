@@ -411,3 +411,322 @@ name: 'HPE_CB_bodyError'
 pid: 4022
 hostname: Mac-mini.local
 
+2017-09-30 13:08:11,359 ERROR 5281 [-/::1/-/24ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.ReferenceError: part is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:13:4)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5281
+hostname: Mac-mini.local
+
+2017-09-30 13:08:44,124 ERROR 5352 [-/::1/-/23ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.ReferenceError: part is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:13:4)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5352
+hostname: Mac-mini.local
+
+2017-09-30 13:09:04,436 ERROR 5378 [-/::1/-/26ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: Cannot read property 'tolowercase' of undefined
+    at Helper.isImage (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:32:57)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:32)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5378
+hostname: Mac-mini.local
+
+2017-09-30 13:09:35,174 ERROR 5426 [-/::1/-/24ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: rs.on is not a function
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:21:16)
+    at Promise (<anonymous>)
+    at Helper.getFileHash (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:19:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:17:35)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5426
+hostname: Mac-mini.local
+
+2017-09-30 13:10:35,730 ERROR 5457 [-/::1/-/23ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: rs.on is not a function
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:21:16)
+    at Promise (<anonymous>)
+    at Helper.getFileHash (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:19:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:17:35)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5457
+hostname: Mac-mini.local
+
+2017-09-30 13:11:18,978 ERROR 5512 [-/::1/-/24ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: rs.on is not a function
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:21:16)
+    at Promise (<anonymous>)
+    at Helper.getFileHash (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:19:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:17:35)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5512
+hostname: Mac-mini.local
+
+2017-09-30 13:12:14,666 ERROR 5583 [-/::1/-/25ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: filename.tolowercase is not a function
+    at Helper.isImage (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:32:58)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:32)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5583
+hostname: Mac-mini.local
+
+2017-09-30 14:04:30,683 ERROR 6595 [-/::1/-/31ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: You may only yield a function, promise, generator, array, or object, but the following object was passed: "undefined"
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:101:25)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6595
+hostname: Mac-mini.local
+
+2017-09-30 14:29:28,128 ERROR 6967 [-/::1/-/35ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: Cannot read property 'getUploadPath' of undefined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:19:20)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6967
+hostname: Mac-mini.local
+
+2017-09-30 15:54:13,753 ERROR 9399 [-/::1/-/32ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.ReferenceError: size is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:20:23)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9399
+hostname: Mac-mini.local
+
+2017-09-30 15:57:13,012 ERROR 9521 [-/::1/-/39ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:51:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:49:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9521
+hostname: Mac-mini.local
+
+2017-09-30 16:03:00,246 ERROR 9721 [-/::1/-/34ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:52:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:50:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9721
+hostname: Mac-mini.local
+
+2017-09-30 16:06:09,304 ERROR 9866 [-/::1/-/34ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:52:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:50:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9866
+hostname: Mac-mini.local
+
+2017-09-30 16:06:36,908 ERROR 9899 [-/::1/-/40ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:53:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:50:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9899
+hostname: Mac-mini.local
+
+2017-09-30 16:07:00,509 ERROR 9933 [-/::1/-/41ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:53:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:50:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9933
+hostname: Mac-mini.local
+
+2017-09-30 16:08:06,862 ERROR 9960 nodejs.TypeError: rs.end is not a function (uncaughtException throw 1 times on pid:9960)
+    at FileStream.rs.on (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:24:20)
+    at emitNone (events.js:110:20)
+    at FileStream.emit (events.js:207:7)
+    at endReadableNT (_stream_readable.js:1059:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+
+pid: 9960
+hostname: Mac-mini.local
+
+2017-09-30 16:08:37,014 ERROR 10023 [-/::1/-/116ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:52:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:49:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:18:39)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 10023
+hostname: Mac-mini.local
+
+2017-09-30 16:13:02,776 ERROR 10172 [-/::1/-/88ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:51:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:49:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:19:22)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 10172
+hostname: Mac-mini.local
+
+2017-09-30 16:13:40,051 ERROR 10215 [-/::1/-/77ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.Error: gm().stream() or gm().write() with a non-readable stream.
+    at gm._spawn (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:258:15)
+    at gm._exec (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:190:17)
+    at gm.proto.(anonymous function) [as size] (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/getters.js:68:12)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:51:18)
+    at Promise (<anonymous>)
+    at Helper.getImageSize (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:49:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:19:22)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 10215
+hostname: Mac-mini.local
+
+2017-09-30 16:38:03,719 ERROR 11073 [-/::1/-/11ms GET /api/files] nodejs.TypeError: Cannot read property 'getUploadPath' of undefined
+    at FilesController.index (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:6:30)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 11073
+hostname: Mac-mini.local
+
+2017-09-30 16:38:14,733 ERROR 11073 [-/::1/-/2ms GET /api/files] nodejs.TypeError: Cannot read property 'getUploadPath' of undefined
+    at FilesController.index (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:6:30)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 11073
+hostname: Mac-mini.local
+
+2017-09-30 17:01:55,694 ERROR 11900 [-/::1/-/24ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: Cannot read property 'createFile' of undefined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:25:27)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 11900
+hostname: Mac-mini.local
+
+2017-09-30 17:04:06,356 ERROR 11975 [-/::1/-/23ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: Cannot read property 'createFile' of undefined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:25:27)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 11975
+hostname: Mac-mini.local
+
+2017-09-30 17:25:56,572 ERROR 12460 [-/::1/-/27ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: this.config.getTempPath is not a function
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:17:34)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 12460
+hostname: Mac-mini.local
+
