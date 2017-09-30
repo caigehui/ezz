@@ -716,3 +716,133 @@ message: 'invalid csrf token'
 pid: 16685
 hostname: Mac-mini.local
 
+2017-09-30 10:24:29,392 WARN 1838 [-/::1/-/43ms POST /api/login] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-09-30 10:24:29,396 WARN 1838 [-/::1/-/47ms POST /api/login] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:148:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'invalid csrf token'
+pid: 1838
+hostname: Mac-mini.local
+
+2017-09-30 11:34:40,495 WARN 3214 [-/::1/-/189ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:21:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 3214
+hostname: Mac-mini.local
+
+2017-09-30 11:34:46,900 WARN 3214 [-/::1/-/3ms POST /api/login] nodejs.ForbiddenError: 用户名或者密码错误
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at LoginController.index (/Users/caigehui/Documents/ezz-example/app/controller/login.js:21:34)
+    at index.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+message: '用户名或者密码错误'
+pid: 3214
+hostname: Mac-mini.local
+
+2017-09-30 11:36:25,658 WARN 3276 [-/::1/-/10ms POST /api/files] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-09-30 11:36:25,662 WARN 3276 [-/::1/-/14ms POST /api/files] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:148:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'invalid csrf token'
+pid: 3276
+hostname: Mac-mini.local
+
+2017-09-30 11:43:11,764 WARN 3490 [-/::1/-/5ms POST /api/files?_csrf=4437Tqi_wEX4zJIcgpyexDBa] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-09-30 11:43:11,767 WARN 3490 [-/::1/-/7ms POST /api/files?_csrf=4437Tqi_wEX4zJIcgpyexDBa] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:139:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'missing csrf token'
+pid: 3490
+hostname: Mac-mini.local
+
+2017-09-30 11:43:38,466 WARN 3533 [-/::1/-/11ms POST /api/files?_csrf=2J7kI9efWN4es3rD0ts6IbXZ] nodejs.UnauthorizedError: 用户未登录
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/app/middleware/save_session.js:4:38)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+message: '用户未登录'
+pid: 3533
+hostname: Mac-mini.local
+
+2017-09-30 11:44:34,920 WARN 3578 [-/::1/-/11ms POST /api/files?_csrf=2J7kI9efWN4es3rD0ts6IbXZ] nodejs.UnauthorizedError: 用户未登录
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/app/middleware/save_session.js:4:38)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+message: '用户未登录'
+pid: 3578
+hostname: Mac-mini.local
+

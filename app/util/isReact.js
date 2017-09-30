@@ -1,17 +1,18 @@
 // https://stackoverflow.com/questions/33199959/how-to-detect-a-react-component-vs-a-react-element
+import React from 'react';
 
 function isClassComponent(component) {
     return (
         typeof component === 'function' && 
         !!component.prototype.isReactComponent
-    ) ? true : false
+    ) ? true : false;
 }
 
 function isFunctionComponent(component) {
     return (
         typeof component === 'function' && (
-            String(component).includes('return React.createElement') ||
-            String(component).includes('_react2.default.createElement')
+            // babel and webpack transform
+            String(component).includes('default.createElement')
         )
     ) ? true : false;
 }
@@ -42,4 +43,4 @@ module.exports = {
     isElement,
     isDOMTypeElement,
     isCompositeTypeElement
-}
+};

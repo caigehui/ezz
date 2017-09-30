@@ -11,7 +11,7 @@ const routes = [
         path: '/:bookId', 
         component: require('./route/Home')
     }
-]
+];
 
 const app = new App({ routes });
 

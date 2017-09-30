@@ -9,23 +9,14 @@
     "cache": "/Users/caigehui/Documents/ezz-example/node_modules/egg-view/config/config.local.js",
     "defaultExtension": "/Users/caigehui/Documents/ezz-example/node_modules/egg-view/config/config.default.js"
   },
-  "static": {
-    "prefix": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
-    "dir": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
-    "dynamic": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
-    "preload": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
-    "buffer": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
-    "maxFiles": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
-    "maxAge": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
-  },
   "security": {
     "csrf": {
       "enable": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+      "headerName": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
       "useSession": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "ignoreJSON": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "cookieName": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "sessionName": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
-      "headerName": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "bodyName": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "queryName": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js"
     },
@@ -64,6 +55,9 @@
   },
   "middleware": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
   "errorHandler": {
+    "match": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
+  },
+  "saveSession": {
     "match": "/Users/caigehui/Documents/ezz-example/config/config.default.js"
   },
   "encryptKey": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
@@ -123,6 +117,14 @@
     "rotateDuration": "/Users/caigehui/Documents/ezz-example/node_modules/egg-logrotator/config/config.default.js",
     "maxDays": "/Users/caigehui/Documents/ezz-example/node_modules/egg-logrotator/config/config.default.js"
   },
+  "static": {
+    "prefix": "/Users/caigehui/Documents/ezz-example/node_modules/egg-static/config/config.default.js",
+    "dir": "/Users/caigehui/Documents/ezz-example/node_modules/egg-static/config/config.default.js",
+    "dynamic": "/Users/caigehui/Documents/ezz-example/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/caigehui/Documents/ezz-example/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/caigehui/Documents/ezz-example/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/caigehui/Documents/ezz-example/node_modules/egg-static/config/config.default.js"
+  },
   "jsonp": {
     "limit": "/Users/caigehui/Documents/ezz-example/node_modules/egg-jsonp/config/config.default.js",
     "callback": "/Users/caigehui/Documents/ezz-example/node_modules/egg-jsonp/config/config.default.js",
@@ -175,6 +177,7 @@
       "gm": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "history": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "invariant": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "js-cookie": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "prop-types": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "react-dom": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",

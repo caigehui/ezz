@@ -12,9 +12,9 @@ import { isReactComponent } from 'util/isReact';
 import invariant from 'invariant';
 import { ERROR_MSG_DURATION } from 'constant';
 
-function NoMatch(props){
+function NoMatch() {
 	return	<h1>404 NOT FOUND</h1>;
-};
+}
 
 export default class App {
 
@@ -32,7 +32,7 @@ export default class App {
 			}
 		});
 		invariant(Array.isArray(routes), 'routes must be an instance of Array!');
-		invariant(isReactComponent(noMatchComponent), `noMatchComponent must be a react component！`);
+		invariant(isReactComponent(noMatchComponent), 'noMatchComponent must be a react component！');
 		this.routes = routes;
 		this.noMatchComponent = noMatchComponent;
 		this.app.use(createLoading({ effects: true }));
@@ -103,10 +103,10 @@ const rehydrateMiddleware = store => next => action => {
 	next(action);
 };
 
-const errorHandlerMiddleware = store => next => action => {
-	try {
-		next(action);
-	} catch(err) {
-		console.error(err);
-	}
-};
+// const errorHandlerMiddleware = store => next => action => {
+// 	try {
+// 		next(action);
+// 	} catch(err) {
+// 		console.error(err);
+// 	}
+// };

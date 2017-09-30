@@ -67,14 +67,15 @@
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
-        "enable": false,
+        "enable": true,
         "useSession": false,
         "ignoreJSON": false,
         "cookieName": "csrfToken",
         "sessionName": "csrfToken",
         "headerName": "x-csrf-token",
         "bodyName": "_csrf",
-        "queryName": "_csrf"
+        "queryName": "_csrf",
+        "matching": "<Function anonymous>"
       },
       "xframe": {
         "enable": true,
@@ -134,9 +135,8 @@
       "dir": "/Users/caigehui/Documents/ezz-example/app/public",
       "dynamic": true,
       "preload": false,
-      "buffer": true,
+      "buffer": false,
       "maxFiles": 1000,
-      "maxAge": 31536000,
       "files": "<LRU>"
     },
     "jsonp": {
@@ -185,7 +185,7 @@
         "prod": "egg-scripts start --daemon --port=8080 --env=prod ",
         "dev": "egg-bin dev",
         "debug": "egg-bin debug",
-        "build": "roadhog build",
+        "build": "roadhog build && mv app/public/index.html app/view/index.html",
         "lint": "eslint --ext .js app --fix",
         "stop": "egg-scripts stop",
         "test": "npm run lint -- --fix && npm run test-local",
@@ -210,6 +210,7 @@
         "gm": "^1.23.0",
         "history": "^4.7.2",
         "invariant": "^2.2.2",
+        "js-cookie": "^2.1.4",
         "prop-types": "^15.6.0",
         "react": "^15.6.0",
         "react-dom": "^15.6.0",
@@ -340,9 +341,9 @@
       "match": "/api"
     },
     "saveSession": {
-      "ignore": "/api/login"
+      "match": "/^\\/api(?!\\/login).*$/gi"
     },
-    "encryptKey": "Dn2OjAzKUdejXnq",
+    "encryptKey": "ezz-example_Dn2OjAzKUdejXnq",
     "coreMiddlewares": [
       "meta",
       "siteFile",

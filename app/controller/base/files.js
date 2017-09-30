@@ -1,7 +1,6 @@
 'use strict';
 const sendToWormhole = require('stream-wormhole');
 const fs = require('fs');
-const path = require('path');
 
 module.exports = app => class FilesController extends app.Controller {
 	* index() {
@@ -16,13 +15,15 @@ module.exports = app => class FilesController extends app.Controller {
 			if (part.length) {
 				// arrays are busboy fields, don't need to handle
 			} else {
-				if (!part.filename) ctx.throw(400, '上传的文件为空')
-				// otherwise, it's a stream
+				if (!part.filename) ctx.throw(400, '上传的文件为空');
+				const ret = yield ctx.helper.getFileHash(part);
+				ctx.body = { ret };
 				let stream = fs.createWriteStream(ctx.helper.getUploadPath(part.filename));
 				part.pipe(stream);
+				// end stream
 				yield sendToWormhole(part);
 			}
 		}
-		this.ctx.status = 200;
+		ctx.status = 200;
 	}
 };

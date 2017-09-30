@@ -17,7 +17,7 @@ function Login({
     const onLogin = () => validateFieldsAndScroll((errors, values) => {
         if (errors) return;
         dispatch({ type: 'app/login', payload: values });
-    })
+    });
 
     return (
         <div>
@@ -66,7 +66,7 @@ function Login({
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
-export default connect(({ loading }) => ({ loading }))(Form.create()(Login))
+export default connect(({ loading }) => ({ loading }))(Form.create()(Login));

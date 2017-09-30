@@ -10,9 +10,9 @@ export default {
     },
     effects: {
         *init() {
-            yield delay(1000)
+            yield delay(1000);
         },
-        *login({ payload }, { call, put, select }) {
+        *login({ payload }, { call, put }) {
             const { data, error } = yield call(request,
                 '/api/login',
                 {
@@ -27,12 +27,12 @@ export default {
                 payload: {
                     user: data.user
                 }
-            })
+            });
         }
     },
     reducers: {
         save(state, action) {
-            return { ...state, ...action.payload }
+            return { ...state, ...action.payload };
         }
     },
     subscriptions: {
@@ -44,4 +44,4 @@ export default {
             });
         },
     },
-}
+};

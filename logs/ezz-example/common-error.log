@@ -376,3 +376,38 @@ hostname: Mac-mini.local
 pid: 15078
 hostname: Mac-mini.local
 
+2017-09-30 12:03:59,221 ERROR 3936 [-/::1/-/18ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.TypeError: Cannot read property 'bind' of undefined
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:13:38)
+    at Promise (<anonymous>)
+    at Helper.getFileHash (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:11:16)
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:20:34)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 3936
+hostname: Mac-mini.local
+
+2017-09-30 12:05:29,875 ERROR 4022 nodejs.TypeError: Cannot read property 'update' of undefined (uncaughtException throw 1 times on pid:4022)
+    at FileStream.update (crypto.js:97:15)
+    at emitOne (events.js:115:13)
+    at FileStream.emit (events.js:210:7)
+    at FileStream.Readable.read (_stream_readable.js:478:10)
+    at flow (_stream_readable.js:849:34)
+    at resume_ (_stream_readable.js:831:3)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+
+pid: 4022
+hostname: Mac-mini.local
+
+2017-09-30 12:05:29,882 ERROR 4022 [-/undefined/-/29ms POST /api/files?_csrf=CU4Uif8Xx5KtRhDhYJAB2nx1] nodejs.HPE_CB_bodyError: Parse Error
+HPE_CB_bodyError: Parse Error
+bytesParsed: 0
+code: 'HPE_CB_body'
+headerSent: true
+name: 'HPE_CB_bodyError'
+pid: 4022
+hostname: Mac-mini.local
+

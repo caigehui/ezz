@@ -4,4 +4,4 @@ import MainLayout from './MainLayout';
 export {
     Loader,
     MainLayout
-}
+};

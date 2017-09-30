@@ -1,9 +1,11 @@
 'use strict';
 var path = require('path');
+var appName = require('../package.json').name;
+
 module.exports = function (appInfo) {
     const config = {};
-
-    config.keys = appInfo.name + '_SWozwDMxSRLQCZ0';
+    
+    config.keys = appName + '_SWozwDMxSRLQCZ0';
 
     config.view = {
         defaultViewEngine: 'nunjucks',
@@ -12,19 +14,9 @@ module.exports = function (appInfo) {
         }
     };
 
-    config.static = {
-        prefix: "/public/",
-        dir: path.join(appInfo.baseDir, 'app/public'),
-        dynamic: true,
-        preload: false,
-        buffer: true,
-        maxFiles: 1000,
-        maxAge: 31536000,
-    };
-
     config.security = {
         csrf: {
-            enable: false
+            headerName: 'x-csrf-token'
         }
     };
 
@@ -35,10 +27,10 @@ module.exports = function (appInfo) {
     };
 
     config.saveSession = {
-        ignore: '/api/login'
+        match: /^\/api(?!\/login).*$/ig
     };
 
-    config.encryptKey = 'Dn2OjAzKUdejXnq';
+    config.encryptKey = appName + '_Dn2OjAzKUdejXnq';
 
     config.mongoose = {
         url: 'mongodb://localhost:27017/ezz',
