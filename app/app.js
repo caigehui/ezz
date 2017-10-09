@@ -11,6 +11,7 @@ import { REHYDRATE } from 'redux-persist/constants';
 import { isReactComponent } from 'util/isReact';
 import invariant from 'invariant';
 import { ERROR_MSG_DURATION } from 'constant';
+import 'util/array';
 
 function NoMatch() {
 	return	<h1>404 NOT FOUND</h1>;
@@ -20,6 +21,7 @@ export default class App {
 
 	constructor({
 		routes,
+		extraModels = [],
 		otherMiddlewares = [],
 		noMatchComponent = NoMatch,
 	}) {
@@ -36,17 +38,20 @@ export default class App {
 		this.routes = routes;
 		this.noMatchComponent = noMatchComponent;
 		this.app.use(createLoading({ effects: true }));
-		this.addModel();
+		this.addModel(extraModels);
 		this.app.router(this.routerConfig);
 	}
 
-	addModel() {
+	addModel(extraModels) {
 		for(let route of this.routes) {
 			if(!route.models) continue;
 			invariant(Array.isArray(route.models), 'models must be an instance of Array!');
 			for(let model of route.models) {
 				this.app.model(model);
 			}
+		}
+		for(let model of extraModels) {
+			this.app.model(model);
 		}
 	}
 

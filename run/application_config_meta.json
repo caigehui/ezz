@@ -184,6 +184,7 @@
       "react-dom": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "redux-persist": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "sjcl": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
+      "spark-md5": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js",
       "stream-wormhole": "/Users/caigehui/Documents/ezz-example/node_modules/egg/config/config.default.js"
     },
     "devDependencies": {

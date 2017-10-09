@@ -7,6 +7,8 @@ module.exports = app => {
   app.resources('users', '/api/users', 'base.users');
   // 文件管理
   app.resources('files', '/api/files', 'base.files');
+  // 验证文件是否存在
+  app.post('/api/files/verify', 'base.files.verify');
   // 渲染前端，并处理react-router的BrowserHistroy
   app.get(/^(?!\/api\/).*$/, 'view.home.index');
   // API没有匹配

@@ -761,3 +761,1071 @@ hostname: Mac-mini.local
 pid: 2560
 hostname: Mac-mini.local
 
+2017-10-09 09:53:47,511 ERROR 2230 [egg-mongoose] mongodb://localhost:27017/ezz disconnected
+2017-10-09 09:53:47,515 ERROR 2230 nodejs.MongoError: [egg-mongoose]failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+    at Pool.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+    at emitOne (events.js:115:13)
+    at Pool.emit (events.js:210:7)
+    at Connection.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+    at Object.onceWrapper (events.js:318:30)
+    at emitTwo (events.js:125:13)
+    at Connection.emit (events.js:213:7)
+    at Socket.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/connection/connection.js:187:49)
+    at Object.onceWrapper (events.js:316:30)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+name: 'MongoError'
+message: '[egg-mongoose]failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]'
+pid: 2230
+hostname: Mac-mini.local
+
+2017-10-09 11:36:21,334 ERROR 4502 [-/::1/-/16ms GET /api/files/sdasd] nodejs.ReferenceError: path is not defined
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:6:25)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 4502
+hostname: Mac-mini.local
+
+2017-10-09 11:36:48,063 ERROR 4535 [-/::1/-/13ms GET /api/files/sdasd] nodejs.ReferenceError: fs is not defined
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:9:19)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 4535
+hostname: Mac-mini.local
+
+2017-10-09 11:36:48,180 ERROR 4535 [-/::1/-/2ms GET /api/files/sdasd] nodejs.ReferenceError: fs is not defined
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:9:19)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 4535
+hostname: Mac-mini.local
+
+2017-10-09 11:36:53,198 ERROR 4535 [-/::1/-/2ms GET /api/files/sdasd] nodejs.ReferenceError: fs is not defined
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:9:19)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 4535
+hostname: Mac-mini.local
+
+2017-10-09 12:38:59,018 ERROR 5633 [-/127.0.0.1/-/58ms POST /api/files] nodejs.TypeError: Cannot read property 'File' of undefined
+    at File.createFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:7:42)
+    at createFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 5633
+hostname: Mac-mini.local
+
+2017-10-09 12:39:21,865 ERROR 5663 [-/127.0.0.1/-/71ms POST /api/files] nodejs.ValidationError: File validation failed: filename: Cast to Number failed for value "background.jpg" at path "filename", filesize: Path `filesize` is required.
+    at ValidationError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validation.js:28:11)
+    at model.Document.invalidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1602:32)
+    at model.Document.set (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:765:10)
+    at model._handleIndex (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:598:14)
+    at model.Document.set (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:558:24)
+    at model.Document (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:76:12)
+    at model.Model (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:47:12)
+    at new model (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:3701:13)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1945:51
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/internal/parallel.js:27:9
+    at eachOfArrayLike (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/eachOf.js:57:9)
+    at exports.default (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/eachOf.js:9:5)
+    at _parallel (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/internal/parallel.js:26:5)
+    at parallelLimit (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/parallel.js:85:26)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1966:5
+    at Promise (<anonymous>)
+errors: { filename:  { CastError: Cast to Number failed for value "background.jpg" at path "filename" at CastError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/cast.js:27:11) at model.Document.set (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:766:7) at model._handleIndex (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:598:14) at model.Document.set (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:558:24) at model.Document (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:76:12) at model.Model (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:47:12) at new model (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:3701:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1945:51 at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/internal/parallel.js:27:9 at eachOfArrayLike (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/eachOf.js:57:9) at exports.default (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/eachOf.js:9:5) at _parallel (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/internal/parallel.js:26:5) at parallelLimit (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/parallel.js:85:26) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1966:5 at Promise (<anonymous>) at Function.create (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1929:17) message: 'Cast to Number failed for value "background.jpg" at path "filename"', name: 'CastError', stringValue: '"background.jpg"', kind: 'Number', value: 'background.jpg', path: 'filename', reason:  { CastError: Cast to number failed for value "background.jpg" at path "filename" at CastError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/cast.js:27:11) at SchemaNumber.cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schema/number.js:231:9) at SchemaNumber.SchemaType.applySetters (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:681:12) at model.Document.set (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:757:18) at model._handleIndex (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:598:14) at model.Document.set (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:558:24) at model.Document (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:76:12) at model.Model (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:47:12) at new model (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:3701:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1945:51 at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/internal/parallel.js:27:9 at eachOfArrayLike (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/eachOf.js:57:9) at exports.default (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/eachOf.js:9:5) at _parallel (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/internal/parallel.js:26:5) at parallelLimit (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/node_modules/async/parallel.js:85:26) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/model.js:1966:5 message: 'Cast to number failed for value "background.jpg" at path "filename"', name: 'CastError', stringValue: '"background.jpg"', kind: 'number', value: 'background.jpg', path: 'filename', reason: undefined } }, filesize:  { ValidatorError: Path `filesize` is required. at ValidatorError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validator.js:25:11) at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:758:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11 at Array.forEach (<anonymous>) at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9 at _combinedTickCallback (internal/process/next_tick.js:131:7) at process._tickCallback (internal/process/next_tick.js:180:9) message: 'Path `filesize` is required.', name: 'ValidatorError', properties:  { type: 'required', message: 'Path `{PATH}` is required.', validator: [Function], path: 'filesize', value: undefined }, kind: 'required', path: 'filesize', value: undefined, reason: undefined, '$isValidatorError': true } }
+_message: 'File validation failed'
+message: 'File validation failed: filename: Cast to Number failed for value "background.jpg" at path "filename", filesize: Path `filesize` is required.'
+name: 'ValidationError'
+pid: 5663
+hostname: Mac-mini.local
+
+2017-10-09 12:41:57,861 ERROR 5726 [-/127.0.0.1/-/69ms POST /api/files] nodejs.ValidationError: File validation failed: filesize: Path `filesize` is required.
+    at ValidationError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validation.js:28:11)
+    at model.Document.invalidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1602:32)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1474:17
+    at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:760:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+errors: { filesize:  { ValidatorError: Path `filesize` is required. at ValidatorError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validator.js:25:11) at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:758:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11 at Array.forEach (<anonymous>) at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9 at _combinedTickCallback (internal/process/next_tick.js:131:7) at process._tickCallback (internal/process/next_tick.js:180:9) message: 'Path `filesize` is required.', name: 'ValidatorError', properties:  { type: 'required', message: 'Path `{PATH}` is required.', validator: [Function], path: 'filesize', value: undefined }, kind: 'required', path: 'filesize', value: undefined, reason: undefined, '$isValidatorError': true } }
+_message: 'File validation failed'
+message: 'File validation failed: filesize: Path `filesize` is required.'
+name: 'ValidationError'
+pid: 5726
+hostname: Mac-mini.local
+
+2017-10-09 12:42:56,029 ERROR 5793 [-/127.0.0.1/-/65ms POST /api/files] nodejs.ValidationError: File validation failed: filesize: Path `filesize` is required.
+    at ValidationError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validation.js:28:11)
+    at model.Document.invalidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1602:32)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1474:17
+    at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:760:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+errors: { filesize:  { ValidatorError: Path `filesize` is required. at ValidatorError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validator.js:25:11) at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:758:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11 at Array.forEach (<anonymous>) at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9 at _combinedTickCallback (internal/process/next_tick.js:131:7) at process._tickCallback (internal/process/next_tick.js:180:9) message: 'Path `filesize` is required.', name: 'ValidatorError', properties:  { type: 'required', message: 'Path `{PATH}` is required.', validator: [Function], path: 'filesize', value: undefined }, kind: 'required', path: 'filesize', value: undefined, reason: undefined, '$isValidatorError': true } }
+_message: 'File validation failed'
+message: 'File validation failed: filesize: Path `filesize` is required.'
+name: 'ValidationError'
+pid: 5793
+hostname: Mac-mini.local
+
+2017-10-09 12:43:25,543 ERROR 5825 [-/127.0.0.1/-/270ms POST /api/files] nodejs.ValidationError: File validation failed: filesize: Path `filesize` is required.
+    at ValidationError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validation.js:28:11)
+    at model.Document.invalidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1602:32)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1474:17
+    at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:760:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+errors: { filesize:  { ValidatorError: Path `filesize` is required. at ValidatorError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validator.js:25:11) at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:758:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11 at Array.forEach (<anonymous>) at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9 at _combinedTickCallback (internal/process/next_tick.js:131:7) at process._tickCallback (internal/process/next_tick.js:180:9) message: 'Path `filesize` is required.', name: 'ValidatorError', properties:  { type: 'required', message: 'Path `{PATH}` is required.', validator: [Function], path: 'filesize', value: undefined }, kind: 'required', path: 'filesize', value: undefined, reason: undefined, '$isValidatorError': true } }
+_message: 'File validation failed'
+message: 'File validation failed: filesize: Path `filesize` is required.'
+name: 'ValidationError'
+pid: 5825
+hostname: Mac-mini.local
+
+2017-10-09 13:00:03,700 ERROR 6280 [-/127.0.0.1/-/42ms POST /api/files] nodejs.TypeError: this.ctx.helper.getFileSize is not a function
+    at File.createFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:7:52)
+    at createFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 6280
+hostname: Mac-mini.local
+
+2017-10-09 13:00:26,127 ERROR 6318 [-/127.0.0.1/-/175ms POST /api/files] nodejs.ValidationError: File validation failed: filesize: Path `filesize` is required.
+    at ValidationError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validation.js:28:11)
+    at model.Document.invalidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1602:32)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1474:17
+    at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:760:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+errors: { filesize:  { ValidatorError: Path `filesize` is required. at ValidatorError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/validator.js:25:11) at validate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:758:13) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:805:11 at Array.forEach (<anonymous>) at SchemaNumber.SchemaType.doValidate (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:765:19) at /Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/document.js:1472:9 at _combinedTickCallback (internal/process/next_tick.js:131:7) at process._tickCallback (internal/process/next_tick.js:180:9) message: 'Path `filesize` is required.', name: 'ValidatorError', properties:  { type: 'required', message: 'Path `{PATH}` is required.', validator: [Function], path: 'filesize', value: undefined }, kind: 'required', path: 'filesize', value: undefined, reason: undefined, '$isValidatorError': true } }
+_message: 'File validation failed'
+message: 'File validation failed: filesize: Path `filesize` is required.'
+name: 'ValidationError'
+pid: 6318
+hostname: Mac-mini.local
+
+2017-10-09 14:12:19,424 ERROR 6926 [-/127.0.0.1/-/15ms GET /api/files/ds-s-s] nodejs.TypeError: Path must be a string. Received undefined
+    at assertPath (path.js:28:11)
+    at Object.join (path.js:1249:7)
+    at Object.config.getUploadPath.filename [as getUploadPath] (/Users/caigehui/Documents/ezz-example/config/config.default.js:49:21)
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:13:32)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+
+pid: 6926
+hostname: Mac-mini.local
+
+2017-10-09 14:13:51,222 ERROR 7009 [-/127.0.0.1/-/30ms GET /api/files/ds-s-s] nodejs.TypeError: Path must be a string. Received undefined
+    at assertPath (path.js:28:11)
+    at Object.join (path.js:1249:7)
+    at Object.config.getUploadPath.filename [as getUploadPath] (/Users/caigehui/Documents/ezz-example/config/config.default.js:49:21)
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:14:32)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+
+pid: 7009
+hostname: Mac-mini.local
+
+2017-10-09 14:14:16,418 ERROR 7031 [-/127.0.0.1/-/21ms GET /api/files/ds-s-s] nodejs.CastError: Cast to ObjectId failed for value "ds-s-s" at path "_id" for model "File"
+    at CastError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/cast.js:27:11)
+    at ObjectId.cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schema/objectid.js:158:13)
+    at ObjectId.SchemaType._castForQuery (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:1064:15)
+    at ObjectId.castForQuery (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schema/objectid.js:198:15)
+    at ObjectId.SchemaType.castForQueryWrapper (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:1021:15)
+    at cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/cast.js:269:32)
+    at model.Query.Query.cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/query.js:3109:12)
+    at model.Query.Query._castConditions (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/query.js:1145:10)
+    at model.Query.Query._findOne (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/query.js:1352:8)
+    at /Users/caigehui/Documents/ezz-example/node_modules/kareem/index.js:250:8
+    at /Users/caigehui/Documents/ezz-example/node_modules/kareem/index.js:23:7
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+message: 'Cast to ObjectId failed for value "ds-s-s" at path "_id" for model "File"'
+name: 'CastError'
+stringValue: '"ds-s-s"'
+kind: 'ObjectId'
+value: 'ds-s-s'
+path: '_id'
+reason: undefined
+model: { [Function: model]
+  hooks: Kareem { _pres: {}, _posts: {} },
+  base: 
+   Mongoose {
+     connections: [ [Object], [Object] ],
+     models: {},
+     modelSchemas: { File: [Object], User: [Object] },
+     options: { pluralization: true },
+     plugins: [ [Array], [Array], [Array] ] },
+  modelName: 'File',
+  model: [Function: model],
+  db: 
+   NativeConnection {
+     base: 
+      Mongoose {
+        connections: [Array],
+        models: {},
+        modelSchemas: [Object],
+        options: [Object],
+        plugins: [Array] },
+     collections: { files: [Object], users: [Object] },
+     models: { File: [Object], User: [Object] },
+     config: { autoIndex: true },
+     replica: false,
+     hosts: null,
+     host: 'localhost',
+     port: 27017,
+     user: undefined,
+     pass: undefined,
+     name: 'ezz',
+     options: 
+      { db: [Object],
+        auth: {},
+        server: [Object],
+        replset: [Object],
+        mongos: undefined },
+     otherDbs: [],
+     states: 
+      { '0': 'disconnected',
+        '1': 'connected',
+        '2': 'connecting',
+        '3': 'disconnecting',
+        '4': 'unauthorized',
+        '99': 'uninitialized',
+        disconnected: 0,
+        connected: 1,
+        connecting: 2,
+        disconnecting: 3,
+        unauthorized: 4,
+        uninitialized: 99 },
+     _readyState: 1,
+     _closeCalled: false,
+     _hasOpened: true,
+     _listening: false,
+     db: 
+      Db {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        s: [Object],
+        serverConfig: [Getter],
+        bufferMaxEntries: [Getter],
+        databaseName: [Getter],
+        _listening: true },
+     Schema: 
+      { [Function: Schema]
+        reserved: [Object],
+        interpretAsType: [Function],
+        Types: [Object],
+        ObjectId: [Object] },
+     _events: 
+      { error: [Function],
+        disconnected: [Function],
+        connected: [Function],
+        reconnected: [Function] },
+     _eventsCount: 4 },
+  discriminators: undefined,
+  '$appliedHooks': true,
+  _events: { init: [Function], save: [Function] },
+  _eventsCount: 2,
+  schema: 
+   Schema {
+     obj: 
+      { filename: [Object],
+        filesize: [Object],
+        hash: [Object],
+        temp: [Object] },
+     paths: 
+      { filename: [Object],
+        filesize: [Object],
+        hash: [Object],
+        temp: [Object],
+        _id: [Object],
+        __v: [Object] },
+     aliases: {},
+     subpaths: {},
+     virtuals: { id: [Object] },
+     singleNestedPaths: {},
+     nested: {},
+     inherits: {},
+     callQueue: [ [Array], [Array], [Array], [Array], [Array], [Array] ],
+     _indexes: [],
+     methods: {},
+     statics: {},
+     tree: 
+      { filename: [Object],
+        filesize: [Object],
+        hash: [Object],
+        temp: [Object],
+        _id: [Object],
+        __v: [Function: Number],
+        id: [Object] },
+     query: {},
+     childSchemas: [],
+     plugins: [ [Object], [Object], [Object], [Object] ],
+     s: { hooks: [Object], kareemHooks: [Object] },
+     options: 
+      { retainKeyOrder: false,
+        typeKey: 'type',
+        id: true,
+        noVirtualId: false,
+        _id: true,
+        noId: false,
+        validateBeforeSave: true,
+        read: null,
+        shardKey: null,
+        autoIndex: null,
+        minimize: true,
+        discriminatorKey: '__t',
+        versionKey: '__v',
+        capped: false,
+        bufferCommands: true,
+        strict: true,
+        pluralization: true },
+     '$globalPluginsApplied': true },
+  collection: 
+   NativeCollection {
+     collection: Collection { s: [Object] },
+     opts: { bufferCommands: true, capped: false },
+     name: 'files',
+     collectionName: 'files',
+     conn: 
+      NativeConnection {
+        base: [Object],
+        collections: [Object],
+        models: [Object],
+        config: [Object],
+        replica: false,
+        hosts: null,
+        host: 'localhost',
+        port: 27017,
+        user: undefined,
+        pass: undefined,
+        name: 'ezz',
+        options: [Object],
+        otherDbs: [],
+        states: [Object],
+        _readyState: 1,
+        _closeCalled: false,
+        _hasOpened: true,
+        _listening: false,
+        db: [Object],
+        Schema: [Object],
+        _events: [Object],
+        _eventsCount: 4 },
+     queue: [],
+     buffer: false,
+     emitter: 
+      EventEmitter {
+        domain: null,
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined } },
+  Query: 
+   { [Function]
+     base: 
+      Query {
+        toConstructor: [Function: toConstructor],
+        setOptions: [Function],
+        collection: [Function: collection],
+        '$where': [Function],
+        where: [Function],
+        equals: [Function: equals],
+        eq: [Function: eq],
+        or: [Function: or],
+        nor: [Function: nor],
+        and: [Function: and],
+        gt: [Function],
+        gte: [Function],
+        lt: [Function],
+        lte: [Function],
+        ne: [Function],
+        in: [Function],
+        nin: [Function],
+        all: [Function],
+        regex: [Function],
+        size: [Function],
+        maxDistance: [Function],
+        minDistance: [Function],
+        mod: [Function],
+        exists: [Function],
+        elemMatch: [Function],
+        within: [Function: within],
+        box: [Function],
+        polygon: [Function],
+        circle: [Function],
+        near: [Function: near],
+        intersects: [Function: intersects],
+        geometry: [Function: geometry],
+        select: [Function: select],
+        slice: [Function],
+        sort: [Function],
+        limit: [Function],
+        skip: [Function],
+        maxScan: [Function],
+        batchSize: [Function],
+        comment: [Function],
+        maxTime: [Function],
+        snapshot: [Function],
+        hint: [Function],
+        slaveOk: [Function],
+        read: [Function],
+        tailable: [Function],
+        merge: [Function],
+        find: [Function],
+        cursor: [Function: cursor],
+        findOne: [Function],
+        count: [Function],
+        distinct: [Function],
+        update: [Function: update],
+        updateMany: [Function: updateMany],
+        updateOne: [Function: updateOne],
+        replaceOne: [Function: replaceOne],
+        remove: [Function],
+        deleteOne: [Function],
+        deleteMany: [Function],
+        findOneAndUpdate: [Function],
+        findOneAndRemove: [Function],
+        _findAndModify: [Function],
+        _wrapCallback: [Function],
+        setTraceFunction: [Function],
+        exec: [Function: exec],
+        thunk: [Function],
+        then: [Function],
+        stream: [Function],
+        selected: [Function: selected],
+        selectedInclusively: [Function: selectedInclusively],
+        selectedExclusively: [Function: selectedExclusively],
+        _mergeUpdate: [Function],
+        _optionsForExec: [Function],
+        _fieldsForExec: [Function],
+        _updateForExec: [Function],
+        _ensurePath: [Function],
+        _validate: [Function] } },
+  '$__insertMany': [Function],
+  insertMany: [Function],
+  [Symbol(EGG_LOADER_ITEM_FULLPATH)]: '/Users/caigehui/Documents/ezz-example/app/model/file.js',
+  [Symbol(EGG_LOADER_ITEM_EXPORTS)]: true }
+pid: 7031
+hostname: Mac-mini.local
+
+2017-10-09 14:18:37,205 ERROR 7117 [-/127.0.0.1/-/22ms GET /api/files/ds-s-s] nodejs.CastError: Cast to ObjectId failed for value "ds" at path "_id" for model "File"
+    at CastError (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/error/cast.js:27:11)
+    at ObjectId.cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schema/objectid.js:158:13)
+    at ObjectId.SchemaType._castForQuery (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:1064:15)
+    at ObjectId.castForQuery (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schema/objectid.js:198:15)
+    at ObjectId.SchemaType.castForQueryWrapper (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/schematype.js:1021:15)
+    at cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/cast.js:269:32)
+    at model.Query.Query.cast (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/query.js:3109:12)
+    at model.Query.Query._castConditions (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/query.js:1145:10)
+    at model.Query.Query._findOne (/Users/caigehui/Documents/ezz-example/node_modules/mongoose/lib/query.js:1352:8)
+    at /Users/caigehui/Documents/ezz-example/node_modules/kareem/index.js:250:8
+    at /Users/caigehui/Documents/ezz-example/node_modules/kareem/index.js:23:7
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+message: 'Cast to ObjectId failed for value "ds" at path "_id" for model "File"'
+name: 'CastError'
+stringValue: '"ds"'
+kind: 'ObjectId'
+value: 'ds'
+path: '_id'
+reason: undefined
+model: { [Function: model]
+  hooks: Kareem { _pres: {}, _posts: {} },
+  base: 
+   Mongoose {
+     connections: [ [Object], [Object] ],
+     models: {},
+     modelSchemas: { File: [Object], User: [Object] },
+     options: { pluralization: true },
+     plugins: [ [Array], [Array], [Array] ] },
+  modelName: 'File',
+  model: [Function: model],
+  db: 
+   NativeConnection {
+     base: 
+      Mongoose {
+        connections: [Array],
+        models: {},
+        modelSchemas: [Object],
+        options: [Object],
+        plugins: [Array] },
+     collections: { files: [Object], users: [Object] },
+     models: { File: [Object], User: [Object] },
+     config: { autoIndex: true },
+     replica: false,
+     hosts: null,
+     host: 'localhost',
+     port: 27017,
+     user: undefined,
+     pass: undefined,
+     name: 'ezz',
+     options: 
+      { db: [Object],
+        auth: {},
+        server: [Object],
+        replset: [Object],
+        mongos: undefined },
+     otherDbs: [],
+     states: 
+      { '0': 'disconnected',
+        '1': 'connected',
+        '2': 'connecting',
+        '3': 'disconnecting',
+        '4': 'unauthorized',
+        '99': 'uninitialized',
+        disconnected: 0,
+        connected: 1,
+        connecting: 2,
+        disconnecting: 3,
+        unauthorized: 4,
+        uninitialized: 99 },
+     _readyState: 1,
+     _closeCalled: false,
+     _hasOpened: true,
+     _listening: false,
+     db: 
+      Db {
+        domain: null,
+        _events: [Object],
+        _eventsCount: 6,
+        _maxListeners: undefined,
+        s: [Object],
+        serverConfig: [Getter],
+        bufferMaxEntries: [Getter],
+        databaseName: [Getter],
+        _listening: true },
+     Schema: 
+      { [Function: Schema]
+        reserved: [Object],
+        interpretAsType: [Function],
+        Types: [Object],
+        ObjectId: [Object] },
+     _events: 
+      { error: [Function],
+        disconnected: [Function],
+        connected: [Function],
+        reconnected: [Function] },
+     _eventsCount: 4 },
+  discriminators: undefined,
+  '$appliedHooks': true,
+  _events: { init: [Function], save: [Function] },
+  _eventsCount: 2,
+  schema: 
+   Schema {
+     obj: 
+      { filename: [Object],
+        filesize: [Object],
+        hash: [Object],
+        temp: [Object] },
+     paths: 
+      { filename: [Object],
+        filesize: [Object],
+        hash: [Object],
+        temp: [Object],
+        _id: [Object],
+        __v: [Object] },
+     aliases: {},
+     subpaths: {},
+     virtuals: { id: [Object] },
+     singleNestedPaths: {},
+     nested: {},
+     inherits: {},
+     callQueue: [ [Array], [Array], [Array], [Array], [Array], [Array] ],
+     _indexes: [],
+     methods: {},
+     statics: {},
+     tree: 
+      { filename: [Object],
+        filesize: [Object],
+        hash: [Object],
+        temp: [Object],
+        _id: [Object],
+        __v: [Function: Number],
+        id: [Object] },
+     query: {},
+     childSchemas: [],
+     plugins: [ [Object], [Object], [Object], [Object] ],
+     s: { hooks: [Object], kareemHooks: [Object] },
+     options: 
+      { retainKeyOrder: false,
+        typeKey: 'type',
+        id: true,
+        noVirtualId: false,
+        _id: true,
+        noId: false,
+        validateBeforeSave: true,
+        read: null,
+        shardKey: null,
+        autoIndex: null,
+        minimize: true,
+        discriminatorKey: '__t',
+        versionKey: '__v',
+        capped: false,
+        bufferCommands: true,
+        strict: true,
+        pluralization: true },
+     '$globalPluginsApplied': true },
+  collection: 
+   NativeCollection {
+     collection: Collection { s: [Object] },
+     opts: { bufferCommands: true, capped: false },
+     name: 'files',
+     collectionName: 'files',
+     conn: 
+      NativeConnection {
+        base: [Object],
+        collections: [Object],
+        models: [Object],
+        config: [Object],
+        replica: false,
+        hosts: null,
+        host: 'localhost',
+        port: 27017,
+        user: undefined,
+        pass: undefined,
+        name: 'ezz',
+        options: [Object],
+        otherDbs: [],
+        states: [Object],
+        _readyState: 1,
+        _closeCalled: false,
+        _hasOpened: true,
+        _listening: false,
+        db: [Object],
+        Schema: [Object],
+        _events: [Object],
+        _eventsCount: 4 },
+     queue: [],
+     buffer: false,
+     emitter: 
+      EventEmitter {
+        domain: null,
+        _events: {},
+        _eventsCount: 0,
+        _maxListeners: undefined } },
+  Query: 
+   { [Function]
+     base: 
+      Query {
+        toConstructor: [Function: toConstructor],
+        setOptions: [Function],
+        collection: [Function: collection],
+        '$where': [Function],
+        where: [Function],
+        equals: [Function: equals],
+        eq: [Function: eq],
+        or: [Function: or],
+        nor: [Function: nor],
+        and: [Function: and],
+        gt: [Function],
+        gte: [Function],
+        lt: [Function],
+        lte: [Function],
+        ne: [Function],
+        in: [Function],
+        nin: [Function],
+        all: [Function],
+        regex: [Function],
+        size: [Function],
+        maxDistance: [Function],
+        minDistance: [Function],
+        mod: [Function],
+        exists: [Function],
+        elemMatch: [Function],
+        within: [Function: within],
+        box: [Function],
+        polygon: [Function],
+        circle: [Function],
+        near: [Function: near],
+        intersects: [Function: intersects],
+        geometry: [Function: geometry],
+        select: [Function: select],
+        slice: [Function],
+        sort: [Function],
+        limit: [Function],
+        skip: [Function],
+        maxScan: [Function],
+        batchSize: [Function],
+        comment: [Function],
+        maxTime: [Function],
+        snapshot: [Function],
+        hint: [Function],
+        slaveOk: [Function],
+        read: [Function],
+        tailable: [Function],
+        merge: [Function],
+        find: [Function],
+        cursor: [Function: cursor],
+        findOne: [Function],
+        count: [Function],
+        distinct: [Function],
+        update: [Function: update],
+        updateMany: [Function: updateMany],
+        updateOne: [Function: updateOne],
+        replaceOne: [Function: replaceOne],
+        remove: [Function],
+        deleteOne: [Function],
+        deleteMany: [Function],
+        findOneAndUpdate: [Function],
+        findOneAndRemove: [Function],
+        _findAndModify: [Function],
+        _wrapCallback: [Function],
+        setTraceFunction: [Function],
+        exec: [Function: exec],
+        thunk: [Function],
+        then: [Function],
+        stream: [Function],
+        selected: [Function: selected],
+        selectedInclusively: [Function: selectedInclusively],
+        selectedExclusively: [Function: selectedExclusively],
+        _mergeUpdate: [Function],
+        _optionsForExec: [Function],
+        _fieldsForExec: [Function],
+        _updateForExec: [Function],
+        _ensurePath: [Function],
+        _validate: [Function] } },
+  '$__insertMany': [Function],
+  insertMany: [Function],
+  [Symbol(EGG_LOADER_ITEM_FULLPATH)]: '/Users/caigehui/Documents/ezz-example/app/model/file.js',
+  [Symbol(EGG_LOADER_ITEM_EXPORTS)]: true }
+pid: 7117
+hostname: Mac-mini.local
+
+2017-10-09 14:25:44,562 ERROR 7349 [-/127.0.0.1/-/35ms GET /api/files/59db027d9f334018d47acc38] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+name: 'ENOENTError'
+pid: 7349
+hostname: Mac-mini.local
+
+2017-10-09 14:25:44,989 ERROR 7349 [-/127.0.0.1/-/7ms GET /api/files/59db027d9f334018d47acc38] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+name: 'ENOENTError'
+pid: 7349
+hostname: Mac-mini.local
+
+2017-10-09 14:25:50,063 ERROR 7349 [-/127.0.0.1/-/6ms GET /api/files/59db027d9f334018d47acc38] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+name: 'ENOENTError'
+pid: 7349
+hostname: Mac-mini.local
+
+2017-10-09 14:26:20,111 ERROR 7349 [-/127.0.0.1/-/2ms GET /api/files/59db027d9f334018d47acc38] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+name: 'ENOENTError'
+pid: 7349
+hostname: Mac-mini.local
+
+2017-10-09 14:27:14,992 ERROR 7417 [-/127.0.0.1/-/141ms GET /api/files/59db027d9f334018d47acc38] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+name: 'ENOENTError'
+pid: 7417
+hostname: Mac-mini.local
+
+2017-10-09 14:27:33,185 ERROR 7446 [-/127.0.0.1/-/32ms GET /api/files/59db027d9f334018d47acc38] nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5'
+name: 'ENOENTError'
+pid: 7446
+hostname: Mac-mini.local
+
+2017-10-09 15:41:18,726 ERROR 9288 [-/127.0.0.1/-/147ms POST /api/files] nodejs.TypeError: helper.getUploadPath is not a function
+    at File.createFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:31:56)
+    at createFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 9288
+hostname: Mac-mini.local
+
+2017-10-09 15:42:00,728 ERROR 9318 [-/127.0.0.1/-/153ms POST /api/files] nodejs.TypeError: gm().write() expects a filename when writing new files
+    at gm.write (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:93:23)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:110:18)
+    at Promise (<anonymous>)
+    at Helper.createResizedImage (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:106:16)
+    at File.createFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:31:30)
+    at createFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 9318
+hostname: Mac-mini.local
+
+2017-10-09 15:42:00,740 ERROR 9318 nodejs.ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5-small' (uncaughtException throw 1 times on pid:9318)
+ENOENTError: ENOENT: no such file or directory, open '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5-small' (uncaughtException throw 1 times on pid:9318)
+errno: -2
+code: 'ENOENT'
+syscall: 'open'
+path: '/Users/caigehui/Documents/upload/e93d50b3d6b6b4880664c66e4cf4a4c5-small'
+name: 'ENOENTError'
+pid: 9318
+hostname: Mac-mini.local
+
+2017-10-09 15:43:37,275 ERROR 9420 [-/127.0.0.1/-/154ms POST /api/files] nodejs.TypeError: gm().write() expects a filename when writing new files
+    at gm.write (/Users/caigehui/Documents/ezz-example/node_modules/gm/lib/command.js:93:23)
+    at Promise (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:110:18)
+    at Promise (<anonymous>)
+    at Helper.createResizedImage (/Users/caigehui/Documents/ezz-example/app/extend/helper.js:106:16)
+    at File.createFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:31:30)
+    at createFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 9420
+hostname: Mac-mini.local
+
+2017-10-09 16:05:03,564 ERROR 9945 [-/127.0.0.1/-/49ms GET /api/files/59db027d9f334018d47acc38-small] nodejs.TypeError: Assignment to constant variable.
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:23:13)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 9945
+hostname: Mac-mini.local
+
+2017-10-09 16:35:06,988 ERROR 10698 [-/127.0.0.1/-/18ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.TypeError: Assignment to constant variable.
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:32:28)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 10698
+hostname: Mac-mini.local
+
+2017-10-09 16:35:10,645 ERROR 10698 [-/127.0.0.1/-/3ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.TypeError: Assignment to constant variable.
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:32:28)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 10698
+hostname: Mac-mini.local
+
+2017-10-09 16:35:12,352 ERROR 10698 [-/127.0.0.1/-/3ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.TypeError: Assignment to constant variable.
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:32:28)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 10698
+hostname: Mac-mini.local
+
+2017-10-09 17:04:46,140 ERROR 11374 [-/127.0.0.1/-/11ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.TypeError: Cannot read property 'getFile' of undefined
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:10:30)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 11374
+hostname: Mac-mini.local
+
+2017-10-09 17:04:58,813 ERROR 11394 [-/127.0.0.1/-/34ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.ReferenceError: fs is not defined
+    at File.getFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:40:25)
+    at getFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 11394
+hostname: Mac-mini.local
+
+2017-10-09 17:04:58,956 ERROR 11394 [-/127.0.0.1/-/6ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.ReferenceError: fs is not defined
+    at File.getFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:40:25)
+    at getFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 11394
+hostname: Mac-mini.local
+
+2017-10-09 17:05:01,099 ERROR 11394 [-/127.0.0.1/-/3ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.ReferenceError: fs is not defined
+    at File.getFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:40:25)
+    at getFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 11394
+hostname: Mac-mini.local
+
+2017-10-09 17:05:06,157 ERROR 11394 [-/127.0.0.1/-/4ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.ReferenceError: fs is not defined
+    at File.getFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:40:25)
+    at getFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 11394
+hostname: Mac-mini.local
+
+2017-10-09 18:14:08,865 ERROR 13113 [-/127.0.0.1/-/33ms POST /api/files/verify] nodejs.TypeError: this.ctx.service.base.verifyFile is not a function
+    at FilesController.verify (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:70:55)
+    at verify.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+
+pid: 13113
+hostname: Mac-mini.local
+
+2017-10-09 18:14:42,256 ERROR 13146 [-/127.0.0.1/-/44ms POST /api/files/verify] nodejs.TypeError: Cannot read property '_id' of null
+    at File.verifyFile (/Users/caigehui/Documents/ezz-example/app/service/base/file.js:70:25)
+    at verifyFile.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 13146
+hostname: Mac-mini.local
+
+2017-10-09 18:52:22,014 ERROR 14359 [-/127.0.0.1/-/40ms GET /api/files/59db31e3a7cd1b28997998c7-small] nodejs.ReferenceError: fs is not defined
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:39:25)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+
+pid: 14359
+hostname: Mac-mini.local
+

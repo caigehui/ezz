@@ -9,7 +9,8 @@ const routes = [
     },
     {
         path: '/:bookId', 
-        component: require('./route/Home')
+        component: require('./route/Home'),
+        models: [require('./route/Home/model')]
     }
 ];
 

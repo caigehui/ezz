@@ -900,3 +900,67 @@ message: 'missing csrf token'
 pid: 2560
 hostname: Mac-mini.local
 
+2017-10-09 09:55:47,596 WARN 2380 [-/127.0.0.1/-/35ms POST /api/login] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-10-09 09:55:47,600 WARN 2380 [-/127.0.0.1/-/39ms POST /api/login] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:139:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'missing csrf token'
+pid: 2380
+hostname: Mac-mini.local
+
+2017-10-09 14:22:05,024 WARN 7187 [-/127.0.0.1/-/13ms GET /api/files/ds-s-s] nodejs.NotFoundError: 找不到该文件
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:13:67)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+message: '找不到该文件'
+pid: 7187
+hostname: Mac-mini.local
+
+2017-10-09 14:28:12,520 WARN 7486 [-/127.0.0.1/-/19ms GET /api/files/dsadasdsa] nodejs.NotFoundError: 找不到该文件
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at FilesController.show (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:14:67)
+    at show.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+message: '找不到该文件'
+pid: 7486
+hostname: Mac-mini.local
+

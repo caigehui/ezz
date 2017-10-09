@@ -6,8 +6,28 @@ const gm = require('gm');
 
 module.exports = {
     /**
+     * 根据文件Document的Id获取Url
+     * @param {string} fileId 
+     * @param {string} size 'origin' | 'medium' | 'small' 
+     */
+    getFileUrl(fileId, size) {
+        if(!size) return `/api/files/${fileId}`;
+        return `/api/files/${fileId}-${size}`;
+    },
+    /**
+     * 判断文件是否存在
+     * @param {string} filepath 文件路径
+     */
+    isFileExists(filepath) {
+        return new Promise((resolve) => {
+            fs.exists(filepath, exists => {
+                resolve(exists);
+            })
+        })
+    },
+    /**
      * 获取文件的Hash
-     * @param {object} filepath 文件路径
+     * @param {string} filepath 文件路径
      */
     getFileHash(filepath) {
         return new Promise((resolve) => {
@@ -18,6 +38,18 @@ module.exports = {
                 resolve({ hash: hash.digest('hex') });
             });
         });
+    },
+    /**
+     * 获取文件的大小
+     * @param {string} filepath 文件路径
+     */
+    getFilesize(filepath) {
+        return new Promise((resolve) => {
+            fs.stat(filepath, (err, stats) => {
+                if(err) resolve(0);
+                resolve({ filesize: stats.size });
+            })
+        })
     },
     /**
      * 判断文件是否为图片
@@ -72,7 +104,7 @@ module.exports = {
             gm(rs)
                 .size((err, size) => {
                     if (err) throw err;
-                    resolve({ size })
+                    resolve(size)
                 })
         })
     },
