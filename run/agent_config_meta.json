@@ -11,8 +11,8 @@
   },
   "security": {
     "csrf": {
-      "enable": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
       "headerName": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
+      "enable": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "useSession": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "ignoreJSON": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
       "cookieName": "/Users/caigehui/Documents/ezz-example/node_modules/egg-security/config/config.default.js",
@@ -76,6 +76,7 @@
     "files": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js",
     "whitelist": "/Users/caigehui/Documents/ezz-example/node_modules/egg-multipart/config/config.default.js"
   },
+  "getUploadPath": "/Users/caigehui/Documents/ezz-example/config/config.default.js",
   "onerror": {
     "errorPageUrl": "/Users/caigehui/Documents/ezz-example/node_modules/egg-onerror/config/config.default.js",
     "appErrorFilter": "/Users/caigehui/Documents/ezz-example/node_modules/egg-onerror/config/config.default.js"

@@ -730,3 +730,34 @@ hostname: Mac-mini.local
 pid: 12460
 hostname: Mac-mini.local
 
+2017-10-02 12:15:34,613 ERROR 958 [egg-mongoose] mongodb://localhost:27017/ezz disconnected
+2017-10-02 12:15:34,616 ERROR 958 nodejs.MongoError: [egg-mongoose]failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+    at Pool.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/topologies/server.js:336:35)
+    at emitOne (events.js:115:13)
+    at Pool.emit (events.js:210:7)
+    at Connection.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/connection/pool.js:280:12)
+    at Object.onceWrapper (events.js:318:30)
+    at emitTwo (events.js:125:13)
+    at Connection.emit (events.js:213:7)
+    at Socket.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/mongodb-core/lib/connection/connection.js:187:49)
+    at Object.onceWrapper (events.js:316:30)
+    at emitOne (events.js:115:13)
+    at Socket.emit (events.js:210:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+name: 'MongoError'
+message: '[egg-mongoose]failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]'
+pid: 958
+hostname: Mac-mini.local
+
+2017-10-02 14:53:01,086 ERROR 2560 [-/127.0.0.1/-/17ms POST /api/files] nodejs.ReferenceError: filename is not defined
+    at FilesController.create (/Users/caigehui/Documents/ezz-example/app/controller/base/files.js:20:17)
+    at create.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+
+pid: 2560
+hostname: Mac-mini.local
+

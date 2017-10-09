@@ -24,7 +24,7 @@ export default class App {
 		noMatchComponent = NoMatch,
 	}) {
 		this.app = dva({
-			onAction: [rehydrateMiddleware, errorHandlerMiddleware, ...otherMiddlewares],
+			onAction: [rehydrateMiddleware, ...otherMiddlewares],
 			history: createHistory(),
 			extraEnhancers: [autoRehydrate()],
 			onError(e) {

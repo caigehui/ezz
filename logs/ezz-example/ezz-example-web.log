@@ -878,3 +878,25 @@ status: 400
 pid: 6540
 hostname: Mac-mini.local
 
+2017-10-02 14:51:53,317 WARN 2560 [-/127.0.0.1/-/11ms POST /api/files] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2017-10-02 14:51:53,321 WARN 2560 [-/127.0.0.1/-/15ms POST /api/files] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (/Users/caigehui/Documents/ezz-example/node_modules/koa/lib/context.js:89:23)
+    at Object.assertCsrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/app/extend/context.js:139:17)
+    at Object.csrf (/Users/caigehui/Documents/ezz-example/node_modules/egg-security/lib/middlewares/csrf.js:31:10)
+    at csrf.next (<anonymous>)
+    at Object.<anonymous> (/Users/caigehui/Documents/ezz-example/node_modules/koa-compose/index.js:28:19)
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:65:19)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+    at Object.toPromise (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:118:63)
+    at next (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:99:29)
+    at onFulfilled (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:69:7)
+    at /Users/caigehui/Documents/ezz-example/node_modules/co/index.js:54:5
+    at Promise (<anonymous>)
+    at Object.co (/Users/caigehui/Documents/ezz-example/node_modules/co/index.js:50:10)
+message: 'missing csrf token'
+pid: 2560
+hostname: Mac-mini.local
+
