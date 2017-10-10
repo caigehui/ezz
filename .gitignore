@@ -12,5 +12,5 @@ npm-debug.log*
 package-lock.json
 appveyor.yml
 .travis.yml
-/log
+/logs
 /run

@@ -1,7 +1,11 @@
 'use strict';
 const sendToWormhole = require('stream-wormhole');
+const fs = require('fs');
 
 module.exports = app => class FilesController extends app.Controller {
+	*index() {
+		this.ctx.body = yield this.ctx.helper.getFileHash(this.config.getUploadPath('background.jpg'));
+	}
 	/**
 	 * 获取文件
 	 */
@@ -53,7 +57,7 @@ module.exports = app => class FilesController extends app.Controller {
 				const filename = rs.filename;
 				const filepath = this.config.getUploadPath(filename);
 				// 写入临时文件
-				yield ctx.helper.writeFile(rs, filepath);
+				ctx.helper.writeFile(rs, filepath);
 				// 创建文件的数据库记录，如果是尺寸大的图片则裁剪
 				const { url, fileId } = yield ctx.service.base.file.createFile({ filepath, filename });
 				this.ctx.body = { url, fileId };

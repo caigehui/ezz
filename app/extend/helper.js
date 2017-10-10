@@ -64,22 +64,8 @@ module.exports = {
      * @param {string} filename 文件路径
      */
     writeFile(rs, filepath) {
-        return new Promise((resolve) => {
-            let ws = fs.createWriteStream(filepath);
-            rs.on('data', (chunk) => {
-                if (!ws.write(chunk)) {//判断写缓冲区是否写满(node的官方文档有对write方法返回值的说明)
-                    rs.pause();//如果写缓冲区不可用，暂停读取数据
-                }
-            });
-            rs.on('end', () => {
-                ws.end('完成', () => {
-                    resolve();
-                })
-            });
-            ws.on("drain", () => {//写缓冲区可用，会触发"drain"事件
-                rs.resume();//重新启动读取数据
-            });
-        })
+        let ws = fs.createWriteStream(filepath);
+        rs.pipe(ws);
     },
     /**
      * 重命名文件

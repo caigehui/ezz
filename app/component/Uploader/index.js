@@ -63,7 +63,7 @@ export default class Uploader extends React.Component {
         });
     }
 
-    beforeUpload = (file) => {
+    beforeUpload = (file, fileList) => {
         return new Promise((resolve, reject) => {
             this.getHash(file).then(hash => {
                 request(MD5_VERIFY_API, {
@@ -71,12 +71,13 @@ export default class Uploader extends React.Component {
                         hash,
                         filename: file.name
                     }
-                }).then(({ url, fileId }) => {
+                }).then(({ data: { fileId, url } }) => {
                     if (fileId) {
                         message.success(`${file.name} 成功秒传`);
-                        this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid, url, fileId }]);
+                        this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid,filename: file.name , url, fileId }]);
+                        file.url = url;
                         this.setState({ fileList: [...this.state.fileList, file] });
-                        reject('已秒传');
+                        reject('秒传');
                     } else {
                         resolve();
                     }
@@ -86,14 +87,15 @@ export default class Uploader extends React.Component {
     }
 
     onChange = ({ file, fileList }) => {
-        this.setState({ fileList: fileList.slice(0) });
-        this.fileList = JSON.parse(JSON.stringify(fileList));
         if (file.status === 'done') {
             message.success(`${file.name} 成功上传`);
-            this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid, url: file.response.url, fileId: file.response.fileId }]);
+            this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid, filename: file.name, url: file.response.url, fileId: file.response.fileId }]);
+            let doneFile = fileList.find(i => i.uid === file.uid);
+            doneFile.url = file.response.url;
         } else if (file.status === 'error') {
             message.error(`${file.name} 上传失败`);
         }
+        this.setState({ fileList });
     }
 
     onRemove = file => {
@@ -117,7 +119,8 @@ export default class Uploader extends React.Component {
                 withCredentials
                 fileList={this.state.fileList}
                 onChange={this.onChange}
-                beforeUpload={this.beforeUpload}>
+                beforeUpload={this.beforeUpload}
+                onRemove={this.onRemove}>
                 <Button>
                     <Icon type="upload" />上传
                 </Button>

@@ -1,5 +1,4 @@
 'use strict';
-const fs = require('fs');
 
 const MEDIUM_MAX_WIDTH = 720;
 
@@ -66,7 +65,7 @@ module.exports = app => class File extends app.Service {
             });
         }
         return {
-            url: file ? this.helper.getFileUrl(file._id) : null,
+            url: file ? this.ctx.helper.getFileUrl(file._id) : null,
             fileId: file ? file._id : null
         }
     }
