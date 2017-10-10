@@ -65,30 +65,29 @@ export default class Uploader extends React.Component {
 
     beforeUpload = (file) => {
         return new Promise((resolve, reject) => {
-            // this.getHash(file).then(hash => {
-            //     request(MD5_VERIFY_API, {
-            //         post: {
-            //             hash,
-            //             filename: file.name
-            //         }
-            //     }).then(({ url, fileId }) => {
-            //         if (fileId) {
-            //             message.success(`${file.name} 成功秒传`);
-            //             this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid, url, fileId }]);
-            //             this.setState({ fileList: [...this.state.fileList, file] });
-            //             reject('已秒传');
-            //         } else {
-            //             resolve();
-            //         }
-            //     })
-            // });
-            resolve();
+            this.getHash(file).then(hash => {
+                request(MD5_VERIFY_API, {
+                    post: {
+                        hash,
+                        filename: file.name
+                    }
+                }).then(({ url, fileId }) => {
+                    if (fileId) {
+                        message.success(`${file.name} 成功秒传`);
+                        this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid, url, fileId }]);
+                        this.setState({ fileList: [...this.state.fileList, file] });
+                        reject('已秒传');
+                    } else {
+                        resolve();
+                    }
+                })
+            });
         })
     }
 
     onChange = ({ file, fileList }) => {
-        console.log('onChange', fileList);
-        this.setState({ fileList });
+        this.setState({ fileList: fileList.slice(0) });
+        this.fileList = JSON.parse(JSON.stringify(fileList));
         if (file.status === 'done') {
             message.success(`${file.name} 成功上传`);
             this.props.onChange && this.props.onChange([...this.props.files, { uid: file.uid, url: file.response.url, fileId: file.response.fileId }]);
@@ -98,7 +97,6 @@ export default class Uploader extends React.Component {
     }
 
     onRemove = file => {
-        console.log('onRemove!');
         this.setState({
             fileList: this.state.fileList.removeByCondition(i => i.uid === file.uid)
         });
@@ -106,13 +104,11 @@ export default class Uploader extends React.Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        console.log('shouldChange', nextState);
         if(nextProps.files.length !== this.props.files.length) return false;
         return true;
     }
 
     render() {
-        console.log('render', this.state.fileList);
         return (
             <Upload
                 name="file"
