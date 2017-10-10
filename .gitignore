@@ -10,4 +10,7 @@
 .DS_Store
 npm-debug.log*
 package-lock.json
-package-lock.json
+appveyor.yml
+.travis.yml
+/log
+/run
