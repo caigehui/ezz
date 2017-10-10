@@ -6,7 +6,8 @@ import { ENCRYPT_KEY } from 'constant';
 export default {
     namespace: 'app',
     state: {
-        user: null
+        user: null,
+        collapsed: false
     },
     effects: {
         *init() {
@@ -33,6 +34,9 @@ export default {
     reducers: {
         save(state, action) {
             return { ...state, ...action.payload };
+        },
+        toggleCollapsed(state) {
+            return { ...state, collapsed: !state.collapsed };
         }
     },
     subscriptions: {

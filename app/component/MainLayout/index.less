@@ -1,0 +1,85 @@
+.trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: color .3s;
+}
+  
+.trigger:hover {
+    color: #108ee9;
+}
+  
+.top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 16px;
+}
+
+.name {
+    font-size: 18px;
+    color: rgb(240, 240, 240);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 130px;
+    transition: color .3s;
+}
+
+.name:hover {
+    color: white;
+}
+
+.logo {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+}
+
+.header {
+    background-color: white;
+    padding: 0;
+}
+
+.content {
+    margin: 24px 16px;
+    padding: 24px;
+    background-color: #fff;
+    min-height: 280px;
+}
+
+.footer {
+    text-align: center;
+}
+
+.toggleTheme {
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+    height: 48px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 16px 0 24px;
+    overflow: hidden;
+    z-index: 1000;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+}
+
+.lightTheme {
+    color: #108ee9
+}
+
+.darkTheme {
+    color: white;
+}
+
+@media only screen and (max-width: 768px) and (min-width: 0) {
+    
+
+}

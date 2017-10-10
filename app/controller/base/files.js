@@ -3,9 +3,6 @@ const sendToWormhole = require('stream-wormhole');
 const fs = require('fs');
 
 module.exports = app => class FilesController extends app.Controller {
-	*index() {
-		this.ctx.body = yield this.ctx.helper.getFileHash(this.config.getUploadPath('background.jpg'));
-	}
 	/**
 	 * 获取文件
 	 */

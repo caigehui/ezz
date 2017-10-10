@@ -42,6 +42,7 @@ module.exports = function (appInfo) {
         fileExtensions: [
             '.doc',
             '.docx',
+            '.pdf'
         ]
     };
         

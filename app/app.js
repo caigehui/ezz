@@ -67,7 +67,7 @@ export default class App {
 							})} />
 						))
 					}
-					<Route component={this.noMatchComponent} />
+					<Route path="/error" component={this.noMatchComponent} />
 				</Switch>
 			</Router>
 		);

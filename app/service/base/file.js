@@ -57,7 +57,7 @@ module.exports = app => class File extends app.Service {
         }
         let file = existFile;
         if (!isDocExists && file) {
-            file = yield ctx.model.File.create({
+            file = yield this.ctx.model.File.create({
                 filename,
                 filesize: existFile.filesize,
                 hash,
