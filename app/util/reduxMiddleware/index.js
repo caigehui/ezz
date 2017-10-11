@@ -1,5 +1,5 @@
 import rehydrateMiddleware from './rehydrate';
-import authenticationMiddleware from './authentication';
+import authenticationMiddleware from './authentication'
 
 export {
     rehydrateMiddleware,

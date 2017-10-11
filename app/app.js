@@ -1,5 +1,5 @@
 import React from 'react';
-import { routerRedux , Switch, Route } from 'dva/router';
+import { routerRedux, Switch, Route } from 'dva/router';
 import dynamic from 'dva/dynamic';
 import dva from 'dva';
 import { message } from 'antd';
@@ -11,13 +11,16 @@ import { REHYDRATE } from 'redux-persist/constants';
 import { isReactComponent } from 'util/isReact';
 import invariant from 'invariant';
 import { ERROR_MSG_DURATION } from 'constant';
-import { rehydrateMiddleware, authenticationMiddleware } from 'util/reduxMiddleware';
+import {
+	rehydrateMiddleware,
+	authenticationMiddleware
+} from 'util/reduxMiddleware';
 import 'util/array';
 
 const { ConnectedRouter } = routerRedux;
 
 function NoMatch() {
-	return	<h1>404 NOT FOUND</h1>;
+	return <h1>404 NOT FOUND</h1>;
 }
 
 export default class App {
@@ -29,7 +32,11 @@ export default class App {
 		noMatchComponent = NoMatch,
 	}) {
 		this.app = dva({
-			onAction: [rehydrateMiddleware, authenticationMiddleware, ...otherMiddlewares],
+			onAction: [
+				rehydrateMiddleware,
+				authenticationMiddleware,
+				...otherMiddlewares
+			],
 			history: createHistory(),
 			extraEnhancers: [autoRehydrate()],
 			onError(e) {
@@ -46,14 +53,14 @@ export default class App {
 	}
 
 	addModel(extraModels) {
-		for(let route of this.routes) {
-			if(!route.models) continue;
+		for (let route of this.routes) {
+			if (!route.models) continue;
 			invariant(Array.isArray(route.models), 'models must be an instance of Array!');
-			for(let model of route.models) {
+			for (let model of route.models) {
 				this.app.model(model);
 			}
 		}
-		for(let model of extraModels) {
+		for (let model of extraModels) {
 			this.app.model(model);
 		}
 	}
