@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route } from 'dva/router';
+import { routerRedux , Switch, Route } from 'dva/router';
 import dynamic from 'dva/dynamic';
 import dva from 'dva';
 import { message } from 'antd';
@@ -11,7 +11,10 @@ import { REHYDRATE } from 'redux-persist/constants';
 import { isReactComponent } from 'util/isReact';
 import invariant from 'invariant';
 import { ERROR_MSG_DURATION } from 'constant';
+import { rehydrateMiddleware, authenticationMiddleware } from 'util/reduxMiddleware';
 import 'util/array';
+
+const { ConnectedRouter } = routerRedux;
 
 function NoMatch() {
 	return	<h1>404 NOT FOUND</h1>;
@@ -26,7 +29,7 @@ export default class App {
 		noMatchComponent = NoMatch,
 	}) {
 		this.app = dva({
-			onAction: [rehydrateMiddleware, ...otherMiddlewares],
+			onAction: [rehydrateMiddleware, authenticationMiddleware, ...otherMiddlewares],
 			history: createHistory(),
 			extraEnhancers: [autoRehydrate()],
 			onError(e) {
@@ -57,7 +60,7 @@ export default class App {
 
 	routerConfig = ({ app, history }) => {
 		return (
-			<Router history={history}>
+			<ConnectedRouter history={history}>
 				<Switch>
 					{
 						this.routes.map((route, index) => (
@@ -67,9 +70,9 @@ export default class App {
 							})} />
 						))
 					}
-					<Route path="/error" component={this.noMatchComponent} />
+					<Route component={this.noMatchComponent} />
 				</Switch>
-			</Router>
+			</ConnectedRouter>
 		);
 	}
 
@@ -96,22 +99,3 @@ export default class App {
 		this.persist();
 	}
 }
-
-const rehydrateMiddleware = store => next => action => {
-	if (action.type === REHYDRATE) {
-		// 恢复数据
-		for (let i in action.payload) {
-			if (i === REHYDRATE) continue;
-			store.dispatch({ type: `${i}/save`, payload: action.payload[i] });
-		}
-	}
-	next(action);
-};
-
-// const errorHandlerMiddleware = store => next => action => {
-// 	try {
-// 		next(action);
-// 	} catch(err) {
-// 		console.error(err);
-// 	}
-// };

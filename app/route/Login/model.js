@@ -2,6 +2,7 @@ import delay from 'util/delay';
 import request from 'util/request';
 import sjcl from 'sjcl';
 import { ENCRYPT_KEY } from 'constant';
+import { routerRedux } from 'dva/router';
 
 export default {
     namespace: 'app',
@@ -14,7 +15,7 @@ export default {
             yield delay(1000);
         },
         *login({ payload }, { call, put }) {
-            const { data, error } = yield call(request,
+            const { data, err } = yield call(request,
                 '/api/login',
                 {
                     post: {
@@ -22,13 +23,16 @@ export default {
                         password: sjcl.encrypt(ENCRYPT_KEY, payload.password)
                     }
                 });
-            if (error) return;
+            if (err) return;
             yield put({
                 type: 'save',
                 payload: {
                     user: data.user
                 }
             });
+            yield put(routerRedux.replace({
+                pathname: '/'
+            }))
         }
     },
     reducers: {

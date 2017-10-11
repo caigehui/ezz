@@ -8,7 +8,8 @@ const routes = [
         models: [require('./route/Login/model')]
     },
     {
-        path: '/:bookId', 
+        path: '/', 
+        exact: true,
         component: require('./route/Home'),
         models: [require('./route/Home/model')]
     }

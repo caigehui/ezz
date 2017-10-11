@@ -30,10 +30,10 @@ function MyHeader({ collapsed, dispatch, user }) {
 						onClick={onMenuClick}>
 						<SubMenu
 							title={
-								<div className={styles.user}>
-									<Avatar src={require('asset/avatar.jpg')} icon="user"/>
-									<span> {user ? user.username : ' '} </span>
-								</div>}>
+								<span className={styles.user}>
+									<Avatar src={'dsada'} icon="user"/>
+									<span> {user ? user.username : '未知用户'} </span>
+								</span>}>
 								<Menu.Item key="userInfo"><Icon type="user"/>个人信息</Menu.Item>
 								<Menu.Item key="userSetting"><Icon type="setting"/>偏好设置</Menu.Item>
 								<Menu.Item key="logout"><Icon type="logout"/>退出登录</Menu.Item>

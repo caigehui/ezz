@@ -16,9 +16,14 @@ module.exports = function (appInfo) {
 
     config.security = {
         csrf: {
+            enable: false,
             headerName: 'x-csrf-token'
         }
     };
+
+    config.session = {
+        httpOnly: false
+    }
 
     config.middleware = ['errorHandler', 'saveSession'];
 

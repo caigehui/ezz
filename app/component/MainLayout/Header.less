@@ -18,8 +18,8 @@
 
 .menuCol {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
-    height: 100%;
 }
 
 .menu {
@@ -31,6 +31,15 @@
 .user {
     display: flex;
     align-items: center;
+    height: 100%;
+
+    :global {
+        .anticon {
+          min-width: 16px;
+          font-size: 16px;
+          margin-right: 0;
+        }
+    }
 
     span:last-child {
         margin-left: 10px;

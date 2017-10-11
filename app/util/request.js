@@ -14,6 +14,9 @@ function parseJSON(response) {
 async function checkStatus(response) {
 	if (response.status >= 200 && response.status < 300) {
 		return response;
+	}else if(response.status === 401) {
+		// 未登录
+		window.location.href = '/login';
 	}
 	const { error, detail } = await response.json();
 	message.error(error || response.statusText, ERROR_MSG_DURATION);

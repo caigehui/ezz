@@ -3,8 +3,9 @@ import { connect } from 'dva';
 import { Button, Row, Form, Input, Icon, Checkbox } from 'antd';
 import styles from './index.less';
 import { Loader } from 'component';
-
+import { routerRedux } from 'dva/router';
 const FormItem = Form.Item;
+import Cookies from 'js-cookie';
 
 function Login({
     loading,
@@ -16,7 +17,7 @@ function Login({
 }) {
     const onLogin = () => validateFieldsAndScroll((errors, values) => {
         if (errors) return;
-        dispatch({ type: 'app/login', payload: values });
+        dispatch({ type: 'app/login', payload: values }).then()
     });
 
     return (
