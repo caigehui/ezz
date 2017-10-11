@@ -6,7 +6,7 @@ module.exports = app => {
         username: { type: String, required: true },
         password: { type: String, required: true },
         nickname: { type: String, required: true },
-        avatar: String
+        avatar: { type: mongoose.Schema.Types.ObjectId }
     });
 
     return mongoose.model('User', UserSchema);
