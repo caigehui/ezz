@@ -6,6 +6,7 @@ import { routerRedux } from 'dva/router';
 
 export default {
     namespace: 'app',
+    persist: true,
     state: {
         user: null,
         collapsed: false,
@@ -49,14 +50,5 @@ export default {
         toggleCollapsed(state) {
             return { ...state, collapsed: !state.collapsed };
         }
-    },
-    // subscriptions: {
-    //     setup({ dispatch, history }) {
-    //         return history.listen(({ pathname }) => {
-    //             if (pathname.match(/^\/login.*$/)) {
-    //                 dispatch({ type: 'init' });
-    //             }
-    //         });
-    //     },
-    // },
+    }
 };

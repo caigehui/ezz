@@ -90,7 +90,7 @@ export default class App {
 			const { models } = route;
 			if (!models) continue;
 			for (let i of models) {
-				if (!i.disablePersist) {
+				if (i.persist) {
 					whitelist.push(i.namespace);
 				}
 			}

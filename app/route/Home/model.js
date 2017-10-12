@@ -1,6 +1,5 @@
 export default {
     namespace: 'home',
-    disablePersist: true,
     state: {
         files: []
     },
