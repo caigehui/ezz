@@ -6,8 +6,13 @@ module.exports = app => {
         username: { type: String, required: true },
         password: { type: String, required: true },
         name: { type: String, required: true },
-        avatar: String
-    });
+        mobile: { type: String, required: true },
+        email: String,
+        avatar: String,
+        privileges: [String],
+        createTime: { type: Date, default: Date.now },
+        lastLoginTime: Date
+    }, { collection: 'user'});
 
     return mongoose.model('User', UserSchema);
 };

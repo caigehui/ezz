@@ -11,6 +11,6 @@ module.exports = app => {
         temp: { type: Boolean, default: true },
         // 原图hash
         hash: { type: String, required: true }
-    });
+    },{ collection: 'file'});
     return mongoose.model('File', FileSchema);
 };
