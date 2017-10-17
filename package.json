@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "init": "mongo 127.0.0.1:27017/ezz -quiet shell/init.js",
+    "data": "mongo -quiet shell/data.js",
     "start": "roadhog server",
     "prod": "egg-scripts start --daemon --port=8080 --env=prod ",
     "dev": "egg-bin dev",

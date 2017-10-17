@@ -2,16 +2,10 @@
 
 module.exports = ({ mongoose }) => {
     const RoleSchema = new mongoose.Schema({
-        departmentName: { type: String, required: true },
-        groups: [{
-            name: String,
-            description: String,
-            members: [{
-                id: mongoose.Schema.Types.ObjectId,
-                name: String
-            }],
-            privileges: [String]
-        }]
-    }, { collection: 'role'});
-    return mongoose.model('Role', RoleSchema);
+        name: { type: String, required: true }, // 角色名
+        description: String, //角色描述
+        privileges: { type: [String], default: [] },// 角色权限
+    }, { collection: 'role' });
+
+    return mongoose.model('Role', UserSchema);
 };
