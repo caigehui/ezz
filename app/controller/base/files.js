@@ -13,7 +13,8 @@ module.exports = app => class FilesController extends app.Controller {
         // 判断ObjectId是否合法
         if (!params[0].match(/^[0-9a-fA-F]{24}$/)) return ctx.throw(404, '找不到该文件');
         // 查找文件
-        const file = yield ctx.model.File.findById(params[0]);
+		const file = yield ctx.model.File.findById(params[0]);
+		if(!file) ctx.throw(404, '找不到该文件');
         // 获取额外的尺寸参数
         let size = '';
         if (params[1] && params[1] === 'medium') {

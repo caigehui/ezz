@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import { Button, Row, Form, Input, Icon, Checkbox } from 'antd';
 import styles from './index.less';
-import { Loader } from 'component';
+import { Loader } from 'components';
 import { routerRedux } from 'dva/router';
 const FormItem = Form.Item;
 function Login({
@@ -22,7 +22,7 @@ function Login({
         <div className={styles.container}>
             <div className={styles.form}>
                 <div className={styles.logo}>
-                    <img alt={'logo'} src={require('asset/logo.svg')} />
+                    <img alt={'logo'} src={require('assets/logo.svg')} />
                     <span>WxDocs</span>
                 </div>
                 <form>

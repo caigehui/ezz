@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Upload, Button, Icon, message } from 'antd';
-import request from 'util/request';
+import request from 'utils/request';
 import SparkMD5 from 'spark-md5';
 
 const MD5_VERIFY_API = '/api/files/verify';

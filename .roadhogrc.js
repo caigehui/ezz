@@ -1,5 +1,5 @@
 export default {
-  entry: 'app/index.js',
+  entry: 'app-view/index.js',
   publicPath: '/public/',
   outputPath: './app/public',
   hash: true,
@@ -11,12 +11,12 @@ export default {
         'transform-decorators-legacy',
         ['import', { 'libraryName': 'antd', 'style': 'css' }],
         ['module-resolver', {
-          'root': ['./app'],
+          'root': ['./app-view'],
           'alias': {
-            'component': './component',
-            'asset': './asset',
-            'util': './util',
-            'constant': './constant'
+            'components': './components',
+            'assets': './assets',
+            'utils': './utils',
+            'constants': './constants'
           }
         }]
       ],
@@ -34,12 +34,12 @@ export default {
         'transform-decorators-legacy',
         ['import', { 'libraryName': 'antd', 'style': 'css' }],
         ['module-resolver', {
-          'root': ['./app'],
+          'root': ['./app-view'],
           'alias': {
-            'component': './component',
-            'asset': './asset',
-            'util': './util',
-            'constant': './constant'
+            'components': './components',
+            'assets': './assets',
+            'utils': './utils',
+            'constants': './constants'
           }
         }]
       ]

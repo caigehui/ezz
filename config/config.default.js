@@ -1,9 +1,10 @@
 'use strict';
+/* es5 file */ 
 var path = require('path');
 var appName = require('../package.json').name;
 
 module.exports = function (appInfo) {
-    const config = {};
+    var config = {};
     
     config.keys = appName + '_SWozwDMxSRLQCZ0';
 
@@ -51,7 +52,7 @@ module.exports = function (appInfo) {
         ]
     };
         
-    config.getUploadPath = filename => {
+    config.getUploadPath = function(filename) {
         return path.join(__dirname, '..', '..', 'upload', filename)
     }
 

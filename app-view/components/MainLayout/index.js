@@ -18,7 +18,7 @@ function MainLayout({ children, match, collapsed, dispatch, loading }) {
                 >
                     <Link to="/">
                         <div className={styles.top}>
-                            <img src={require('asset/logo-dark.svg')} className={styles.logo} />
+                            <img src={require('assets/logo-dark.svg')} className={styles.logo} />
                             {!collapsed ? <span className={styles.name}>WxDocs</span> : null}
                         </div>
                     </Link>

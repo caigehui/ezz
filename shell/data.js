@@ -1,5 +1,5 @@
 var conn = new Mongo();
-var db = conn.getDB("test");
+var db = conn.getDB("ezz");
 
 // 数据库升级语句
 function updateData() {
@@ -68,7 +68,7 @@ if (!db.menu.findOne()) {
         }
     ]);
 
-    // 插入管理员
+    // 插入系统管理员
     var userId = ObjectId();
     db.user.insert({
         _id: userId,

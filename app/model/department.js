@@ -11,7 +11,7 @@ module.exports = ({ mongoose }) => {
                 name: String,
                 // 岗位描述
                 description: String,
-                // 岗位拥有的权限
+                // 岗位拥有的权限，[1]表示始终拥有全部权限
                 privileges: { type: [String], default: [] },
                 // 岗位人员
                 users: [{

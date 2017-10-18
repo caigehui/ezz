@@ -1,5 +1,5 @@
-import delay from 'util/delay';
-import request from 'util/request';
+import delay from 'utils/delay';
+import request from 'utils/request';
 import sjcl from 'sjcl';
 import { ENCRYPT_KEY } from 'constant';
 import { routerRedux } from 'dva/router';
