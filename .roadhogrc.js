@@ -16,7 +16,8 @@ export default {
             'components': './components',
             'assets': './assets',
             'utils': './utils',
-            'constants': './constants'
+            'constants': './constants',
+            'app': './app'
           }
         }]
       ],
@@ -39,7 +40,8 @@ export default {
             'components': './components',
             'assets': './assets',
             'utils': './utils',
-            'constants': './constants'
+            'constants': './constants',
+            'app': './app'
           }
         }]
       ]

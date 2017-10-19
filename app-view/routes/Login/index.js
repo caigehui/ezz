@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'dva';
+import { connect, routerRedux } from 'app';
+import { Loader } from 'components';
 import { Button, Row, Form, Input, Icon, Checkbox } from 'antd';
 import styles from './index.less';
-import { Loader } from 'components';
-import { routerRedux } from 'dva/router';
 const FormItem = Form.Item;
 function Login({
     loading,

@@ -1,7 +1,7 @@
 import React from 'react';
-import { routerRedux, Switch, Route } from 'dva/router';
+import { routerRedux, Switch, Route, Link } from 'dva/router';
+import dva, { connect } from 'dva';
 import dynamic from 'dva/dynamic';
-import dva from 'dva';
 import { message } from 'antd';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
@@ -16,6 +16,13 @@ import {
 	authenticationMiddleware
 } from './middlewares';
 import 'utils/array';
+export {
+	routerRedux,
+	Route,
+	Link,
+	connect
+}
+
 
 const { ConnectedRouter } = routerRedux;
 
@@ -23,7 +30,7 @@ function NoMatch() {
 	return <h1>404 NOT FOUND</h1>;
 }
 
-export default class App {
+export class App {
 
 	constructor({
 		routes,

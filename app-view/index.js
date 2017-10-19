@@ -1,5 +1,5 @@
 import './index.less';
-import App from './App.js';
+import { App } from 'app';
 
 const routes = [
     {

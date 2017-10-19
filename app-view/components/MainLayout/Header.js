@@ -1,8 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Dropdown, Row, Col, Icon, Avatar } from 'antd';
-import { Link } from 'dva/router';
+import { Link, connect } from 'app';
 import styles from './Header.less';
-import { connect } from 'dva';
 const { Header } = Layout;
 const { SubMenu, ItemGroup } = Menu;
 

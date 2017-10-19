@@ -1,7 +1,6 @@
 import React from 'react';
 import { Layout, Icon, Menu, Switch } from 'antd';
-import { Route, Link } from 'dva/router';
-import { connect } from 'dva';
+import { Route, Link, connect } from 'app';
 import Header from './Header';
 import Loader from '../Loader';
 const { Footer, Sider, Content } = Layout;

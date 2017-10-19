@@ -2,7 +2,7 @@ import delay from 'utils/delay';
 import request from 'utils/request';
 import sjcl from 'sjcl';
 import { ENCRYPT_KEY } from 'constant';
-import { routerRedux } from 'dva/router';
+import { routerRedux } from 'app';
 
 export default {
     namespace: 'app',

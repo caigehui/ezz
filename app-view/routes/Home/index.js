@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect } from 'dva';
+import { connect } from 'app';
 import { MainLayout, Uploader } from 'components';
 
 
