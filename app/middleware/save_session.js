@@ -1,5 +1,6 @@
 'use strict';
 
+// 登录除外
 module.exports = () => function* (next) {
     if(!this.session.user) this.throw(401, '用户未登录');
     yield next;

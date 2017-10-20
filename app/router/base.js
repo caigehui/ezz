@@ -3,6 +3,8 @@
 module.exports = app => {
   // 登录
   app.post('/api/login', 'base.login.index');
+  // 签到
+  app.post('/api/signin', 'base.login.signin');
   // 用户
   app.resources('users', '/api/users', 'base.users');
   // 文件管理

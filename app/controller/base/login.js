@@ -1,29 +1,37 @@
 'use strict';
 const ms = require('ms');
 const sjcl = require('sjcl');
+const mongoose = require('mongoose');
 
 module.exports = app => class LoginController extends app.Controller {
 
-    constructor(ctx) {
-        super(ctx);
-        const rule = {
+
+
+    // 登录
+    * index() {
+        this.ctx.validate({
             username: 'string',
             password: 'string',
-            remember: 'boolean',
-        };
-        ctx.validate(rule);
-    }
-
-    * index() {
+            remember: 'boolean'
+        });
         const { username, password, remember } = this.ctx.request.body;
         const decryptPwd = sjcl.decrypt(this.config.encryptKey, password);
-        const user = yield this.ctx.model.User.findOne({ username, password: decryptPwd });
+        let user = yield this.ctx.model.User.findOne({ username, password: decryptPwd }, { username: 0, password: 0 });
         if (!user) this.ctx.throw(403, '用户名或者密码错误');
         // 设置session
         this.ctx.session = { user };
         if (remember) this.ctx.session.maxAge = ms('14d');
         // 调用 rotateCsrfSecret 刷新用户的 CSRF token
         this.ctx.rotateCsrfSecret();
-        this.ctx.body = { user, body: this.ctx.request.body };
+        this.ctx.body = { msg: '成功登录' };
+    }
+
+    // 签到，每次初始化登入系统时调用，用于获取菜单和用户信息
+    * signin() {
+        const user = yield this.ctx.model.User.findOne({_id: mongoose.Types.ObjectId(this.ctx.session.user._id) } , { username: 0, password: 0 });
+        if(!user) this.ctx.throw(401, '用户验证失败');
+        this.ctx.session.user = user;
+        const { menu } = yield this.ctx.model.Menu.findOne({ companyId: user.currentCompanyId }, { menu: 1 });
+        this.ctx.body = { user, menu };
     }
 };

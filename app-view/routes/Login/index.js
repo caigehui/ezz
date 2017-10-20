@@ -1,5 +1,5 @@
 import React from 'react';
-import { connect, routerRedux } from 'app';
+import { routerRedux, bind } from 'app';
 import { Loader } from 'components';
 import { Button, Row, Form, Input, Icon, Checkbox } from 'antd';
 import styles from './index.less';
@@ -64,4 +64,4 @@ function Login({
     );
 }
 
-export default connect(({ loading }) => ({ loading }))(Form.create()(Login));
+export default bind(({ loading }) => ({ loading }), { disableLayout: true })(Form.create()(Login));

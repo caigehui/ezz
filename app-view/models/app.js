@@ -13,9 +13,18 @@ export default {
         menu: []
     },
     effects: {
-        *init() {
+        // app 初始化
+        *init(action = { }, { call, put }) {
+            const { data, err } = yield call(request, '/api/signin', { post:{}});
+            if(err) return;
+            yield put({
+                type: 'save',
+                payload: {
+                    user: data.user,
+                    menu: data.menu
+                }
+            })
             yield delay(500);
-            // 获取菜单数据
         },
         *login({ payload }, { call, put }) {
             // 登录
@@ -28,19 +37,12 @@ export default {
                     }
                 });
             if (err) return;
-            // 保存用户数据
-            yield put({
-                type: 'save',
-                payload: {
-                    user: data.user
-                }
-            });
+            // 初始化获取偏好设置
+            yield put({ type: 'init' });
             // 路由到首页
             yield put(routerRedux.replace({
                 pathname: '/'
             }));
-            // 初始化获取偏好设置
-            yield put({ type: 'init' });
         }
     },
     reducers: {

@@ -7,6 +7,7 @@ module.exports = ({ mongoose }) => {
             name: String,
             children: Array
         }],
+        logo: String,
         code: String,
         shortname: String,
         legalPerson: String,

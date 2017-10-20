@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Dropdown, Row, Col, Icon, Avatar } from 'antd';
-import { Link, connect } from 'app';
+import { Link } from 'app';
+import { connect } from 'dva';
 import styles from './Header.less';
 const { Header } = Layout;
 const { SubMenu, ItemGroup } = Menu;
@@ -31,7 +32,7 @@ function MyHeader({ collapsed, dispatch, user }) {
 							title={
 								<span className={styles.user}>
 									<Avatar src={'dsada'} icon="user"/>
-									<span> {user ? user.username : '未知用户'} </span>
+									<span> {user ? user.info.name : '未知用户'} </span>
 								</span>}>
 								<Menu.Item key="userInfo"><Icon type="user"/>个人信息</Menu.Item>
 								<Menu.Item key="userSetting"><Icon type="setting"/>偏好设置</Menu.Item>

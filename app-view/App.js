@@ -1,7 +1,8 @@
 import React from 'react';
 import { routerRedux, Switch, Route, Link } from 'dva/router';
-import dva, { connect } from 'dva';
+import dva from 'dva';
 import dynamic from 'dva/dynamic';
+import bind from 'utils/bind';
 import { message } from 'antd';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
@@ -20,7 +21,7 @@ export {
 	routerRedux,
 	Route,
 	Link,
-	connect
+	bind
 }
 
 

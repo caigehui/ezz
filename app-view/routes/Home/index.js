@@ -1,15 +1,12 @@
 import React from 'react';
-import { connect } from 'app';
-import { MainLayout, Uploader } from 'components';
+import { bind } from 'app';
+import { Uploader } from 'components';
 
-
-function Home({ match, dispatch, files }) {
+function Home({ dispatch, files }) {
 
     return (
-        <MainLayout match={match}>
-            <Uploader files={files} onChange={files => dispatch({ type: 'home/save', payload: { files } })}/>
-        </MainLayout>
+        <Uploader files={files} onChange={files => dispatch({ type: 'home/save', payload: { files } })}/>
     );
 }
 
-export default connect(({ home }) => ({ ...home }))(Home);
+export default bind(({ home }) => ({ ...home }))(Home);
