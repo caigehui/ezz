@@ -36,14 +36,7 @@ module.exports = app => {
                 description: String
             }],
             // 子节点
-            children: [{
-                key: String,
-                name: String,
-                description: String,
-                enableDefaultFunctions: Boolean,
-                extraFunctions: Array,
-                children: Array
-            }]
+            children: Array
         }]
     }, { collection: 'menu' });
     return mongoose.model('Menu', MenuSchema);

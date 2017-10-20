@@ -19,39 +19,45 @@ if (!db.menu.findOne()) {
     // 插入菜单
     db.menu.insert({
         companyId: companyId,
-        menu: [{
-            key: '/system',
-            name: '系统管理',
-            iconType: 'setting',
-            children: [
-                {
-                    key: '/system/user',
-                    name: '用户与角色',
-                    enableDefaultFunctions: true,
-                    extraFunctions: [
-                        {
-                            key: '/system/user/role',
-                            name: '角色管理'
-                        }
-                    ]
-                },
-                {
-                    key: '/system/company',
-                    name: '单位管理',
-                    enableDefaultFunctions: true
-                },
-                {
-                    key: '/system/department',
-                    name: '部门管理',
-                    enableDefaultFunctions: true
-                },
-                {
-                    key: '/system/group',
-                    name: '工作组管理',
-                    enableDefaultFunctions: true
-                },
-            ]
-        }]
+        menu: [
+            {
+                key: '/',
+                name: '总览',
+                iconType: 'home'
+            },
+            {
+                key: '/system',
+                name: '系统管理',
+                iconType: 'setting',
+                children: [
+                    {
+                        key: '/system/user',
+                        name: '用户与角色',
+                        enableDefaultFunctions: true,
+                        extraFunctions: [
+                            {
+                                key: '/system/user/role',
+                                name: '角色管理'
+                            }
+                        ]
+                    },
+                    {
+                        key: '/system/company',
+                        name: '单位管理',
+                        enableDefaultFunctions: true
+                    },
+                    {
+                        key: '/system/department',
+                        name: '部门管理',
+                        enableDefaultFunctions: true
+                    },
+                    {
+                        key: '/system/group',
+                        name: '工作组管理',
+                        enableDefaultFunctions: true
+                    },
+                ]
+            }]
     })
 
     // 插入角色
@@ -80,7 +86,7 @@ if (!db.menu.findOne()) {
         role: {
             name: '系统管理员',
             rolePrivileges: [1]
-        },  
+        },
         info: {
             name: 'admin',
             mobile: '13987654321',

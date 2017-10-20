@@ -5,6 +5,7 @@ import { connect } from 'dva';
 import Header from './Header';
 import Loader from '../Loader';
 import styles from './index.less';
+import isarray from 'isarray';
 const { Footer, Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
@@ -17,6 +18,28 @@ function MainLayout({
     menu,
     loading
 }) {
+
+    function getMenu(node) {
+        if (node.children && isarray(node.children) && node.children.length > 0) {
+            return (
+                <SubMenu
+                    key={node.key}
+                    title={<span><Icon type={node.iconType} /><span>{node.name}</span></span>}>
+                    {node.children.map(node => getMenu(node))}
+                </SubMenu>
+            )
+        } else {
+            return (
+                <Item key={node.key}>
+                    <Link to={node.key}>
+                        {node.iconType ? <Icon type={node.iconType} /> : null}
+                        {node.name}
+                    </Link>
+                </Item>
+            )
+        }
+    }
+
     return (
         <Layout style={{ height: '100%' }}>
             <Loader spinning={loading.effects['app/init']} />
@@ -32,9 +55,7 @@ function MainLayout({
                     </div>
                 </Link>
                 <Menu theme="dark" mode="inline" selectedKeys={['']}>
-                    {
-                        
-                    }
+                    {menu.map(node => getMenu(node))}
                 </Menu>
             </Sider>
             <Layout>
