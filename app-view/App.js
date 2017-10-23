@@ -1,5 +1,5 @@
 import React from 'react';
-import { routerRedux, Switch, Route, Link } from 'dva/router';
+import { routerRedux, Switch, Route, Link, Redirect } from 'dva/router';
 import dva from 'dva';
 import dynamic from 'dva/dynamic';
 import bind from 'utils/bind';
@@ -24,20 +24,14 @@ export {
 	bind
 }
 
-
 const { ConnectedRouter } = routerRedux;
-
-function NoMatch() {
-	return <h1>404 NOT FOUND</h1>;
-}
 
 export class App {
 
 	constructor({
 		routes,
 		extraModels = [],
-		otherMiddlewares = [],
-		noMatchComponent = NoMatch,
+		otherMiddlewares = []
 	}) {
 		this.app = dva({
 			onAction: [
@@ -52,9 +46,7 @@ export class App {
 			}
 		});
 		invariant(Array.isArray(routes), 'routes must be an instance of Array!');
-		invariant(isReactComponent(noMatchComponent), 'noMatchComponent must be a react component！');
 		this.routes = routes;
-		this.noMatchComponent = noMatchComponent;
 		this.app.use(createLoading({ effects: true }));
 		this.addModel(extraModels);
 		this.app.router(this.routerConfig);
@@ -85,7 +77,14 @@ export class App {
 							})} />
 						))
 					}
-					<Route component={this.noMatchComponent} />
+					<Route path="/notallow" component={dynamic({
+						app,
+						component: () => require('./routes/ErrorPages/NotAllow')
+					})} />
+					<Route component={dynamic({
+						app,
+						component: () => require('./routes/ErrorPages/NotMatch')
+					})} />
 				</Switch>
 			</ConnectedRouter>
 		);

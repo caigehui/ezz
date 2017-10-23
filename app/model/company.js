@@ -8,6 +8,7 @@ module.exports = ({ mongoose }) => {
             children: Array
         }],
         logo: String,
+        logoLight: String,
         code: String,
         shortname: String,
         legalPerson: String,

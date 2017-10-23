@@ -24,7 +24,14 @@ module.exports = ({ mongoose }) => {
             jobPrivileges: { type: [String], default: [] },// 岗位层级拥有的权限
             userPrivileges: { type: [String], default: [] }// 用户层级拥有的权限，[1]表示始终拥有全部权限
         }],
-        currentCompanyId: mongoose.Schema.Types.ObjectId,// 当前公司
+        // 当前公司
+        currentCompany: {
+            id: mongoose.Schema.Types.ObjectId,// 公司的_Id
+            name: String,// 公司名称
+            isMain: Boolean,// 是否为主公司
+            jobPrivileges: { type: [String], default: [] },// 岗位层级拥有的权限
+            userPrivileges: { type: [String], default: [] }// 用户层级拥有的权限，[1]表示始终拥有全部权限
+        },
         createTime: { type: Date, default: Date.now },// 创建时间
         lastLoginTime: Date// 上次登录时间
     }, { collection: 'user' });

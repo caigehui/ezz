@@ -95,11 +95,20 @@ if (!db.menu.findOne()) {
             {
                 id: companyId,
                 name: 'Ezz企业应用平台',
+                shortname: 'Ezz',
                 isMain: true,
-                privileges: []
+                jobPrivileges: [],
+                userPrivileges: []
             }
         ],
-        currentCompanyId: companyId
+        currentCompanyId: {
+            id: companyId,
+            name: 'Ezz企业应用平台',
+            shortname: 'Ezz',
+            isMain: true,
+            jobPrivileges: [],
+            userPrivileges: []
+        }
     });
 } else {
     // 执行数据库升级语句

@@ -31,7 +31,7 @@ module.exports = app => class LoginController extends app.Controller {
         const user = yield this.ctx.model.User.findOne({_id: mongoose.Types.ObjectId(this.ctx.session.user._id) } , { username: 0, password: 0 });
         if(!user) this.ctx.throw(401, '用户验证失败');
         this.ctx.session.user = user;
-        const { menu } = yield this.ctx.model.Menu.findOne({ companyId: user.currentCompanyId }, { menu: 1 });
+        const { menu } = yield this.ctx.model.Menu.findOne({ companyId: user.currentCompany.id }, { menu: 1 });
         this.ctx.body = { user, menu };
     }
 };

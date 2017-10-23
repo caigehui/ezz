@@ -18,6 +18,7 @@ function MainLayout({
     menu,
     loading
 }) {
+    if(!user) return null;
 
     function getMenu(node) {
         if (node.children && isarray(node.children) && node.children.length > 0) {
@@ -50,13 +51,20 @@ function MainLayout({
             >
                 <Link to="/">
                     <div className={styles.top}>
-                        <img src={require('assets/logo-dark.svg')} className={styles.logo} />
-                        {!collapsed ? <span className={styles.name}>WxDocs</span> : null}
+                        <img src={user.currentCompany.logo || require('assets/logo.svg')} className={styles.logo} />
+                        {!collapsed ? <span className={styles.name}>{user.currentCompany.shortname || user.currentCompany.name}</span> : null}
                     </div>
                 </Link>
                 <Menu theme="dark" mode="inline" selectedKeys={['']}>
                     {menu.map(node => getMenu(node))}
                 </Menu>
+                <div className={styles.collapse}>
+                    <Icon
+                        className={styles.trigger}
+                        type={collapsed ? 'menu-unfold' : 'menu-fold'}
+                        onClick={() => dispatch({ type: 'app/toggleCollapsed' })}
+                    />
+                </div>
             </Sider>
             <Layout>
                 <Header />

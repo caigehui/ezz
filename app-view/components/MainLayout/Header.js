@@ -6,7 +6,7 @@ import styles from './Header.less';
 const { Header } = Layout;
 const { SubMenu, ItemGroup } = Menu;
 
-function MyHeader({ collapsed, dispatch, user }) {
+function MyHeader({ dispatch, user }) {
 	
 	function onMenuClick({ key }) {
 		console.log(key);
@@ -16,14 +16,10 @@ function MyHeader({ collapsed, dispatch, user }) {
 		<Header className={styles.header}>
 			<Row type="flex" justify="right">
 				<Col span={8}>
-					<Icon
-						className={styles.trigger}
-						type={collapsed ? 'menu-unfold' : 'menu-fold'}
-						onClick={() => dispatch({ type: 'app/toggleCollapsed' })}
-					/>
+
 				</Col>
 				<Col span={16} className={styles.menuCol}>
-					<Menu
+					{/* <Menu
 						mode="horizontal"
 						className={styles.menu}
 						selectedKeys={[]}
@@ -38,7 +34,7 @@ function MyHeader({ collapsed, dispatch, user }) {
 								<Menu.Item key="userSetting"><Icon type="setting"/>偏好设置</Menu.Item>
 								<Menu.Item key="logout"><Icon type="logout"/>退出登录</Menu.Item>
 						</SubMenu>
-					</Menu>
+					</Menu> */}
 				</Col>
 			</Row>
 		</Header>

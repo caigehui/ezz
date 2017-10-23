@@ -2,6 +2,7 @@ export default {
   entry: 'app-view/index.js',
   publicPath: '/public/',
   outputPath: './app/public',
+  theme: "./theme.config.js",
   hash: true,
   env: {
     'development': {
