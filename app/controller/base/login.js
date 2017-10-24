@@ -5,8 +5,6 @@ const mongoose = require('mongoose');
 
 module.exports = app => class LoginController extends app.Controller {
 
-
-
     // 登录
     * index() {
         this.ctx.validate({
@@ -33,5 +31,11 @@ module.exports = app => class LoginController extends app.Controller {
         this.ctx.session.user = user;
         const { menu } = yield this.ctx.model.Menu.findOne({ companyId: user.currentCompany.id }, { menu: 1 });
         this.ctx.body = { user, menu };
+    }
+
+    // 退出登录
+    *logout() {
+        this.ctx.session = null;
+        this.ctx.body = { msg: '退出登录' };
     }
 };

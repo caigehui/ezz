@@ -1,4 +1,3 @@
-import './index.less';
 import { App } from 'app';
 import systemRoutes from './routes/System';
 const routes = [

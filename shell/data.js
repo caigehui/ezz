@@ -42,13 +42,13 @@ if (!db.menu.findOne()) {
                         ]
                     },
                     {
-                        key: '/system/company',
-                        name: '单位管理',
+                        key: '/system/department',
+                        name: '部门与岗位',
                         enableDefaultFunctions: true
                     },
                     {
-                        key: '/system/department',
-                        name: '部门管理',
+                        key: '/system/company',
+                        name: '单位管理',
                         enableDefaultFunctions: true
                     },
                     {
@@ -101,7 +101,7 @@ if (!db.menu.findOne()) {
                 userPrivileges: []
             }
         ],
-        currentCompanyId: {
+        currentCompany: {
             id: companyId,
             name: 'Ezz企业应用平台',
             shortname: 'Ezz',

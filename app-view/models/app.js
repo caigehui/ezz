@@ -3,20 +3,37 @@ import request from 'utils/request';
 import sjcl from 'sjcl';
 import { ENCRYPT_KEY } from 'constant';
 import { routerRedux } from 'app';
+import enquire from 'enquire.js';
+import Cookies from 'js-cookie';
 
+const initState = {
+    user: null,
+    collapsed: false,
+    openKeys: [],
+    menu: [],
+    isMobile: false
+};
 export default {
     namespace: 'app',
     persist: true,
-    state: {
-        user: null,
-        collapsed: false,
-        menu: []
+    state: initState,
+    subscriptions: {
+        setup({ dispatch }) {
+            enquire.register('only screen and (min-width: 320px) and (max-width: 767px)', {
+                match: () => {
+                    dispatch({ type: 'changeToMobile' });
+                },
+                unmatch: () => {
+                    dispatch({ type: 'changeToDesktop' });
+                },
+            });
+        }
     },
     effects: {
         // app 初始化
-        *init(action = { }, { call, put }) {
-            const { data, err } = yield call(request, '/api/signin', { post:{}});
-            if(err) return;
+        *init(action = {}, { call, put }) {
+            const { data, err } = yield call(request, '/api/signin', { post: {} });
+            if (err) return;
             yield put({
                 type: 'save',
                 payload: {
@@ -39,10 +56,23 @@ export default {
             if (err) return;
             // 初始化获取偏好设置
             yield put({ type: 'init' });
+            yield delay(500);
             // 路由到首页
             yield put(routerRedux.replace({
                 pathname: '/'
             }));
+        },
+        *logout(action = {}, { call, put }) {
+            const { data, err } = yield call(request, '/api/signin', { post: {} });
+            yield put(routerRedux.replace({
+                pathname: '/login'
+            }));
+            yield put({
+                type: 'save',
+                payload: initState
+            })
+            // 清除Cookies
+            Cookies.set('EGG_SESS', null);
         }
     },
     reducers: {
@@ -51,6 +81,14 @@ export default {
         },
         toggleCollapsed(state) {
             return { ...state, collapsed: !state.collapsed };
+        },
+        changeToMobile(state, action) {
+            if (state.isMobile) return state;
+            return { ...state, isMobile: true };
+        },
+        changeToDesktop(state, action) {
+            if (!state.isMobile) return state;
+            return { ...state, isMobile: false };
         }
     }
 };

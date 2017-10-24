@@ -73,6 +73,44 @@
 
 }
 
+// 全局菜单样式
+:global {
+
+    // 正常Icon
+    .ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    font-size: 15px;
+    //color: rgb(240, 240, 240);
+    }
+    
+    // 折叠后的Icon
+    .ant-menu-inline-collapsed > .ant-menu-item .anticon, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .anticon, .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon {
+    font-size: 24px;
+    }
+
+    // 折叠后的MenuItem
+    .ant-menu-inline-collapsed > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding-left: 20px!important;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    }
+
+    // 正常MenuItem
+    .ant-menu-vertical .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title {
+    font-size: 14px;
+    min-width: 15px;
+    font-family: "PingFang SC";
+    //color: rgb(235, 235, 235);
+    }
+
+    .ant-menu-sub.ant-menu-inline > .ant-menu-item, .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+    font-size: 12px;
+    }
+    
+    // .ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a {
+    // color: rgb(235, 235, 235);
+    // }
+}
+
 @media only screen and (max-width: 768px) and (min-width: 0) {
     
 

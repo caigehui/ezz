@@ -5,6 +5,8 @@ module.exports = app => {
   app.post('/api/login', 'base.login.index');
   // 签到
   app.post('/api/signin', 'base.login.signin');
+  // 退出登录
+  app.post('/api/logout', 'base.login.logout');
   // 用户
   app.resources('users', '/api/users', 'base.users');
   // 文件管理

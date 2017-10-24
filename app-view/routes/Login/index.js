@@ -21,8 +21,8 @@ function Login({
         <div className={styles.container}>
             <div className={styles.form}>
                 <div className={styles.logo}>
-                    <img alt={'logo'} src={require('assets/logo.svg')} />
-                    <span>WxDocs</span>
+                    <img alt={'logo'} src={require('assets/logo-blue.svg')} />
+                    <span>Ezz</span>
                 </div>
                 <form>
                     <FormItem hasFeedback>

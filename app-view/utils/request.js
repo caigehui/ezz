@@ -31,7 +31,6 @@ async function checkStatus(response) {
  * @param  {object} [options]
  */
 export default function request(url, options) {
-
 	let method = (() => {
 		for (let key in options) {
 			if (isMethod(key.toUpperCase())) {

@@ -9,7 +9,9 @@ const { SubMenu, ItemGroup } = Menu;
 function MyHeader({ dispatch, user }) {
 	
 	function onMenuClick({ key }) {
-		console.log(key);
+		if(key === 'logout') {
+			dispatch({ type: 'app/logout' });
+		}
 	}
 
 	return (
@@ -19,7 +21,7 @@ function MyHeader({ dispatch, user }) {
 
 				</Col>
 				<Col span={16} className={styles.menuCol}>
-					{/* <Menu
+					<Menu
 						mode="horizontal"
 						className={styles.menu}
 						selectedKeys={[]}
@@ -27,14 +29,14 @@ function MyHeader({ dispatch, user }) {
 						<SubMenu
 							title={
 								<span className={styles.user}>
-									<Avatar src={'dsada'} icon="user"/>
+									<Avatar src={'dsada'} size="large" icon="user"/>
 									<span> {user ? user.info.name : '未知用户'} </span>
 								</span>}>
 								<Menu.Item key="userInfo"><Icon type="user"/>个人信息</Menu.Item>
 								<Menu.Item key="userSetting"><Icon type="setting"/>偏好设置</Menu.Item>
 								<Menu.Item key="logout"><Icon type="logout"/>退出登录</Menu.Item>
 						</SubMenu>
-					</Menu> */}
+					</Menu>
 				</Col>
 			</Row>
 		</Header>

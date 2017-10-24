@@ -14,9 +14,11 @@ import invariant from 'invariant';
 import { ERROR_MSG_DURATION } from 'constant';
 import {
 	rehydrateMiddleware,
-	authenticationMiddleware
+	authenticationMiddleware,
+	loadingMiddleware
 } from './middlewares';
 import 'utils/array';
+import './themes/index.less';
 export {
 	routerRedux,
 	Route,
@@ -35,6 +37,7 @@ export class App {
 	}) {
 		this.app = dva({
 			onAction: [
+				loadingMiddleware,
 				rehydrateMiddleware,
 				authenticationMiddleware,
 				...otherMiddlewares
@@ -47,6 +50,7 @@ export class App {
 		});
 		invariant(Array.isArray(routes), 'routes must be an instance of Array!');
 		this.routes = routes;
+		this.extraModels = extraModels;
 		this.app.use(createLoading({ effects: true }));
 		this.addModel(extraModels);
 		this.app.router(this.routerConfig);
@@ -100,6 +104,11 @@ export class App {
 				if (i.persist) {
 					whitelist.push(i.namespace);
 				}
+			}
+		}
+		for(let model of this.extraModels) {
+			if(model.persist) {
+				whitelist.push(model.namespace);
 			}
 		}
 		persistStore(this.app._store, {
