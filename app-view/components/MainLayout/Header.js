@@ -29,7 +29,7 @@ function MyHeader({ dispatch, user }) {
 						<SubMenu
 							title={
 								<span className={styles.user}>
-									<Avatar src={'dsada'} size="large" icon="user"/>
+									<Avatar src={user.info.avatar} size="large" icon="user"/>
 									<span> {user ? user.info.name : '未知用户'} </span>
 								</span>}>
 								<Menu.Item key="userInfo"><Icon type="user"/>个人信息</Menu.Item>

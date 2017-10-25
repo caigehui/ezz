@@ -3,7 +3,7 @@ const { LOCATION_CHANGE } = routerRedux;
 import Cookies from 'js-cookie';
 
 const authenticationMiddleware = store => next => action => {
-	if (action.type === LOCATION_CHANGE && action.payload.pathname !== '/login') {
+    if (action.type === LOCATION_CHANGE && action.payload.pathname !== '/login') {
         
         const { app, routing } = store.getState(); 
         if(!(Cookies.get('EGG_SESS') || app.user)) {
@@ -16,7 +16,8 @@ const authenticationMiddleware = store => next => action => {
             store.dispatch({ type: 'app/init' }) 
         } 
 	}
-	next(action);
+    next(action);
+
 };
 
 export default authenticationMiddleware;

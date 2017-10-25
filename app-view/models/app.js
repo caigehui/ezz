@@ -6,17 +6,18 @@ import { routerRedux } from 'app';
 import enquire from 'enquire.js';
 import Cookies from 'js-cookie';
 
-const initState = {
+const getInitState = () => ({
     user: null,
+    openMobileMenu: false,
     collapsed: false,
     openKeys: [],
     menu: [],
-    isMobile: false
-};
+    isMobile: document.documentElement.clientWidth <= 767
+});
 export default {
     namespace: 'app',
     persist: true,
-    state: initState,
+    state: getInitState(),
     subscriptions: {
         setup({ dispatch }) {
             enquire.register('only screen and (min-width: 320px) and (max-width: 767px)', {
@@ -32,6 +33,7 @@ export default {
     effects: {
         // app 初始化
         *init(action = {}, { call, put }) {
+            yield delay(500);
             const { data, err } = yield call(request, '/api/signin', { post: {} });
             if (err) return;
             yield put({
@@ -41,7 +43,6 @@ export default {
                     menu: data.menu
                 }
             })
-            yield delay(500);
         },
         *login({ payload }, { call, put }) {
             // 登录
@@ -69,7 +70,7 @@ export default {
             }));
             yield put({
                 type: 'save',
-                payload: initState
+                payload: getInitState()
             })
             // 清除Cookies
             Cookies.set('EGG_SESS', null);
@@ -81,6 +82,9 @@ export default {
         },
         toggleCollapsed(state) {
             return { ...state, collapsed: !state.collapsed };
+        },
+        toggleMobileMenu(state) {
+            return { ...state, openMobileMenu: !state.openMobileMenu };
         },
         changeToMobile(state, action) {
             if (state.isMobile) return state;

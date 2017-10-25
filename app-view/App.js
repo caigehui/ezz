@@ -37,9 +37,9 @@ export class App {
 	}) {
 		this.app = dva({
 			onAction: [
+				authenticationMiddleware,
 				loadingMiddleware,
 				rehydrateMiddleware,
-				authenticationMiddleware,
 				...otherMiddlewares
 			],
 			history: createHistory(),

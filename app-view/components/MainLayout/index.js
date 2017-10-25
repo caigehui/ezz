@@ -6,6 +6,7 @@ import Header from './Header';
 import Loader from '../Loader';
 import styles from './index.less';
 import isarray from 'isarray';
+import Mobile from './Mobile';
 const { Footer, Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
@@ -42,10 +43,9 @@ function MainLayout({
         }
     }
 
-    return
-    {
+    return (
         isMobile
-            ? <Mobile />
+            ? <Mobile children={children} match={match} getMenu={getMenu}/>
             :
             <Layout style={{ height: '100%' }}>
                 <Loader spinning={loading.effects['app/init']} />
@@ -87,10 +87,8 @@ function MainLayout({
                         Copyright © 2000-2017 WxSoft ZhuHai Inc. All Rights Reserved
                 </Footer>
                 </Layout>
-
-
             </Layout>
-    }
+    )
 }
 
 export default connect(({ app, loading }) => ({ ...app, loading }))(MainLayout);
