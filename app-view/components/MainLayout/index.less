@@ -1,50 +1,62 @@
+@import '~themes/default.less';
+
 .trigger {
     font-size: 18px;
     line-height: 64px;
     padding: 0 16px;
     cursor: pointer;
-    transition: color .3s;
+    //transition: @transition-ease-in;
+
+    &:hover {
+        color: @primary-color;
+        //background-color: fade(@primary-color, 15%);
+    }
 }
   
-.trigger:hover {
-    color: #108ee9;
-}
-  
-.top {
+.company {
     display: flex;
+    height: 100px;
     width: 100%;
     align-items: center;
-    padding: 16px;
-}
+    justify-content: center;
+    padding-left: 14px;
+    padding-right: 34px;
 
-.name {
-    font-size: 18px;
-    color: rgb(240, 240, 240);
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 130px;
-    transition: color .3s;
-}
+    .companyLogo {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        color: rgba(255, 255, 255, 0.67);
 
-.name:hover {
-    color: white;
-}
+        &:hover {
+            color: white;
+        }
+    }
 
-.logo {
-    height: 32px;
-    width: 32px;
-    margin-right: 10px;
+    .companyName {
+        font-size: 20px;
+        color: #999;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: color .3s;
+    
+        &:hover {
+            color: white;
+        }
+    }
+
 }
 
 .content {
-    padding: 24px;
-    background-color: #fff;
+    padding: 0px 24px;
     height: 100%
 }
 
 .footer {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
     background-color: white;
 }
 

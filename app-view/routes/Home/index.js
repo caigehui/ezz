@@ -5,7 +5,8 @@ import { Uploader } from 'components';
 function Home({ dispatch, files }) {
 
     return (
-        <Uploader files={files} onChange={files => dispatch({ type: 'home/save', payload: { files } })}/>
+        <div style={{height: '100%', backgroundColor: 'white'}}>
+        </div>
     );
 }
 

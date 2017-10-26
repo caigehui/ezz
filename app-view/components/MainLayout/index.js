@@ -7,6 +7,7 @@ import Loader from '../Loader';
 import styles from './index.less';
 import isarray from 'isarray';
 import Mobile from './Mobile';
+import Bread from './Bread';
 const { Footer, Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
@@ -51,14 +52,15 @@ function MainLayout({
                 <Loader spinning={loading.effects['app/init']} />
 
                 <Sider
+                    width={220}
                     trigger={null}
                     collapsible
                     collapsed={collapsed}
                 >
                     <Link to="/">
-                        <div className={styles.top}>
-                            <img src={user.currentCompany.logo || require('assets/logo.svg')} className={styles.logo} />
-                            {!collapsed ? <span className={styles.name}>{user.currentCompany.shortname || user.currentCompany.name}</span> : null}
+                        <div className={styles.company}>
+                            <img src={user.currentCompany.logo || require('assets/logo.svg')} className={styles.companyLogo} />
+                            {!collapsed ? <span className={styles.companyName}>{user.currentCompany.shortname || user.currentCompany.name}</span> : null}
                         </div>
                     </Link>
                     <Menu
@@ -80,12 +82,13 @@ function MainLayout({
                 </Sider>
                 <Layout>
                     <Header />
+                    <Bread menu={menu}/>
                     <Content className={styles.content}>
                         {children}
                     </Content>
                     <Footer className={styles.footer}>
                         Copyright © 2000-2017 WxSoft ZhuHai Inc. All Rights Reserved
-                </Footer>
+                    </Footer>
                 </Layout>
             </Layout>
     )

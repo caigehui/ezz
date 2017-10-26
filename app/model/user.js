@@ -36,7 +36,7 @@ module.exports = ({ mongoose }) => {
         preferences: {
 
         },
-        createTime: { type: Date, default: Date.now },// 创建时间
+        createTime: Date,// 创建时间
         lastLoginTime: Date// 上次登录时间
     }, { collection: 'user' });
 
