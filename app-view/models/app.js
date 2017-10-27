@@ -8,6 +8,7 @@ import Cookies from 'js-cookie';
 
 const getInitState = () => ({
     user: null,
+    privileges: [],
     openMobileMenu: false,
     collapsed: false,
     openKeys: [],
@@ -40,7 +41,8 @@ export default {
                 type: 'save',
                 payload: {
                     user: data.user,
-                    menu: data.menu
+                    menu: data.menu,
+                    privileges: Array.from(new Set([...data.user.role.rolePrivileges, ...data.user.currentCompany.jobPrivileges, ...data.user.currentCompany.userPrivileges]))
                 }
             })
         },

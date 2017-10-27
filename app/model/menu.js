@@ -17,15 +17,11 @@ module.exports = app => {
             description: String,
             // 是否禁用该节点
             disable: Boolean,
-            /**
-             * 是否启动默认功能
-             * 每个节点默认有四个功能:
-             * 1. 查看: 节点key
-             * 2. 新增: ${节点key}/create
-             * 3. 编辑: ${节点key}/edit
-             * 4. 删除: ${节点key}/edit
-             */
-            enableDefaultFunctions: Boolean,
+            // 操作
+            actions: [{
+                key: { type: String, required: true, lowercase: true, trim: true, unique: true },
+                name: { type: String, required: true }
+            }],
             // 节点的额外自定义功能 
             extraFunctions: [{
                 // 功能的key值，可能有相应的route path
@@ -33,10 +29,15 @@ module.exports = app => {
                 // 功能名称
                 name: { type: String, required: true },
                 // 功能描述
-                description: String
+                description: String,
+                // 操作
+                actions: [{
+                    key: { type: String, required: true, lowercase: true, trim: true, unique: true },
+                    name: { type: String, required: true }
+                }]
             }],
             // 子节点
-            children: Array
+            children: { type: Array, default: [] }
         }]
     }, { collection: 'menu' });
     return mongoose.model('Menu', MenuSchema);

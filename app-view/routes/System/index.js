@@ -6,6 +6,12 @@ export default [
         models: [require('./User/model')]
     },
     {
+        path: '/system/user/role',
+        exact: true,
+        component: require('./User/Role'),
+        models: [require('./User/Role/model')]
+    },
+    {
         path: '/system/company',
         exact: true,
         component: require('./Company'),

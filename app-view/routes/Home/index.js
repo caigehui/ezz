@@ -10,4 +10,4 @@ function Home({ dispatch, files }) {
     );
 }
 
-export default bind(({ home }) => ({ ...home }))(Home);
+export default bind(({ home }) => ({ ...home }), { disableSubLayout: true })(Home);

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Layout, Icon, Menu, Switch } from 'antd';
-import { Route, Link } from 'app';
+import { Link } from 'app';
 import { connect } from 'dva';
+import { checkAuth } from 'utils/helper';
+import classNames from 'classnames';
 import Header from './Header';
 import Loader from '../Loader';
 import styles from './index.less';
@@ -18,12 +20,14 @@ function MainLayout({
     collapsed,
     user,
     menu,
+    privileges,
     openKeys,
     loading,
     isMobile
 }) {
     if (!user) return null;
     function getMenu(node) {
+        if(!checkAuth(privileges, node.key)) return null; 
         if (node.children && isarray(node.children) && node.children.length > 0) {
             return (
                 <SubMenu
@@ -43,7 +47,6 @@ function MainLayout({
             )
         }
     }
-
     return (
         isMobile
             ? <Mobile children={children} match={match} getMenu={getMenu}/>
@@ -58,7 +61,9 @@ function MainLayout({
                     collapsed={collapsed}
                 >
                     <Link to="/">
-                        <div className={styles.company}>
+                        <div className={classNames(styles.company, {
+                            [styles.companyCollapse]: collapsed
+                        })}>
                             <img src={user.currentCompany.logo || require('assets/logo.svg')} className={styles.companyLogo} />
                             {!collapsed ? <span className={styles.companyName}>{user.currentCompany.shortname || user.currentCompany.name}</span> : null}
                         </div>

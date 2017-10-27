@@ -33,7 +33,20 @@ if (!db.menu.findOne()) {
                     {
                         key: '/system/user',
                         name: '用户与角色',
-                        enableDefaultFunctions: true,
+                        actions: [
+                            {
+                                key: '/system/user/create',
+                                name: '新增用户'
+                            }, 
+                            {
+                                key: '/system/user/delete',
+                                name: '删除用户'
+                            },
+                            {
+                                key: '/system/user/edit',
+                                name: '编辑用户'
+                            }
+                        ],
                         extraFunctions: [
                             {
                                 key: '/system/user/role',
