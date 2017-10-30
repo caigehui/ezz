@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Icon, Menu, Switch } from 'antd';
 import { Link } from 'app';
 import { connect } from 'dva';
-import { checkAuth } from 'utils/helper';
+import { checkAuth, getMenuItemByKey } from 'utils/helper';
 import classNames from 'classnames';
 import Header from './Header';
 import Loader from '../Loader';
@@ -27,6 +27,7 @@ function MainLayout({
 }) {
     if (!user) return null;
     function getMenu(node) {
+        // 校验权限
         if(!checkAuth(privileges, node.key)) return null; 
         if (node.children && isarray(node.children) && node.children.length > 0) {
             return (
@@ -53,7 +54,6 @@ function MainLayout({
             :
             <Layout style={{ height: '100%' }}>
                 <Loader spinning={loading.effects['app/init']} />
-
                 <Sider
                     width={220}
                     trigger={null}
@@ -74,7 +74,7 @@ function MainLayout({
                         mode="inline"
                         openKeys={openKeys}
                         onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
-                        defaultSelectedKeys={[match.url]}>
+                        defaultSelectedKeys={[getMenuItemByKey(menu, match.url).key]}>
                         {menu.map(node => getMenu(node))}
                     </Menu>
                     <div className={styles.collapse}>

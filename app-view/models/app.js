@@ -11,7 +11,11 @@ const getInitState = () => ({
     privileges: [],
     openMobileMenu: false,
     collapsed: false,
+    // 打开的Menu
     openKeys: [],
+    // 每个Menu选择的Funtion
+    functionPathForMenu: {},
+    // 全部菜单dataSource
     menu: [],
     isMobile: document.documentElement.clientWidth <= 767
 });

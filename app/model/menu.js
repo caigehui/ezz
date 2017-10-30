@@ -18,24 +18,30 @@ module.exports = app => {
             // 是否禁用该节点
             disable: Boolean,
             // 操作
-            actions: [{
-                key: { type: String, required: true, lowercase: true, trim: true, unique: true },
-                name: { type: String, required: true }
-            }],
-            // 节点的额外自定义功能 
-            extraFunctions: [{
-                // 功能的key值，可能有相应的route path
-                key: { type: String, required: true, lowercase: true, trim: true, unique: true },
-                // 功能名称
-                name: { type: String, required: true },
-                // 功能描述
-                description: String,
-                // 操作
-                actions: [{
+            actions: {
+                type: [{
                     key: { type: String, required: true, lowercase: true, trim: true, unique: true },
                     name: { type: String, required: true }
-                }]
-            }],
+                }],
+                default: []
+            },
+            // 节点的额外自定义功能 
+            extraFunctions: {
+                type: [{
+                    // 功能的key值，可能有相应的route path
+                    key: { type: String, required: true, lowercase: true, trim: true, unique: true },
+                    // 功能名称
+                    name: { type: String, required: true },
+                    // 功能描述
+                    description: String,
+                    // 操作
+                    actions: [{
+                        key: { type: String, required: true, lowercase: true, trim: true, unique: true },
+                        name: { type: String, required: true }
+                    }]
+                }],
+                default: []
+            },
             // 子节点
             children: { type: Array, default: [] }
         }]

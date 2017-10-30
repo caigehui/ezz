@@ -1,10 +1,14 @@
 import React from 'react';
 import { bind } from 'app';
-
-function Role({  }) {
+import QueueAnim from 'rc-queue-anim';
+function Role({ }) {
 
     return (
-        <div/>
+        <QueueAnim>
+            <div key="1">enter in queue</div>
+            <div key="2">enter in queue</div>
+            <div key="3">enter in queue</div>
+        </QueueAnim>
     );
 }
 

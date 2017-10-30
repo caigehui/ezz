@@ -2,6 +2,8 @@ import React from 'react';
 import { Layout, Icon, Avatar, Menu, Switch, Row, Col, } from 'antd';
 import { Route, Link } from 'app';
 import { connect } from 'dva';
+import { getMenuItemByKey } from 'utils/helper';
+import Bread from './Bread';
 import Loader from '../Loader';
 import styles from './Mobile.less';
 import classNames from 'classnames';
@@ -43,7 +45,7 @@ function Mobile({
                             dispatch({ type: 'app/toggleMobileMenu' })
                         }, 200)}
                         onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
-                        defaultSelectedKeys={[match.url]}>
+                        defaultSelectedKeys={[getMenuItemByKey(menu, match.url).key]}>
                         {menu.map(node => getMenu(node))}
                     </Menu>
                     <div className={styles.me}>
@@ -56,6 +58,7 @@ function Mobile({
                 </div>
             </Header>
             <Layout>
+                <Bread menu={menu}/>
                 <Content className={styles.content}>
                     {children}
                 </Content>

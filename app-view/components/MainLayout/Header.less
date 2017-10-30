@@ -6,32 +6,104 @@
     border-bottom: 1px solid @border-color-base;
 }
 
+:global .ant-select-dropdown{
+    .ant-select-dropdown-menu-item-group {
+        border-bottom: 1px solid @border-color-base;
+    }
+
+    .ant-select-dropdown-menu {
+        max-height: 300px;
+    }
+
+    .ant-select-dropdown-menu-item-group-title {
+        color: #666;
+        font-weight: bold;
+      }
+}
+
+.searchItemCount {
+    position: absolute;
+    color: #999;
+    right: 16px;
+}
+   
+.showAll {
+    text-align: center;
+    cursor: default;
+}
+
+
+.searchCol {
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+
+    .icon {
+        font-size: 16px;
+        color: #ccc;
+        margin-bottom: 3px;
+    }
+
+    .input {
+        flex: 1;
+        margin-left: 10px;
+        border: 0;
+        font-size: 15px;
+
+        &::-webkit-input-placeholder {
+            color: #ccc;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
 .menuCol {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-}
 
-.menu {
-    line-height: 62px;
-    font-size: 15px;
-    padding-right: 16px;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 10px;
-    :global {
-        .anticon {
-          min-width: 22px!important;
-          font-size: 22px!important;
-          margin-right: 0;
+    .buttonWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 100%;
+        text-align: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: @transition-ease-in;
+    
+        &:hover {
+          color: @primary-color;
+          background-color: fade(@primary-color, 15%);
         }
     }
 
-    span:last-child {
-        margin-left: 10px;
+    .menu {
+        line-height: 62px;
+        font-size: 15px;
+        padding-right: 16px;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin-right: 10px;
+        :global {
+            .anticon {
+              min-width: 22px!important;
+              font-size: 22px!important;
+              margin-right: 0;
+            }
+        }
+    
+        span:last-child {
+            margin-left: 10px;
+        }
     }
 }
+

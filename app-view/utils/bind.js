@@ -5,6 +5,7 @@ import { MainLayout, SubLayout } from 'components';
 /**
  * 绑定视图到应用中
  * options.disableLayout 禁用Layout
+ * options.disableSubLayout 禁用SubLayout
  * @param {function} mapStateToProps 
  */
 export default function bind(mapStateToProps, options = {}) {
