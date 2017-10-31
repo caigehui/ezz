@@ -23,12 +23,15 @@ function MainLayout({
     privileges,
     openKeys,
     loading,
-    isMobile
+    isMobile,
+    functionPathForMenu
 }) {
     if (!user) return null;
     function getMenu(node) {
         // 校验权限
         if(!checkAuth(privileges, node.key)) return null; 
+        // 不显示隐藏的菜单
+        if(node.hidden) return null;
         if (node.children && isarray(node.children) && node.children.length > 0) {
             return (
                 <SubMenu
@@ -40,7 +43,7 @@ function MainLayout({
         } else {
             return (
                 <Item key={node.key}>
-                    <Link to={node.key}>
+                    <Link to={functionPathForMenu[node.key] || node.key}>
                         {node.iconType ? <Icon type={node.iconType} /> : null}
                         <span>{node.name}</span>
                     </Link>
@@ -48,6 +51,7 @@ function MainLayout({
             )
         }
     }
+    const menuItem = getMenuItemByKey(menu, match.url);
     return (
         isMobile
             ? <Mobile children={children} match={match} getMenu={getMenu}/>
@@ -74,7 +78,7 @@ function MainLayout({
                         mode="inline"
                         openKeys={openKeys}
                         onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
-                        defaultSelectedKeys={[getMenuItemByKey(menu, match.url).key]}>
+                        defaultSelectedKeys={menuItem ? [menuItem.key] : []}>
                         {menu.map(node => getMenu(node))}
                     </Menu>
                     <div className={styles.collapse}>
@@ -85,8 +89,8 @@ function MainLayout({
                         />
                     </div>
                 </Sider>
-                <Layout>
-                    <Header />
+                <Layout className={styles.layout}>
+                    <Header match={match}/>
                     <Bread menu={menu}/>
                     <Content className={styles.content}>
                         {children}

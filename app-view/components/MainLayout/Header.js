@@ -1,8 +1,10 @@
 import React from 'react';
-import { Layout, Menu, Dropdown, Row, Col, Icon, Avatar, Input, AutoComplete, Badge } from 'antd';
-import { Link } from 'app';
+import { Layout, Menu, Dropdown, Row, Col, Icon, Avatar, Input, AutoComplete, Badge, Popover } from 'antd';
+import { Link, routerRedux } from 'app';
 import { connect } from 'dva';
+import delay from 'utils/delay';
 import styles from './Header.less';
+import classNames from 'classnames';
 const { Header } = Layout;
 const { SubMenu, ItemGroup } = Menu;
 const { Search } = Input;
@@ -26,7 +28,7 @@ const dataSource = [{
 	}],
 }];
 
-function MyHeader({ dispatch, user }) {
+function MyHeader({ dispatch, user, match }) {
 
 	function onMenuClick({ key }) {
 		if (key === 'logout') {
@@ -90,22 +92,7 @@ function MyHeader({ dispatch, user }) {
 					</AutoComplete>
 				</Col>
 				<Col span={20} className={styles.menuCol}>
-					<Menu
-						mode="horizontal"
-						className={styles.menu}
-						selectedKeys={[]}
-						onClick={onMenuClick}>
-						<SubMenu
-							title={
-								<span className={styles.user}>
-									<Avatar src={user.info.avatar} size="large" icon="user" />
-									<span> {user ? user.info.name : '未知用户'} </span>
-								</span>}>
-							<Menu.Item key="userInfo"><Icon type="user" />个人信息</Menu.Item>
-							<Menu.Item key="userSetting"><Icon type="setting" />偏好设置</Menu.Item>
-							<Menu.Item key="logout"><Icon type="logout" />退出登录</Menu.Item>
-						</SubMenu>
-					</Menu>
+					<Me user={user} dispatch={dispatch} match={match}/>
 					<div className={styles.buttonWrapper}>
 						<Badge dot>
 							<Icon type="notification" style={{ fontSize: 20 }} />
@@ -121,6 +108,54 @@ function MyHeader({ dispatch, user }) {
 			</Row>
 		</Header>
 	)
+}
+
+class Me extends React.Component {
+	state = {
+		visible: false
+	}
+
+	hide = () => {
+		this.setState({
+			visible: false,
+		});
+	}
+	handleVisibleChange = (visible) => {
+		this.setState({ visible });
+	}
+
+	render() {
+		const { user, dispatch, match } = this.props;
+		return (
+			<Popover
+				placement="bottom"
+				trigger="click"
+				visible={this.state.visible}
+				onVisibleChange={this.handleVisibleChange}
+				content={
+					<div className={styles.popoverWrapper}>
+						<div onClick={async () => {
+							this.hide();
+							await delay(200);
+							match.url !== `/person/${user._id}` && dispatch(routerRedux.push({
+								pathname: `/person/${user._id}`
+							}));
+						}}><Icon type="user" />个人信息</div>
+						<div onClick={this.hide}><Icon type="setting" />偏好设置</div>
+						<div onClick={async () => {
+							this.hide();
+							await delay(200);
+							dispatch({ type: 'app/logout' });
+						}}><Icon type="logout" />退出登录</div>
+					</div>
+				}>
+				<div className={classNames(styles.buttonWrapper, styles.user)}>
+					<Avatar src={user.info.avatar} icon="user" />
+					<span> {user ? user.info.name : '未知用户'} </span>
+				</div>
+			</Popover>
+		)
+	}
 }
 
 export default connect(({ app }) => ({ collapsed: app.collapsed, user: app.user }))(MyHeader);

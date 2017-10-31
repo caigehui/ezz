@@ -7,7 +7,6 @@ const rehydrateMiddleware = store => next => action => {
 			if (i === REHYDRATE) continue;
 			store.dispatch({ type: `${i}/save`, payload: action.payload[i] });
 		}
-		return;
 	}
 	next(action);
 };

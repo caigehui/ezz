@@ -17,6 +17,8 @@ module.exports = app => {
             description: String,
             // 是否禁用该节点
             disable: Boolean,
+            // 是否隐藏该节点，被隐藏的节点不会出现在菜单中同时不受权限的控制
+            hidden: Boolean,
             // 操作
             actions: {
                 type: [{

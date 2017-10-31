@@ -10,6 +10,8 @@ module.exports = ({ mongoose }) => {
             mobile: { type: String, required: true },// 手机号码
             email: String,// 电子邮箱
             avatar: String,// 头像地址
+            cover: String, // 封面地址
+            summary: String, // 简介
         },
         // 角色
         role: {

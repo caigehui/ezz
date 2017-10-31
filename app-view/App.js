@@ -7,6 +7,7 @@ import { message } from 'antd';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
 import { persistStore, autoRehydrate } from 'redux-persist';
+import createActionBuffer from 'redux-action-buffer'
 import { asyncSessionStorage } from 'redux-persist/storages';
 import { REHYDRATE } from 'redux-persist/constants';
 import { isReactComponent } from 'utils/isReact';
@@ -15,7 +16,8 @@ import { ERROR_MSG_DURATION } from 'constant';
 import {
 	rehydrateMiddleware,
 	authenticationMiddleware,
-	loadingMiddleware
+	loadingMiddleware,
+	routingMiddleware
 } from './middlewares';
 import 'utils/array';
 import './themes/index.less';
@@ -37,9 +39,11 @@ export class App {
 	}) {
 		this.app = dva({
 			onAction: [
+				createActionBuffer(REHYDRATE),
 				authenticationMiddleware,
 				loadingMiddleware,
 				rehydrateMiddleware,
+				routingMiddleware,
 				...otherMiddlewares
 			],
 			history: createHistory(),
@@ -62,6 +66,7 @@ export class App {
 			invariant(Array.isArray(route.models), 'models must be an instance of Array!');
 			for (let model of route.models) {
 				this.app.model(model);
+				model.state._pathname = route.path;
 			}
 		}
 		for (let model of extraModels) {

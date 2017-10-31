@@ -37,7 +37,7 @@ if (!db.menu.findOne()) {
                             {
                                 key: '/system/user/create',
                                 name: '新增用户'
-                            }, 
+                            },
                             {
                                 key: '/system/user/delete',
                                 name: '删除用户'
@@ -70,7 +70,20 @@ if (!db.menu.findOne()) {
                         enableDefaultFunctions: true
                     },
                 ]
-            }]
+            },
+            {
+                key: '/person/:id',
+                name: '个人主页',
+                iconType: 'user',
+                hidden: true,
+                extraFunctions: [
+                    {
+                        key: '/person/edit',
+                        name: '编辑资料'
+                    }
+                ]
+            }
+        ]
     })
 
     // 插入角色

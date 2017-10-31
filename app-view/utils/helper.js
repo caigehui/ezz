@@ -23,6 +23,7 @@ export function getBreadItemByKey(menu, path) {
  */
 export function getMenuItemByKey(menu, path) {
     for(let i = 0; i < menu.length; i++) {
+        if(menu[i].hidden) continue;
         if(menu[i].key === path) return menu[i];
         else if(menu[i].children && menu[i].children.length > 0) {
             const item = getMenuItemByKey(menu[i].children, path);

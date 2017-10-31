@@ -1,16 +1,12 @@
 import { App } from 'app';
+import homeRoutes from './routes/Home';
 import systemRoutes from './routes/System';
 const routes = [
     {
         path: '/login',
         component: require('./routes/Login')
     },
-    {
-        path: '/', 
-        exact: true,
-        component: require('./routes/Home'),
-        models: [require('./routes/Home/model')]
-    },
+    ...homeRoutes,
     ...systemRoutes
 ];
 

@@ -21,8 +21,9 @@ function Mobile({
     openKeys,
     loading,
 }) {
+    const menuItem = getMenuItemByKey(menu, match.url);
     return (
-        <Layout style={{ height: '100%' }}>
+        <Layout style={{ height: '100%', backgroundColor: 'rgb(243, 243, 243)' }}>
             <Loader spinning={loading.effects['app/init']} />
             <Header className={styles.header}>
                 <img src={user.currentCompany.logo || require('assets/logo.svg')} className={styles.logo} />
@@ -45,7 +46,7 @@ function Mobile({
                             dispatch({ type: 'app/toggleMobileMenu' })
                         }, 200)}
                         onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
-                        defaultSelectedKeys={[getMenuItemByKey(menu, match.url).key]}>
+                        defaultSelectedKeys={menuItem ? [menuItem.key] : []}>
                         {menu.map(node => getMenu(node))}
                     </Menu>
                     <div className={styles.me}>
