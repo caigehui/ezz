@@ -7,9 +7,13 @@ import enquire from 'enquire.js';
 import Cookies from 'js-cookie';
 
 const getInitState = () => ({
+    // 用户数据
     user: null,
+    // 用户的菜单功能权限
     privileges: [],
+    // 是否打开移动端的菜单
     openMobileMenu: false,
+    // 菜单是否收起
     collapsed: false,
     // 打开的Menu
     openKeys: [],
@@ -17,6 +21,7 @@ const getInitState = () => ({
     functionPathForMenu: {},
     // 全部菜单dataSource
     menu: [],
+    // 是否为手机
     isMobile: document.documentElement.clientWidth <= 767
 });
 export default {
@@ -36,9 +41,10 @@ export default {
         }
     },
     effects: {
-        // app 初始化
+        // app 初始化，启动应用时的入口
         *init(action = {}, { call, put }) {
             yield delay(500);
+            // 应用启动时调用signin来获取最新的用户数据
             const { data, err } = yield call(request, '/api/signin', { post: {} });
             if (err) return;
             yield put({
@@ -46,6 +52,7 @@ export default {
                 payload: {
                     user: data.user,
                     menu: data.menu,
+                    // 整合权限，并去重
                     privileges: Array.from(new Set([...data.user.role.rolePrivileges, ...data.user.currentCompany.jobPrivileges, ...data.user.currentCompany.userPrivileges]))
                 }
             })
@@ -57,6 +64,7 @@ export default {
                 {
                     post: {
                         ...payload,
+                        // sjcl加密
                         password: sjcl.encrypt(ENCRYPT_KEY, payload.password)
                     }
                 });

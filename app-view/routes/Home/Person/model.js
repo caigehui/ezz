@@ -5,7 +5,6 @@ export default {
     },
     effects: {
         * init(action = {}, { put, select, take }) {
-            yield take('app/init/@@end');
             const { info } = yield select(({ app }) => app.user );
             yield put({
                 type: 'save',

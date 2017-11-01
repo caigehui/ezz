@@ -1,5 +1,7 @@
 import { REHYDRATE } from 'redux-persist/constants';
-
+/**
+ * 对persist: true的model进行数据恢复
+ */
 const rehydrateMiddleware = store => next => action => {
 	if (action.type === REHYDRATE) {
 		// 拦截

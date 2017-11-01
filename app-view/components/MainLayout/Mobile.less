@@ -1,0 +1,119 @@
+@import '~themes/default.less';
+
+.content {
+    padding: 0;
+    background-color: #fff;
+    height: 100%
+}
+
+.footer {
+    text-align: center;
+    background-color: white;
+}
+
+.header {
+    padding: 0 15px;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+
+    .logo {
+        height: 32px;
+        width: 32px;
+        margin-right: 10px;
+    }
+
+    .companyName {
+        font-size: 18px;
+        color: white;
+        margin-right: 10px;
+        flex: 1
+    }
+
+    .btn {
+        width: 20px;
+        height: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5px;
+
+        em {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #FFF;
+            margin-bottom: 5px;
+            transition: transform .3s @ease-in-out, opacity .3s @ease-in-out;
+        }
+    }
+
+    .btnClose {
+        em {
+            &:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+              }
+        }
+    }
+
+    .menu {
+        z-index: 990;
+        display: flex;
+        position: fixed;
+        top: 44px;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .3s @ease-in;
+        pointer-events: none;
+        background: #404040;
+        border-top: 1px solid #333;
+
+        :global {
+            .ant-menu-dark.ant-menu-inline, .ant-menu-dark.ant-menu-vertical {
+                width: 60%;
+            }
+        }
+
+        .me {
+            border-left: 1px solid #333;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            align-items: center;
+
+            .name {
+                color: white;
+                font-size: 15px;
+                text-align: center;
+            }
+
+            .meBtn {
+                color: white;
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
+        }
+      }
+
+      .menuOpen {
+        opacity: 1;
+        pointer-events: auto;
+        transition-timing-function: @ease-out;
+      }
+}

@@ -12,7 +12,7 @@ const routes = [
 
 const extraModels = [
     require('./models/app')
-]
+];
 
 const app = new App({ routes, extraModels });
 

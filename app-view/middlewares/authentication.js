@@ -2,6 +2,10 @@ import { routerRedux } from 'dva/router';
 const { LOCATION_CHANGE } = routerRedux;
 import Cookies from 'js-cookie';
 
+/**
+ * 身份验证的中间件，如果被清除cookies和缓存，直接跳转到登录页
+ * 应用启动时，执行app/init的effects
+ */
 const authenticationMiddleware = store => next => action => {
     if (action.type === LOCATION_CHANGE && action.payload.pathname !== '/login') {
         
