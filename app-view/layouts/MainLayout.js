@@ -5,10 +5,10 @@ import { connect } from 'dva';
 import { checkAuth, getMenuItemByKey } from 'utils/helper';
 import classNames from 'classnames';
 import Header from './Header';
-import Loader from '../Loader';
-import styles from './index.less';
+import { Loader } from 'components';
+import styles from './MainLayout.less';
 import isarray from 'isarray';
-import Mobile from './Mobile';
+import MobileLayout from './MobileLayout';
 import Bread from './Bread';
 const { Footer, Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
@@ -54,15 +54,16 @@ function MainLayout({
     const menuItem = getMenuItemByKey(menu, match.url);
     return (
         isMobile
-            ? <Mobile children={children} match={match} getMenu={getMenu}/>
+            ? <MobileLayout children={children} match={match} getMenu={getMenu}/>
             :
             <Layout style={{ height: '100%' }}>
                 <Loader spinning={loading.effects['app/init']} />
                 <Sider
-                    width={220}
+                    width={256}
                     trigger={null}
                     collapsible
                     collapsed={collapsed}
+                    className={styles.sider}
                 >
                     <Link to="/">
                         <div className={classNames(styles.company, {

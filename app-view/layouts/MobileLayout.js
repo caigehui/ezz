@@ -4,13 +4,13 @@ import { Route, Link } from 'app';
 import { connect } from 'dva';
 import { getMenuItemByKey } from 'utils/helper';
 import Bread from './Bread';
-import Loader from '../Loader';
-import styles from './Mobile.less';
+import { Loader } from 'components';
+import styles from './MobileLayout.less';
 import classNames from 'classnames';
 const { Footer, Sider, Content, Header } = Layout;
 const { SubMenu, Item } = Menu;
 
-function Mobile({
+function MobileLayout({
     children,
     match,
     getMenu,
@@ -71,4 +71,4 @@ function Mobile({
     );
 }
 
-export default connect(({ app, loading }) => ({ ...app, loading }))(Mobile);
+export default connect(({ app, loading }) => ({ ...app, loading }))(MobileLayout);

@@ -1,21 +1,14 @@
 @import "~themes/default";
+@import '~antd/lib/style/v2-compatible-reset.less';
 
 html, body, :global(#root) {
   height: 100%;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: 400;
-  }
-
-  a {
-    font-family: "PingFang SC", "Microsoft Yahei";
-  }
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // nprogress样式

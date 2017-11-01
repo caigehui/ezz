@@ -111,6 +111,7 @@ function MyHeader({ dispatch, user, match }) {
 }
 
 class Me extends React.Component {
+
 	state = {
 		visible: false
 	}
@@ -120,12 +121,29 @@ class Me extends React.Component {
 			visible: false,
 		});
 	}
+
 	handleVisibleChange = (visible) => {
 		this.setState({ visible });
 	}
 
-	render() {
+	onPersonClick = async () => {
 		const { user, dispatch, match } = this.props;
+		this.hide();
+		await delay(200);
+		match.url !== `/person/${user._id}` && dispatch(routerRedux.push({
+			pathname: `/person/${user._id}`
+		}));
+	}
+
+	onLogout = async () => {
+		const { dispatch } = this.props;
+		this.hide();
+		await delay(200);
+		dispatch({ type: 'app/logout' });
+	}
+
+	render() {
+		const { user } = this.props;
 		return (
 			<Popover
 				placement="bottom"
@@ -134,19 +152,9 @@ class Me extends React.Component {
 				onVisibleChange={this.handleVisibleChange}
 				content={
 					<div className={styles.popoverWrapper}>
-						<div onClick={async () => {
-							this.hide();
-							await delay(200);
-							match.url !== `/person/${user._id}` && dispatch(routerRedux.push({
-								pathname: `/person/${user._id}`
-							}));
-						}}><Icon type="user" />个人信息</div>
+						<div onClick={this.onPersonClick}><Icon type="user" />个人信息</div>
 						<div onClick={this.hide}><Icon type="setting" />偏好设置</div>
-						<div onClick={async () => {
-							this.hide();
-							await delay(200);
-							dispatch({ type: 'app/logout' });
-						}}><Icon type="logout" />退出登录</div>
+						<div onClick={this.onLogout}><Icon type="logout" />退出登录</div>
 					</div>
 				}>
 				<div className={classNames(styles.buttonWrapper, styles.user)}>

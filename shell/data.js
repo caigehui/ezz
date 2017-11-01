@@ -12,8 +12,8 @@ if (!db.menu.findOne()) {
     var companyId = ObjectId();
     db.company.insert({
         _id: companyId,
-        name: 'Ezz企业应用平台',
-        shortname: 'Ezz'
+        name: 'Ezz Example',
+        shortname: 'Ezz Example' 
     })
 
     // 插入菜单
@@ -120,8 +120,8 @@ if (!db.menu.findOne()) {
         companies: [
             {
                 id: companyId,
-                name: 'Ezz企业应用平台',
-                shortname: 'Ezz',
+                name: 'Ezz Example',
+                shortname: 'Ezz Example',
                 isMain: true,
                 jobPrivileges: [],
                 userPrivileges: []
@@ -129,8 +129,8 @@ if (!db.menu.findOne()) {
         ],
         currentCompany: {
             id: companyId,
-            name: 'Ezz企业应用平台',
-            shortname: 'Ezz',
+            name: 'Ezz Example',
+            shortname: 'Ezz Example',
             isMain: true,
             jobPrivileges: [],
             userPrivileges: []

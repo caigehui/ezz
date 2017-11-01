@@ -4,11 +4,20 @@
 // 注意：只需写出要覆盖的变量即可（不需要覆盖的变量不要写）
 // http://www.iconfont.cn/collections/detail?cid=790
 @import "../../node_modules/antd/lib/style/themes/default.less";
+
 @border-color-split: #f4f4f4;
 @border-color-base: #e5e5e5;
 @background-color-base: rgb(243, 243, 243);
+
+// extra
 @hover-background-color: #f4f8fb;
 @box-shadow-color:rgba(0,0,0,.1);
-@font-family: "AvenirNext-Regular", "Helvetica Neue", "lucida grande", "PingFangHK-Light", "STHeiti", "Heiti SC", "Hiragino Sans GB", "Microsoft JhengHei", "Microsoft Yahei", SimHei, "WenQuanYi Micro Hei", "Droid Sans", "Roboto", Helvetica, Tahoma, Arial, "sans-serif";
 @transition-ease-in: all 0.3s ease-out;
 @transition-ease-out: all 0.3s ease-out;
+
+.textOverflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+  }

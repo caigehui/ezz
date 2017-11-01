@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { MainLayout, SubLayout } from 'components';
+import { MainLayout, SubLayout } from '../layouts';
 
 /**
  * 绑定视图到应用中

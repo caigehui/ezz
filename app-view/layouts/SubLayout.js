@@ -2,13 +2,13 @@ import React from 'react';
 import { Layout, Icon, Menu, Switch } from 'antd';
 import { Route, Link, routerRedux } from 'app';
 import { connect } from 'dva';
-import styles from './index.less';
+import styles from './SubLayout.less';
 import { getMenuItemByKey } from 'utils/helper';
 const { Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
 function SubLayout({
-        match,
+    match,
     location,
     children,
     dispatch,
@@ -19,8 +19,8 @@ function SubLayout({
     functionPathForMenu
 }) {
     const item = getMenuItemByKey(menu, match.url);
-    // 强制修改
-    if(functionPathForMenu[item.key] !== match.url) functionPathForMenu[item.key] = match.url;
+    // 如果地址错误则强制修改
+    if (functionPathForMenu[item.key] !== match.url) functionPathForMenu[item.key] = match.url;
     return (
         <Layout className={styles.layout}>
             {item.extraFunctions && item.extraFunctions.length > 0 ?
