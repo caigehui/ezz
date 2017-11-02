@@ -1,12 +1,12 @@
 import React from 'react';
-import { Layout, Icon, Menu, Switch } from 'antd';
+import { Icon, Menu, Switch, Layout } from 'antd';
 import { Route, Link, routerRedux } from 'dva/router';
 import { connect } from 'dva';
 import styles from './SubLayout.less';
 import { getMenuItemByKey } from 'utils/helper';
 import { PageHeader } from 'components';
-const { Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
+const { Content } = Layout;
 
 function SubLayout({
     match,
@@ -23,7 +23,7 @@ function SubLayout({
     // 如果地址错误则强制修改
     if (functionPathForMenu[item.key] !== match.url) functionPathForMenu[item.key] = match.url;
     return (
-        <Layout className={styles.layout}>
+        <Layout className={styles.container}>
             <PageHeader>
                 {item.extraFunctions && item.extraFunctions.length > 0 ?
                     <Menu
@@ -38,7 +38,9 @@ function SubLayout({
                     null
                 }
             </PageHeader>
-            {children}
+            <Content className={styles.content}>
+                {children}
+            </Content>
         </Layout>
     )
 }

@@ -1,5 +1,17 @@
 @import '~themes/default.less';
 
-.layout {
+.container {
     height: 100%;
+    flex: 1;
+    .content {
+        padding: 24px;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 0) {
+    
+    .content {
+        padding: 16px;
+    }
 }

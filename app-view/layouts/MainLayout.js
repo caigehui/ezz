@@ -91,9 +91,7 @@ function MainLayout({
                 </Sider>
                 <Layout className={styles.layout}>
                     <Header user={user} match={match}/>
-                    <Content className={styles.content}>
-                        {children}
-                    </Content>
+                    {children}
                     <GlobalFooter/>
                 </Layout>
             </Layout>
