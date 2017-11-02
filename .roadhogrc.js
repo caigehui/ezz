@@ -18,7 +18,7 @@ export default {
             'assets': './assets',
             'utils': './utils',
             'constants': './constants',
-            'app': './app'
+            'bind': './bind'
           }
         }]
       ],
@@ -42,7 +42,7 @@ export default {
             'assets': './assets',
             'utils': './utils',
             'constants': './constants',
-            'app': './app'
+            'bind': './bind'
           }
         }]
       ]

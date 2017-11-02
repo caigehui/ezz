@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Icon, Menu, Switch } from 'antd';
-import { Route, Link, routerRedux } from 'app';
+import { Route, Link, routerRedux } from 'dva/router';
 import { connect } from 'dva';
 import styles from './SubLayout.less';
 import { getMenuItemByKey } from 'utils/helper';

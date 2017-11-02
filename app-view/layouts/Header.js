@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Menu, Dropdown, Row, Col, Icon, Avatar, Input, AutoComplete, Badge, Popover } from 'antd';
-import { Link, routerRedux } from 'app';
+import { Link, routerRedux } from 'dva/router';
 import { connect } from 'dva';
 import delay from 'utils/delay';
 import styles from './Header.less';

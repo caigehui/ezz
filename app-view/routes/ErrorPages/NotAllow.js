@@ -1,6 +1,6 @@
 import React from 'react';
-import { bind } from 'app';
-import Exception from 'ant-design-pro/lib/Exception';
+import bind from 'bind';
+import { Exception } from 'components';
 
 class NotAllow extends React.Component {
 
@@ -10,6 +10,4 @@ class NotAllow extends React.Component {
 
 }
 
-export default bind(() => {}, {
-    disableSubLayout: true
-})(NotAllow);
+export default bind({ disableSubLayout: true })(NotAllow);

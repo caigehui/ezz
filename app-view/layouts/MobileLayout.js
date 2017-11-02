@@ -1,13 +1,13 @@
 import React from 'react';
 import { Layout, Icon, Avatar, Menu, Switch, Row, Col, } from 'antd';
-import { Route, Link } from 'app';
+import { Route, Link } from 'dva/router';
 import { connect } from 'dva';
 import { getMenuItemByKey } from 'utils/helper';
 import Bread from './Bread';
-import { Loader } from 'components';
+import { Loader, GlobalFooter } from 'components';
 import styles from './MobileLayout.less';
 import classNames from 'classnames';
-const { Footer, Sider, Content, Header } = Layout;
+const { Sider, Content, Header } = Layout;
 const { SubMenu, Item } = Menu;
 
 function MobileLayout({
@@ -63,9 +63,7 @@ function MobileLayout({
                 <Content className={styles.content}>
                     {children}
                 </Content>
-                <Footer className={styles.footer}>
-                    Copyright © 2000-2017 WxSoft ZhuHai Inc. All Rights Reserved
-                </Footer>
+                <GlobalFooter/>
             </Layout>
         </Layout>
     );

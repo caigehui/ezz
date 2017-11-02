@@ -2,7 +2,7 @@ import delay from 'utils/delay';
 import request from 'utils/request';
 import sjcl from 'sjcl';
 import { ENCRYPT_KEY } from 'constant';
-import { routerRedux } from 'app';
+import { routerRedux } from 'dva/router';
 import enquire from 'enquire.js';
 import Cookies from 'js-cookie';
 
@@ -68,7 +68,7 @@ export default {
                         password: sjcl.encrypt(ENCRYPT_KEY, payload.password)
                     }
                 });
-            if (err) return;
+            if (err) return err;
             // 初始化获取偏好设置
             yield put({ type: 'init' });
             yield delay(500);
@@ -76,6 +76,7 @@ export default {
             yield put(routerRedux.replace({
                 pathname: '/'
             }));
+            return false;
         },
         *logout(action = {}, { call, put }) {
             const { data, err } = yield call(request, '/api/signin', { post: {} });

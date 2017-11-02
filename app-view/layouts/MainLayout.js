@@ -1,16 +1,16 @@
 import React from 'react';
 import { Layout, Icon, Menu, Switch } from 'antd';
-import { Link } from 'app';
+import { Link } from 'dva/router';
 import { connect } from 'dva';
 import { checkAuth, getMenuItemByKey } from 'utils/helper';
 import classNames from 'classnames';
 import Header from './Header';
-import { Loader } from 'components';
+import { Loader, GlobalFooter } from 'components';
 import styles from './MainLayout.less';
 import isarray from 'isarray';
 import MobileLayout from './MobileLayout';
 import Bread from './Bread';
-const { Footer, Sider, Content } = Layout;
+const { Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
 function MainLayout({
@@ -96,9 +96,7 @@ function MainLayout({
                     <Content className={styles.content}>
                         {children}
                     </Content>
-                    <Footer className={styles.footer}>
-                        Copyright © 2000-2017 WxSoft ZhuHai Inc. All Rights Reserved
-                    </Footer>
+                    <GlobalFooter/>
                 </Layout>
             </Layout>
     )

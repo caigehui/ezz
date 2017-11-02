@@ -1,5 +1,5 @@
 import React from 'react';
-import { bind } from 'app';
+import bind from 'bind';
 import QueueAnim from 'rc-queue-anim';
 function Role({ }) {
 

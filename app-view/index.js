@@ -1,4 +1,4 @@
-import { App } from 'app';
+import App from 'app';
 import homeRoutes from './routes/Home';
 import systemRoutes from './routes/System';
 const routes = [

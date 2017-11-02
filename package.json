@@ -20,7 +20,6 @@
     "install-node": "6.11.1"
   },
   "dependencies": {
-    "ant-design-pro": "^0.2.0",
     "antd": "^3.0.0-beta.1",
     "babel-runtime": "^6.9.2",
     "classnames": "^2.2.5",

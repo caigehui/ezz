@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { withRouter } from 'react-router'
 import { Breadcrumb } from 'antd';
 import { getBreadItemByKey } from 'utils/helper';
-import { Link } from 'app';
+import { Link } from 'dva/router';
 const Item = Breadcrumb.Item;
 
 const Bread = withRouter(({ location: { pathname }, match: { path, url }, menu }) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { routerRedux, Switch, Route, Link, Redirect } from 'dva/router';
 import dva from 'dva';
 import dynamic from 'dva/dynamic';
-import bind from 'utils/bind';
+import bind from './bind';
 import { message } from 'antd';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
@@ -21,17 +21,10 @@ import {
 } from './middlewares';
 import 'utils/array';
 import './themes/index.less';
-// 导出常用方法和库
-export {
-	routerRedux,
-	Route,
-	Link,
-	bind
-}
 
 const { ConnectedRouter } = routerRedux;
 
-export class App {
+export default class App {
 
 	constructor({
 		routes,

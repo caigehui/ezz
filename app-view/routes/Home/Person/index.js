@@ -1,6 +1,5 @@
 import React from 'react';
-import { bind } from 'app';
-import { } from 'antd';
+import bind from 'bind';
 import styles from './index.less';
 
 function Person({ info, dispatch, match }) {

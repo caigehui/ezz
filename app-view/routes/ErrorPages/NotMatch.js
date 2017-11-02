@@ -1,11 +1,11 @@
 import React from 'react';
-import { bind, Link } from 'app';
-import Exception from 'ant-design-pro/lib/Exception';
+import bind from 'bind';
+import { Exception } from 'components';
 
 function NotMatch() {
     return <Exception type="404" />
 }
 
-export default bind(() => {}, {
+export default bind({
     disableSubLayout: true
 })(NotMatch);
