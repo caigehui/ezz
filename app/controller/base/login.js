@@ -30,6 +30,7 @@ module.exports = app => class LoginController extends app.Controller {
         if(!user) this.ctx.throw(401, '用户验证失败');
         this.ctx.session.user = user;
         const { menu } = yield this.ctx.model.Menu.findOne({ companyId: user.currentCompany.id }, { menu: 1 });
+        yield this.ctx.model.User.update({ _id: mongoose.Types.ObjectId(this.ctx.session.user._id) }, { '$set': { lastLoginTime: new Date() } })
         this.ctx.body = { user, menu };
     }
 

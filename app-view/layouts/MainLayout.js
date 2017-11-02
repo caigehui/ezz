@@ -9,7 +9,6 @@ import { Loader, GlobalFooter } from 'components';
 import styles from './MainLayout.less';
 import isarray from 'isarray';
 import MobileLayout from './MobileLayout';
-import Bread from './Bread';
 const { Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
@@ -91,8 +90,7 @@ function MainLayout({
                     </div>
                 </Sider>
                 <Layout className={styles.layout}>
-                    <Header match={match}/>
-                    <Bread menu={menu}/>
+                    <Header user={user} match={match}/>
                     <Content className={styles.content}>
                         {children}
                     </Content>

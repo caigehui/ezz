@@ -134,7 +134,8 @@ if (!db.menu.findOne()) {
             isMain: true,
             jobPrivileges: [],
             userPrivileges: []
-        }
+        },
+        createTime: new Date()
     });
 } else {
     // 执行数据库升级语句

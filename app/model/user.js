@@ -38,9 +38,12 @@ module.exports = ({ mongoose }) => {
         preferences: {
 
         },
-        createTime: Date,// 创建时间
+        createTime:  {
+            type: Date,
+            default: Date.now
+        },// 创建时间
         lastLoginTime: Date// 上次登录时间
-    }, { collection: 'user' });
+    }, { collection: 'user', timestamps: { createdAt: 'createTime' } });
 
     return mongoose.model('User', UserSchema);
 };

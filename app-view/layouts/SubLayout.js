@@ -4,6 +4,7 @@ import { Route, Link, routerRedux } from 'dva/router';
 import { connect } from 'dva';
 import styles from './SubLayout.less';
 import { getMenuItemByKey } from 'utils/helper';
+import { PageHeader } from 'components';
 const { Sider, Content } = Layout;
 const { SubMenu, Item } = Menu;
 
@@ -23,36 +24,21 @@ function SubLayout({
     if (functionPathForMenu[item.key] !== match.url) functionPathForMenu[item.key] = match.url;
     return (
         <Layout className={styles.layout}>
-            {item.extraFunctions && item.extraFunctions.length > 0 ?
-                isMobile ?
+            <PageHeader>
+                {item.extraFunctions && item.extraFunctions.length > 0 ?
                     <Menu
+                        style={{ borderBottom:  0}}
                         mode="horizontal"
                         selectedKeys={[functionPathForMenu[item.key] || match.url]}
                         onSelect={i => { dispatch({ type: 'app/save', payload: { functionPathForMenu: { ...functionPathForMenu, [item.key]: i.key } } }) }}
-                        style={{ height: '100%' }}
                     >
-                        <Item key={item.key}><Link to={item.key}>{item.name}</Link></Item>
-                        {item.extraFunctions.map((i, index) => <Item key={i.key}><Link to={i.key}></Link>{i.name}</Item>)}
+                        {[<Item key={item.key} style={{ padding: '0 5px', marginRight: 30 }}><Link to={item.key}></Link>{item.name}</Item>].concat(item.extraFunctions.map((i, index) => <Item key={i.key} style={{ padding: '0 5px', marginRight: 30 }}><Link to={i.key}></Link>{i.name}</Item>))}
                     </Menu>
                     :
-                    <Sider width={180}>
-                        <Menu
-                            mode="inline"
-                            defaultSelectedKeys={[match.url]}
-                            selectedKeys={[functionPathForMenu[item.key] || match.url]}
-                            style={{ height: '100%' }}
-                            onSelect={i => { dispatch({ type: 'app/save', payload: { functionPathForMenu: { ...functionPathForMenu, [item.key]: i.key } } }) }}
-                        >
-                            <Item key={item.key}><Link to={item.key}>{item.name}</Link></Item>
-                            {item.extraFunctions.map((i, index) => <Item key={i.key}><Link to={i.key}></Link>{i.name}</Item>)}
-                        </Menu>
-                    </Sider>
-                :
-                null
-            }
-            <Content className={styles.content}>
-                {children}
-            </Content>
+                    null
+                }
+            </PageHeader>
+            {children}
         </Layout>
     )
 }

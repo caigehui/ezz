@@ -3,7 +3,6 @@ import { Layout, Icon, Avatar, Menu, Switch, Row, Col, } from 'antd';
 import { Route, Link } from 'dva/router';
 import { connect } from 'dva';
 import { getMenuItemByKey } from 'utils/helper';
-import Bread from './Bread';
 import { Loader, GlobalFooter } from 'components';
 import styles from './MobileLayout.less';
 import classNames from 'classnames';
@@ -59,7 +58,6 @@ function MobileLayout({
                 </div>
             </Header>
             <Layout>
-                <Bread menu={menu}/>
                 <Content className={styles.content}>
                     {children}
                 </Content>

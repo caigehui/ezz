@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withRouter } from 'react-router'
 import { Breadcrumb } from 'antd';
 import { getBreadItemByKey } from 'utils/helper';
 import { Link } from 'dva/router';
 const Item = Breadcrumb.Item;
 
-const Bread = withRouter(({ location: { pathname }, match: { path, url }, menu }) => {
+const Bread = ({ pathname, path, menu }) => {
     let breadcrumbs;
     if (getBreadItemByKey(menu, pathname)) {
         const keys = pathname.split('/');
@@ -43,10 +42,10 @@ const Bread = withRouter(({ location: { pathname }, match: { path, url }, menu }
     }
 
     return (
-        <Breadcrumb style={{ padding: '18px 24px' }}>
+        <Breadcrumb>
             {breadcrumbs}
         </Breadcrumb>
     );
-})
+}
 
 export default Bread;
