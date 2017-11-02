@@ -10,7 +10,7 @@ module.exports = app => {
             // 节点的key值，与route path对应，唯一
             key: { type: String, required: true, lowercase: true, trim: true, unique: true },
             // 节点名称
-            name: { type: String, required: true },
+            name: String,
             // 图标类型
             iconType: String,
             // 节点描述

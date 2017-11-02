@@ -25,9 +25,9 @@ if (!db.menu.findOne()) {
                 name: '总览',
                 iconType: 'home'
             },
-            {
+            {   
                 key: '/system',
-                name: '系统管理',
+                name: '系统管理 ',
                 iconType: 'setting',
                 children: [
                     {
