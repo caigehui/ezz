@@ -1,6 +1,5 @@
 'use strict';
 const fs = require('fs');
-const path = require('path');
 const crypto = require('crypto');
 const gm = require('gm');
 
@@ -22,8 +21,8 @@ module.exports = {
         return new Promise((resolve) => {
             fs.exists(filepath, exists => {
                 resolve(exists);
-            })
-        })
+            });
+        });
     },
     /**
      * 获取文件的Hash
@@ -48,8 +47,8 @@ module.exports = {
             fs.stat(filepath, (err, stats) => {
                 if(err) resolve(0);
                 resolve({ filesize: stats.size });
-            })
-        })
+            });
+        });
     },
     /**
      * 判断文件是否为图片
@@ -77,7 +76,7 @@ module.exports = {
             fs.rename(originPath, targetPath, (err) => {
                 if(err) return reject({err});
                 resolve();
-            })
+            });
         });
     },
     /**
@@ -85,14 +84,14 @@ module.exports = {
      * @param {object} rs 
      */
     getImageSize(filepath) {
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             let rs = fs.createReadStream(filepath);
             gm(rs)
                 .size((err, size) => {
                     if (err) throw err;
-                    resolve(size)
-                })
-        })
+                    resolve(size);
+                });
+        });
     },
     /**
      * 
@@ -107,7 +106,7 @@ module.exports = {
                 .write(options.imagePath, (err) => {
                     if (err) throw err;
                     resolve();
-                })
-        })
+                });
+        });
     }
 };

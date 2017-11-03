@@ -3,25 +3,29 @@ import request from 'utils/request';
 export default {
     namespace: 'user',
     state: {
-        users: []
+        users: [],
+        count: 0,
+        visible: false
     },
     effects: {
-        * init(action = {}, { call, put }) {
-            const { data, err } = yield call(request, `/api/users`);
+        * query({ payload: { pageSize, page } }, { call, put, select }) {
+            const { data, err } = yield call(request, `/api/users?page=${page}&pagesize=${pageSize}`);
+            if(err) return;
             yield put({
                 type: 'save',
                 payload: {
-                    users: data
+                    users: data.users.mapLocaleString(['lastLoginTime']),
+                    count: data.count
                 }
             })
         },
-        * query({ page }, {  }) {
-
-        }
     },
     reducers: {
         save(state, action) {
             return { ...state, ...action.payload };
+        },
+        addUser(state) {
+            return { ...state, visible: true }
         }
     },
 };

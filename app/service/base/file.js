@@ -38,7 +38,7 @@ module.exports = app => class File extends app.Service {
         return {
             url: helper.getFileUrl(file._id),
             fileId: file._id
-        }
+        };
     }
     /**
      * 验证文件是否存在
@@ -67,6 +67,6 @@ module.exports = app => class File extends app.Service {
         return {
             url: file ? this.ctx.helper.getFileUrl(file._id) : null,
             fileId: file ? file._id : null
-        }
+        };
     }
 };

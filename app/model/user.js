@@ -4,6 +4,12 @@ module.exports = ({ mongoose }) => {
     const UserSchema = new mongoose.Schema({
         username: { type: String, required: true, unique: true },// 用户名
         password: { type: String, required: true },// 密码
+        // 账户状态
+        status: { type: String, enum: ['使用中', '禁用中', '冻结中'] },
+        // 创建时间
+        createTime: { type: Date, default: Date.now },
+        // 上次登录时间
+        lastLoginTime: Date,
         // 个人信息
         info: {
             name: { type: String, required: true },// 用户名称
@@ -38,11 +44,7 @@ module.exports = ({ mongoose }) => {
         preferences: {
 
         },
-        createTime:  {
-            type: Date,
-            default: Date.now
-        },// 创建时间
-        lastLoginTime: Date// 上次登录时间
+        
     }, { collection: 'user', timestamps: { createdAt: 'createTime' } });
 
     return mongoose.model('User', UserSchema);

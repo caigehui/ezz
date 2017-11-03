@@ -3,7 +3,8 @@ import { routerRedux, Switch, Route, Link, Redirect } from 'dva/router';
 import dva from 'dva';
 import dynamic from 'dva/dynamic';
 import bind from './bind';
-import { message } from 'antd';
+import { message, LocaleProvider } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
 import { persistStore, autoRehydrate } from 'redux-persist';
@@ -74,26 +75,28 @@ export default class App {
 
 	routerConfig = ({ app, history }) => {
 		return (
-			<ConnectedRouter history={history}>
-				<Switch>
-					{
-						this.routes.map((route, index) => (
-							<Route key={index} path={route.path} exact={route.exact} component={dynamic({
-								app,
-								component: () => route.component,
-							})} />
-						))
-					}
-					<Route path="/notallow" component={dynamic({
-						app,
-						component: () => require('./routes/ErrorPages/NotAllow')
-					})} />
-					<Route component={dynamic({
-						app,
-						component: () => require('./routes/ErrorPages/NotMatch')
-					})} />
-				</Switch>
-			</ConnectedRouter>
+			<LocaleProvider locale={zhCN}>
+				<ConnectedRouter history={history}>
+					<Switch>
+						{
+							this.routes.map((route, index) => (
+								<Route key={index} path={route.path} exact={route.exact} component={dynamic({
+									app,
+									component: () => route.component,
+								})} />
+							))
+						}
+						<Route path="/notallow" component={dynamic({
+							app,
+							component: () => require('./routes/ErrorPages/NotAllow')
+						})} />
+						<Route component={dynamic({
+							app,
+							component: () => require('./routes/ErrorPages/NotMatch')
+						})} />
+					</Switch>
+				</ConnectedRouter>
+			</LocaleProvider>
 		);
 	}
 
@@ -110,8 +113,8 @@ export default class App {
 				}
 			}
 		}
-		for(let model of this.extraModels) {
-			if(model.persist) {
+		for (let model of this.extraModels) {
+			if (model.persist) {
 				whitelist.push(model.namespace);
 			}
 		}

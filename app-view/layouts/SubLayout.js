@@ -17,14 +17,15 @@ function SubLayout({
     user,
     privileges,
     isMobile,
-    functionPathForMenu
+    functionPathForMenu,
+    renderExtra
 }) {
     const item = getMenuItemByKey(menu, match.url);
     // 如果地址错误则强制修改
     if (functionPathForMenu[item.key] !== match.url) functionPathForMenu[item.key] = match.url;
     return (
         <Layout className={styles.container}>
-            <PageHeader>
+            <PageHeader renderExtra={renderExtra}>
                 {item.extraFunctions && item.extraFunctions.length > 0 ?
                     <Menu
                         style={{ borderBottom:  0}}

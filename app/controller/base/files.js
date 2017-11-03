@@ -20,7 +20,7 @@ module.exports = app => class FilesController extends app.Controller {
         if (params[1] && params[1] === 'medium') {
             size = '-medium';
         } else if (params[1] && params[1] === 'small') {
-            size = '-small'
+            size = '-small';
         }
         // 获取文件的filePath
         let filepath = this.config.getUploadPath(file.hash);
@@ -70,6 +70,6 @@ module.exports = app => class FilesController extends app.Controller {
 	*verify() {
 		const { hash, filename } = this.ctx.request.body;
 		const { url, fileId } = yield this.ctx.service.base.file.verifyFile({ hash, filename });
-		this.ctx.body = { url, fileId }
+		this.ctx.body = { url, fileId };
 	}
 };

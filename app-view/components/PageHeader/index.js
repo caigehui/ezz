@@ -9,12 +9,18 @@ function PageHeader({
     location: { pathname },
     match: { path },
     menu,
-    children
+    renderExtra,
+    children,
+    dispatch
 }) {
+    const item = getBreadItemByKey(menu, path);
     return (
         <div className={styles.container}>
             <Bread pathname={pathname} path={path} menu={menu}/>
-            <h1>{getBreadItemByKey(menu, path).name}</h1>
+            <div className={styles.extraContainer}>
+                {!renderExtra && <h1>{item.name}</h1>}
+                {renderExtra && renderExtra({ item, dispatch })}
+            </div>
             {children}
         </div>
     )

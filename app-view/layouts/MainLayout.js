@@ -28,9 +28,9 @@ function MainLayout({
     if (!user) return null;
     function getMenu(node) {
         // 校验权限
-        if(!checkAuth(privileges, node.key)) return null; 
+        if (!checkAuth(privileges, node.key)) return null;
         // 不显示隐藏的菜单
-        if(node.hidden) return null;
+        if (node.hidden) return null;
         if (node.children && isarray(node.children) && node.children.length > 0) {
             return (
                 <SubMenu
@@ -53,7 +53,7 @@ function MainLayout({
     const menuItem = getMenuItemByKey(menu, match.url);
     return (
         isMobile
-            ? <MobileLayout children={children} match={match} getMenu={getMenu}/>
+            ? <MobileLayout children={children} match={match} getMenu={getMenu} />
             :
             <Layout style={{ height: '100%' }}>
                 <Loader spinning={loading.effects['app/init']} />
@@ -72,15 +72,25 @@ function MainLayout({
                             {!collapsed ? <span className={styles.companyName}>{user.currentCompany.shortname || user.currentCompany.name}</span> : null}
                         </div>
                     </Link>
-                    <Menu
-                        inlineCollapsed={collapsed}
-                        theme="dark"
-                        mode="inline"
-                        openKeys={openKeys}
-                        onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
-                        defaultSelectedKeys={menuItem ? [menuItem.key] : []}>
-                        {menu.map(node => getMenu(node))}
-                    </Menu>
+                    {
+                        collapsed ?
+                            <Menu
+                                inlineCollapsed
+                                theme="dark"
+                                mode="inline"
+                                defaultSelectedKeys={menuItem ? [menuItem.key] : []}>
+                                {menu.map(node => getMenu(node))}
+                            </Menu>
+                            :
+                            <Menu
+                                theme="dark"
+                                mode="inline"
+                                openKeys={openKeys}
+                                onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
+                                defaultSelectedKeys={menuItem ? [menuItem.key] : []}>
+                                {menu.map(node => getMenu(node))}
+                            </Menu>
+                    }
                     <div className={styles.collapse}>
                         <Icon
                             className={styles.trigger}
@@ -90,9 +100,9 @@ function MainLayout({
                     </div>
                 </Sider>
                 <Layout className={styles.layout}>
-                    <Header user={user} match={match}/>
+                    <Header user={user} match={match} />
                     {children}
-                    <GlobalFooter/>
+                    <GlobalFooter />
                 </Layout>
             </Layout>
     )

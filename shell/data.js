@@ -32,7 +32,7 @@ if (!db.menu.findOne()) {
                 children: [
                     {
                         key: '/system/user',
-                        name: '用户与角色',
+                        name: '用户管理',
                         actions: [
                             {
                                 key: '/system/user/create',
@@ -109,8 +109,10 @@ if (!db.menu.findOne()) {
         _id: userId,
         username: 'admin',
         password: 'admin',
+        status: '使用中',
+        createTime: Date(),
         role: {
-            name: '系统管理员',
+            name: '超级管理员', // 不显示超级管理员
             rolePrivileges: [1]
         },
         info: {
@@ -135,7 +137,6 @@ if (!db.menu.findOne()) {
             jobPrivileges: [],
             userPrivileges: []
         },
-        createTime: new Date()
     });
 } else {
     // 执行数据库升级语句

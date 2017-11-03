@@ -3,7 +3,7 @@
 module.exports = ({ mongoose }) => {
     const RoleSchema = new mongoose.Schema({
         name: { type: String, required: true }, // 角色名
-        description: String, //角色描述
+        description: String, // 角色描述
         privileges: { type: [String], default: [] },// 角色权限，[1]表示始终拥有全部权限
     }, { collection: 'role' });
 
