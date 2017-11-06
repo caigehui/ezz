@@ -4,6 +4,7 @@ import Exception from './Exception';
 import GlobalFooter from './GlobalFooter';
 import PageHeader from './PageHeader';
 import CommonTable from './CommonTable';
+import ErrorMessage from './ErrorMessage';
 
 export {
     Loader,
@@ -11,5 +12,6 @@ export {
     Exception,
     GlobalFooter,
     PageHeader,
-    CommonTable
+    CommonTable,
+    ErrorMessage
 };

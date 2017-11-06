@@ -1,27 +1,3 @@
-import _ from 'lodash';
-
-/**
- * 将数据库的UTC时间转换成本地时间
- */
-Array.prototype.mapLocaleString = function(keys) {
-    if(!keys) {
-        for(let i of this) {
-            i = (new Date(i)).toLocaleString();
-        }
-    } else if(typeof(keys) === 'string') {
-        for(let i of this) {
-            _.set(i, keys, (new Date(_.get(i, keys))).toLocaleString()); 
-        }
-    } else if(keys instanceof Array) {
-        for(let i of this) {
-            for(let key of keys) {
-                _.set(i, key, (new Date(_.get(i, key))).toLocaleString()); 
-            }
-        }
-    }
-    return this;
-}
-
 /**
  * 返回移除后的数组，不更改原数组
  * @param {function} condition 

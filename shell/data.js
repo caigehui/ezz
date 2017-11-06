@@ -110,7 +110,7 @@ if (!db.menu.findOne()) {
         username: 'admin',
         password: 'admin',
         status: '使用中',
-        createTime: Date(),
+        createTime: new Date(),
         role: {
             name: '超级管理员', // 不显示超级管理员
             rolePrivileges: [1]

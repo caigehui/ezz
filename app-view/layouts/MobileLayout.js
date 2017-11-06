@@ -23,7 +23,7 @@ function MobileLayout({
     const menuItem = getMenuItemByKey(menu, match.url);
     return (
         <Layout style={{ height: '100%', backgroundColor: 'rgb(243, 243, 243)' }}>
-            <Loader spinning={loading.effects['app/init']} />
+            <Loader spinning={loading.effects['app/init']} fullScreen/>
             <Header className={styles.header}>
                 <img src={user.currentCompany.logo || require('assets/logo.svg')} className={styles.logo} />
                 <span className={styles.companyName}>{user.currentCompany.shortname || user.currentCompany.name}</span>

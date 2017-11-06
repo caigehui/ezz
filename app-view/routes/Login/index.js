@@ -104,7 +104,7 @@ export default class Login extends Component {
                     size="large"
                     prefix={<Icon type="lock" className={styles.prefixIcon} />}
                     type="password"
-                    placeholder="888888"
+                    placeholder="admin"
                   />
                 )}
               </FormItem>

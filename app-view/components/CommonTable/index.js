@@ -15,13 +15,24 @@ export default class CommonTable extends React.Component {
         this.props.onFetch && this.props.onFetch(1, 10);
     }
 
+    reload = (page, pageSize) => {
+        console.log('111');
+        this.page = page || this.page;
+        this.pageSize = pageSize || this.pageSize;
+        this.props.onFetch && this.props.onFetch(this.page, this.pageSize)
+    }
+
+    page = 1
+
+    pageSize = 10
+
     render() {
         const paginationProps = {
             showQuickJumper: true,
             showSizeChanger: true,
             total: this.props.totalCount,
-            onChange: (page, pageSize) => this.props.onFetch && this.props.onFetch(page, pageSize),
-            onShowSizeChange: (page, pageSize) => this.props.onFetch && this.props.onFetch(page, pageSize)
+            onChange: this.reload,
+            onShowSizeChange: this.reload
         }
 
         return (

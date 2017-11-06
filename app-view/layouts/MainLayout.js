@@ -55,8 +55,8 @@ function MainLayout({
         isMobile
             ? <MobileLayout children={children} match={match} getMenu={getMenu} />
             :
-            <Layout style={{ height: '100%' }}>
-                <Loader spinning={loading.effects['app/init']} />
+            <Layout>
+                <Loader spinning={loading.effects['app/init']} fullScreen />
                 <Sider
                     width={256}
                     trigger={null}
@@ -91,13 +91,6 @@ function MainLayout({
                                 {menu.map(node => getMenu(node))}
                             </Menu>
                     }
-                    <div className={styles.collapse}>
-                        <Icon
-                            className={styles.trigger}
-                            type={collapsed ? 'menu-unfold' : 'menu-fold'}
-                            onClick={() => dispatch({ type: 'app/toggleCollapsed' })}
-                        />
-                    </div>
                 </Sider>
                 <Layout className={styles.layout}>
                     <Header user={user} match={match} />

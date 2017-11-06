@@ -7,8 +7,10 @@ module.exports = app => {
   app.post('/api/signin', 'base.login.signin');
   // 退出登录
   app.post('/api/logout', 'base.login.logout');
-  // 用户
+  // 用户管理
   app.resources('users', '/api/users', 'base.users');
+  // 验证用户字段是否存在
+  app.post('/api/verify', 'base.verify.index');
   // 文件管理
   app.resources('files', '/api/files', 'base.files');
   // 验证文件是否存在

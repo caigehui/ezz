@@ -28,7 +28,7 @@ const dataSource = [{
 	}],
 }];
 
-function MyHeader({ dispatch, user, match }) {
+function MyHeader({ dispatch, user, collapsed, match }) {
 
 	function onMenuClick({ key }) {
 		if (key === 'logout') {
@@ -78,6 +78,11 @@ function MyHeader({ dispatch, user, match }) {
 	return (
 		<Header className={styles.header}>
 			<Row type="flex" justify="right">
+				<Col span={1}>
+				<div className={styles.buttonWrapper} onClick={() => dispatch({ type: 'app/toggleCollapsed' })}>
+						<Icon type={collapsed ? 'menu-unfold' : 'menu-fold'}/>
+					</div>
+				</Col>
 				<Col span={4} className={styles.searchCol}>
 					<Icon type="search" className={styles.icon} />
 					<AutoComplete
@@ -91,7 +96,7 @@ function MyHeader({ dispatch, user, match }) {
 						<input placeholder="搜索..." className={styles.input} />
 					</AutoComplete>
 				</Col>
-				<Col span={20} className={styles.menuCol}>
+				<Col span={19} className={styles.menuCol}>
 					<Me user={user} dispatch={dispatch} match={match}/>
 					<div className={styles.buttonWrapper}>
 						<Badge dot>

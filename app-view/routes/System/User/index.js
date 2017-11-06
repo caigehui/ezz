@@ -5,22 +5,17 @@ import { Layout, Table, Icon, Avatar, Button, Badge, Menu, Dropdown, Modal } fro
 const { Column } = Table;
 const confirm = Modal.confirm;
 import styles from './index.less';
+import UserForm from './UserForm';
 
 const PAGE_SIZE = 10;
 
-function User({
-    users,
-    count,
-    page,
-    pageSize,
-    dispatch,
-    loading }) {
+class User extends React.Component {
 
-    function onFetch(page, pageSize) {
-        dispatch({ type: 'user/query', payload: { page, pageSize } })
+    onFetch = (page, pageSize) => {
+        this.props.dispatch({ type: 'user/query', payload: { page, pageSize } })
     }
 
-    function renderName(text, record) {
+    renderName(text, record) {
         return (
             <div className={styles.nameColumn}>
                 <Avatar src={record.info.avatar} icon="user" />
@@ -29,7 +24,7 @@ function User({
         )
     }
 
-    function renderStatus(text, record) {
+    renderStatus(text, record) {
         switch (record.status) {
             case '使用中':
                 return <span><Badge status="success" />使用中</span>
@@ -40,7 +35,7 @@ function User({
         }
     }
 
-    function renderAction(text, record) {
+    renderAction(text, record) {
 
         return (
             <div className={styles.actionColumn}>
@@ -67,30 +62,45 @@ function User({
         )
     }
 
-    return (
-        <Layout style={{ height: '100%', background: 'white', padding: 24 }}>
-            <CommonTable
-                onFetch={onFetch}
-                totalCount={count}
-                dataSource={users}
-                rowKey={record => record._id}
-                loading={loading.effects['user/query']}>
-                <Column title="姓名" key="name" render={renderName} />
-                <Column title="手机号码" dataIndex="info.mobile" key="mobile" />
-                <Column title="角色" dataIndex="role.name" key="role" />
-                <Column title="状态" render={renderStatus} key="status" />
-                <Column title="上次登录时间" dataIndex="lastLoginTime" key="lastLoginTime" />
-                <Column title="操作" key="action" render={renderAction} />
-            </CommonTable>
-        </Layout>
-    );
+    onCreate = () => {
+        this.refs.table.reload();
+    }
+
+    render () {
+        const {
+            users,
+            count,
+            loading
+         } = this.props;
+
+         return (
+            <Layout style={{ height: '100%', background: 'white', padding: 24 }}>
+                <CommonTable
+                    ref="table"
+                    onFetch={this.onFetch}
+                    totalCount={count}
+                    dataSource={users}
+                    rowKey={record => record._id}
+                    loading={loading.effects['user/query']}>
+                    <Column title="姓名" key="name" render={this.renderName} />
+                    <Column title="手机号码" dataIndex="info.mobile" key="mobile" />
+                    <Column title="角色" dataIndex="role.name" key="role" />
+                    <Column title="状态" render={this.renderStatus} key="status" />
+                    <Column title="上次登录时间" dataIndex="lastLoginTime" key="lastLoginTime" />
+                    <Column title="操作" key="action" render={this.renderAction} />
+                </CommonTable>
+                <UserForm onCreate={this.onCreate}/>
+            </Layout>
+        );
+    }
 }
+
 
 function renderExtra({ item, dispatch }) {
     return (
         <div className={styles.header}>
             <h1>{item.name}</h1>
-            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'user/addUser' })}>
+            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'user/toggleModal' })}>
                 新增用户
             </Button>
         </div>

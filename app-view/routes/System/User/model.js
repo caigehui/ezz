@@ -1,11 +1,13 @@
 import request from 'utils/request';
+import { mapLocaleString } from 'utils/helper';
 
 export default {
     namespace: 'user',
     state: {
         users: [],
         count: 0,
-        visible: false
+        visible: false,
+        err: null
     },
     effects: {
         * query({ payload: { pageSize, page } }, { call, put, select }) {
@@ -14,18 +16,36 @@ export default {
             yield put({
                 type: 'save',
                 payload: {
-                    users: data.users.mapLocaleString(['lastLoginTime']),
+                    users: mapLocaleString(data.users, ['lastLoginTime']),
                     count: data.count
                 }
             })
         },
+        * create({ payload }, { call, put }) {
+            const { data, err } = yield call(request, '/api/users', { post: {
+                ...payload,
+                role: {
+                    name: '系统管理员',
+                    rolePrivileges: ['1']
+                }
+            } });
+            if(err) {
+                yield put({
+                    type: 'save',
+                    payload: { err }
+                })
+                return false;
+            } else {
+                return true;
+            }
+        }
     },
     reducers: {
         save(state, action) {
             return { ...state, ...action.payload };
         },
-        addUser(state) {
-            return { ...state, visible: true }
+        toggleModal(state) {
+            return { ...state, visible: !state.visible }
         }
     },
 };

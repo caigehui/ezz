@@ -5,7 +5,7 @@ module.exports = ({ mongoose }) => {
         username: { type: String, required: true, unique: true },// 用户名
         password: { type: String, required: true },// 密码
         // 账户状态
-        status: { type: String, enum: ['使用中', '禁用中', '冻结中'] },
+        status: { type: String, enum: ['使用中', '禁用中', '冻结中', '已注销'] },
         // 创建时间
         createTime: { type: Date, default: Date.now },
         // 上次登录时间
