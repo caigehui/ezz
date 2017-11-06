@@ -75,6 +75,7 @@ export function mapLocaleString(arr, keys) {
     return arr;
 }
 
+// form校验函数
 async function validator({value, callback, model, field}) {
     const { data } = await request('/api/verify', { post: { model, field, value } });
     if (data.exist) callback(`${name}已重复，请重新输入`);
