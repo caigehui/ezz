@@ -54,21 +54,6 @@ if (!db.menu.findOne()) {
                             }
                         ]
                     },
-                    {
-                        key: '/system/department',
-                        name: '部门与岗位',
-                        enableDefaultFunctions: true
-                    },
-                    {
-                        key: '/system/company',
-                        name: '单位管理',
-                        enableDefaultFunctions: true
-                    },
-                    {
-                        key: '/system/group',
-                        name: '工作组管理',
-                        enableDefaultFunctions: true
-                    },
                 ]
             },
             {

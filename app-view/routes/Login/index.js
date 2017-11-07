@@ -116,9 +116,9 @@ export default class Login extends Component {
               <FormItem>
                 {getFieldDecorator('mobile', {
                   rules: [{
-                    required: type === 'mobile', message: '请输入手机号！',
+                    required: type === 'mobile', message: '请输入手机号！'
                   }, {
-                    pattern: /^1\d{10}$/, message: '手机号格式错误！',
+                    pattern: /^1\d{10}$/, message: '手机号格式错误！'
                   }],
                 })(
                   <Input

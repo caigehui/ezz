@@ -98,7 +98,7 @@ function renderExtra({ item, dispatch }) {
     return (
         <div className={styles.header}>
             <h1>{item.name}</h1>
-            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'modal/open', payload: 'UserForm' })}>
+            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'modal/open', payload: 'PrivilegePicker' })}>
                 新增用户
             </Button>
         </div>
