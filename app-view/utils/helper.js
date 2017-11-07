@@ -82,6 +82,7 @@ async function validator({value, callback, model, field}) {
     callback();
 }
 
+// 1.5秒内最多调用一次
 const throttleValidator = _.throttle(validator, 1500, { leading: false })
 
 /**

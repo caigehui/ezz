@@ -20,10 +20,12 @@ function UserForm({
     visible,
     err,
     onCreate,
+    loading,
     form: {
       getFieldDecorator,
         validateFields,
         getFieldsValue,
+        resetFields
     }
 }) {
 
@@ -37,25 +39,20 @@ function UserForm({
                     }
                 });
                 ret && message.success('新增成功', 1, () => {
-                    dispatch({
-                        type: 'user/save',
-                        payload: {
-                            err: null,
-                            visible: false
-                        }
-                    });
-                    onCreate && onCreate();
+                    dispatch({ type: 'modal/close', payload: 'UserForm' })
+                    resetFields();
                 });
             }
         });
     }
-    
+
     return (
         <Modal
             title="新增用户"
             visible={visible}
             onOk={onSubmit}
-            onCancel={() => dispatch({ type: 'user/toggleModal' })}>
+            confirmLoading={loading.effects['user/create']}
+            onCancel={() => dispatch({ type: 'modal/close', payload: 'UserForm' })}>
             <ErrorMessage err={err} />
             <Form layout="horizontal">
                 <FormItem label="姓名" hasFeedback {...formItemLayout}>
@@ -71,13 +68,16 @@ function UserForm({
                 <FormItem label="初始密码" hasFeedback {...formItemLayout}>
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: '请输入密码!' }],
-                    })(<Input type="password" autoComplete="new-password" />)}
+                    })(<Input autoComplete="new-password" />)}
                 </FormItem>
                 <FormItem label="手机号码" hasFeedback {...formItemLayout}>
                     {getFieldDecorator('mobile', {
-                        rules: [{ required: true }],
-                        pattern: /^1[34578]\d{9}$/,
-                        message: '手机号码格式不正确！',
+                        rules: [
+                            { required: true , message: '请输入手机号码!'},
+                            {
+                                pattern: /^1[34578]\d{9}$/,
+                                message: '手机号码格式不正确！',
+                            }]
                     })(<Input />)}
                 </FormItem>
             </Form>
@@ -85,4 +85,4 @@ function UserForm({
     )
 }
 
-export default connect(state => ({ visible: state.user.visible, err: state.user.err }))(Form.create()(UserForm));
+export default connect(state => ({ visible: state.modal['UserForm'], err: state.user.err, loading: state.loading }))(Form.create()(UserForm));

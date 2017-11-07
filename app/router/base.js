@@ -9,6 +9,8 @@ module.exports = app => {
   app.post('/api/logout', 'base.login.logout');
   // 用户管理
   app.resources('users', '/api/users', 'base.users');
+  // 角色管理
+  app.resources('roles', '/api/roles', 'base.roles');
   // 验证用户字段是否存在
   app.post('/api/verify', 'base.verify.index');
   // 文件管理

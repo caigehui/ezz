@@ -1,17 +1,9 @@
 'use strict';
-module.exports = app => class UsersController extends app.Controller {
+module.exports = app => class RolesController extends app.Controller {
     * index() {
         const ctx = this.ctx;
-        // 查询当前公司和没有注销的账号
-        const { list, count } = yield ctx.service.base.query.find({
-            model: 'User',
-            conditions: {
-                'currentCompany.id': { $eq: this.ctx.session.user.currentCompany.id },
-                'status': { $ne: '已注销' },
-            },
-            filter: { username: 0, password: 0, companies: 0 }
-        });
-        ctx.body = { count, users: list };
+        const { list, count } = yield ctx.service.base.query.find({ model: 'Role' });
+        ctx.body = { count, roles: list };
         ctx.status = 200;
     }
     * create() {

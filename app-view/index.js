@@ -11,7 +11,8 @@ const routes = [
 ];
 
 const extraModels = [
-    require('./models/app')
+    require('./models/app'),
+    require('./models/modal')
 ];
 
 const app = new App({ routes, extraModels });

@@ -6,6 +6,7 @@ const { Column } = Table;
 const confirm = Modal.confirm;
 import styles from './index.less';
 import UserForm from './UserForm';
+import { PrivilegePicker } from 'components';
 
 const PAGE_SIZE = 10;
 
@@ -62,34 +63,31 @@ class User extends React.Component {
         )
     }
 
-    onCreate = () => {
-        this.refs.table.reload();
-    }
-
-    render () {
+    render() {
         const {
             users,
             count,
             loading
          } = this.props;
 
-         return (
+        return (
             <Layout style={{ height: '100%', background: 'white', padding: 24 }}>
                 <CommonTable
-                    ref="table"
                     onFetch={this.onFetch}
                     totalCount={count}
                     dataSource={users}
                     rowKey={record => record._id}
-                    loading={loading.effects['user/query']}>
-                    <Column title="姓名" key="name" render={this.renderName} />
+                    loading={loading.effects['user/query']}
+                    reloadTriggers={[loading.effects['user/create']]}>
+                    <Column title="姓名" key="name" render={this.renderName}/>
                     <Column title="手机号码" dataIndex="info.mobile" key="mobile" />
                     <Column title="角色" dataIndex="role.name" key="role" />
                     <Column title="状态" render={this.renderStatus} key="status" />
                     <Column title="上次登录时间" dataIndex="lastLoginTime" key="lastLoginTime" />
-                    <Column title="操作" key="action" render={this.renderAction} />
+                    <Column title="操作" key="action" render={this.renderAction}/>
                 </CommonTable>
-                <UserForm onCreate={this.onCreate}/>
+                <UserForm />
+                <PrivilegePicker />
             </Layout>
         );
     }
@@ -100,7 +98,7 @@ function renderExtra({ item, dispatch }) {
     return (
         <div className={styles.header}>
             <h1>{item.name}</h1>
-            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'user/toggleModal' })}>
+            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'modal/open', payload: 'UserForm' })}>
                 新增用户
             </Button>
         </div>

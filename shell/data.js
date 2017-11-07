@@ -39,12 +39,12 @@ if (!db.menu.findOne()) {
                                 name: '新增用户'
                             },
                             {
-                                key: '/system/user/delete',
-                                name: '删除用户'
+                                key: '/system/user/cancel',
+                                name: '注销用户'
                             },
                             {
-                                key: '/system/user/edit',
-                                name: '编辑用户'
+                                key: '/system/user/ban',
+                                name: '禁用用户'
                             }
                         ],
                         extraFunctions: [

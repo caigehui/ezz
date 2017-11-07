@@ -6,7 +6,6 @@ export default {
     state: {
         users: [],
         count: 0,
-        visible: false,
         err: null
     },
     effects: {
@@ -29,15 +28,11 @@ export default {
                     rolePrivileges: ['1']
                 }
             } });
-            if(err) {
-                yield put({
-                    type: 'save',
-                    payload: { err }
-                })
-                return false;
-            } else {
-                return true;
-            }
+            yield put({
+                type: 'save',
+                payload: { err }
+            })
+            if(!err) return true;
         }
     },
     reducers: {

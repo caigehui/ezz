@@ -5,6 +5,7 @@ import GlobalFooter from './GlobalFooter';
 import PageHeader from './PageHeader';
 import CommonTable from './CommonTable';
 import ErrorMessage from './ErrorMessage';
+import PrivilegePicker from './PrivilegePicker';
 
 export {
     Loader,
@@ -13,5 +14,6 @@ export {
     GlobalFooter,
     PageHeader,
     CommonTable,
-    ErrorMessage
+    ErrorMessage,
+    PrivilegePicker
 };
