@@ -108,6 +108,15 @@ export default {
         changeToDesktop(state, action) {
             if (!state.isMobile) return state;
             return { ...state, isMobile: false };
+        },
+        resetFunctionPathForMenu(state, action) {
+            return {
+                ...state,
+                functionPathForMenu: {
+                    ...state.functionPathForMenu,
+                    [action.payload]: action.payload
+                }
+            }
         }
     }
 };

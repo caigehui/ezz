@@ -45,7 +45,7 @@ export function getMenuItemByKey(menu, path) {
  * @param {string} key 
  */
 export function checkAuth(privileges, key) {
-    return privileges.find(i => i === key || i === '1')
+    return privileges.find(i => i === key)
 }
 
 /**

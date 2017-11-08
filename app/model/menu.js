@@ -37,10 +37,13 @@ module.exports = app => {
                     // 功能描述
                     description: String,
                     // 操作
-                    actions: [{
-                        key: { type: String, required: true, lowercase: true, trim: true, unique: true },
-                        name: { type: String, required: true }
-                    }]
+                    actions: {
+                        type: [{
+                            key: { type: String, required: true, lowercase: true, trim: true, unique: true },
+                            name: { type: String, required: true }
+                        }],
+                        default: []
+                    },
                 }],
                 default: []
             },

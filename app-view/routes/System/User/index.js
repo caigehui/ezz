@@ -79,12 +79,12 @@ class User extends React.Component {
                     rowKey={record => record._id}
                     loading={loading.effects['user/query']}
                     reloadTriggers={[loading.effects['user/create']]}>
-                    <Column title="姓名" key="name" render={this.renderName}/>
+                    <Column title="姓名" key="name" render={this.renderName} />
                     <Column title="手机号码" dataIndex="info.mobile" key="mobile" />
                     <Column title="角色" dataIndex="role.name" key="role" />
                     <Column title="状态" render={this.renderStatus} key="status" />
                     <Column title="上次登录时间" dataIndex="lastLoginTime" key="lastLoginTime" />
-                    <Column title="操作" key="action" render={this.renderAction}/>
+                    <Column title="操作" key="action" render={this.renderAction} />
                 </CommonTable>
                 <UserForm />
                 <PrivilegePicker />

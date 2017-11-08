@@ -15,7 +15,7 @@ if (!db.menu.findOne()) {
         name: 'Ezz Example',
         shortname: 'Ezz Example' 
     })
-
+    
     // 插入菜单
     db.menu.insert({
         companyId: companyId,
@@ -76,7 +76,7 @@ if (!db.menu.findOne()) {
         {
             name: '系统管理员',
             description: '始终拥有全部菜单权限',
-            privileges: [1]
+            privileges: ['/', '/system', '/system/user', '/system/user/create', '/system/user/cancel', '/system/user/ban', '/system/user/role']
         },
         {
             name: '普通用户',
@@ -98,7 +98,7 @@ if (!db.menu.findOne()) {
         createTime: new Date(),
         role: {
             name: '超级管理员', // 不显示超级管理员
-            rolePrivileges: [1]
+            rolePrivileges: ['/', '/system', '/system/user', '/system/user/create', '/system/user/cancel', '/system/user/ban', '/system/user/role']
         },
         info: {
             name: 'admin',

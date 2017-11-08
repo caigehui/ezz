@@ -15,7 +15,7 @@ module.exports = ({ mongoose }) => {
                 id: mongoose.Schema.Types.ObjectId,
                 name: String
             }],
-            // 组权限，[1]表示始终拥有全部权限
+            // 组权限
             privileges: [String]
         }]
     },{ collection: 'group'});

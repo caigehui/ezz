@@ -22,7 +22,7 @@ module.exports = ({ mongoose }) => {
         // 角色
         role: {
             name: String,// 角色名
-            rolePrivileges: { type: [String], default: [] },// 角色权限，[1]表示始终拥有全部权限
+            rolePrivileges: { type: [String], default: [] },// 角色权限
         },
         // 所属公司
         companies: [{
@@ -30,7 +30,7 @@ module.exports = ({ mongoose }) => {
             name: String,// 公司名称
             isMain: Boolean,// 是否为主公司
             jobPrivileges: { type: [String], default: [] },// 岗位层级拥有的权限
-            userPrivileges: { type: [String], default: [] }// 用户层级拥有的权限，[1]表示始终拥有全部权限
+            userPrivileges: { type: [String], default: [] }// 用户层级拥有的权限
         }],
         // 当前公司
         currentCompany: {
@@ -38,7 +38,7 @@ module.exports = ({ mongoose }) => {
             name: String,// 公司名称
             isMain: Boolean,// 是否为主公司
             jobPrivileges: { type: [String], default: [] },// 岗位层级拥有的权限
-            userPrivileges: { type: [String], default: [] }// 用户层级拥有的权限，[1]表示始终拥有全部权限
+            userPrivileges: { type: [String], default: [] }// 用户层级拥有的权限
         },
         // 偏好设置
         preferences: {
