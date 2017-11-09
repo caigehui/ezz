@@ -2,6 +2,7 @@
 const ms = require('ms');
 const sjcl = require('sjcl');
 const mongoose = require('mongoose');
+const _ = require('lodash');
 
 module.exports = app => class LoginController extends app.Controller {
 
@@ -14,7 +15,7 @@ module.exports = app => class LoginController extends app.Controller {
         });
         const { username, password, remember } = this.ctx.request.body;
         const decryptPwd = sjcl.decrypt(this.config.encryptKey, password);
-        let user = yield this.ctx.model.User.findOne({ username, password: decryptPwd }, { username: 0, password: 0 });
+        let user = yield this.ctx.model.User.findOne({ $or: [{ username }, { 'info.mobile': username }], password: decryptPwd }, { username: 0, password: 0 });
         if (!user) this.ctx.throw(403, '用户名或者密码错误');
         // 设置session
         this.ctx.session = { user };
@@ -28,8 +29,15 @@ module.exports = app => class LoginController extends app.Controller {
     * signin() {
         const user = yield this.ctx.model.User.findOne({_id: mongoose.Types.ObjectId(this.ctx.session.user._id) } , { username: 0, password: 0 });
         if(!user) this.ctx.throw(401, '用户验证失败');
-        this.ctx.session.user = user;
         const { menu } = yield this.ctx.model.Menu.findOne({ companyId: user.currentCompany.id }, { menu: 1 });
+        this.ctx.session = {
+            user,
+            privileges: _.uniq([
+                ...user.role.rolePrivileges,
+                ...user.currentCompany.jobPrivileges,
+                ...user.currentCompany.userPrivileges]
+            ),
+        }
         yield this.ctx.model.User.update({ _id: mongoose.Types.ObjectId(this.ctx.session.user._id) }, { '$set': { lastLoginTime: Date() } });
         this.ctx.body = { user, menu };
     }

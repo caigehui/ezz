@@ -65,7 +65,7 @@ class User extends React.Component {
 
     render() {
         const {
-            users,
+            list,
             count,
             loading
          } = this.props;
@@ -75,7 +75,7 @@ class User extends React.Component {
                 <CommonTable
                     onFetch={this.onFetch}
                     totalCount={count}
-                    dataSource={users}
+                    dataSource={list}
                     rowKey={record => record._id}
                     loading={loading.effects['user/query']}
                     reloadTriggers={[loading.effects['user/create']]}>
@@ -98,7 +98,7 @@ function renderExtra({ item, dispatch }) {
     return (
         <div className={styles.header}>
             <h1>{item.name}</h1>
-            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'modal/open', payload: 'PrivilegePicker' })}>
+            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'modal/open', payload: 'UserForm' })}>
                 新增用户
             </Button>
         </div>

@@ -62,22 +62,25 @@ function UserForm({
                 </FormItem>
                 <FormItem label="登录账号" hasFeedback {...formItemLayout}>
                     {getFieldDecorator('username', {
-                        rules: [{ required: true, message: '请输入账号!' }, { validator: verify({ model: 'User', name: '登录账号', field: 'username' }) }],
+                        rules: [
+                            { required: true, message: '请输入账号!' },
+                            { validator: verify({ model: 'User', name: '登录账号', field: 'username' }) }],
                     })(<Input />)}
                 </FormItem>
                 <FormItem label="初始密码" hasFeedback {...formItemLayout}>
                     {getFieldDecorator('password', {
                         rules: [{ required: true, message: '请输入密码!' }],
-                    })(<Input autoComplete="new-password" />)}
+                    })(<Input type="password" autoComplete="new-password" />)}
                 </FormItem>
                 <FormItem label="手机号码" hasFeedback {...formItemLayout}>
                     {getFieldDecorator('mobile', {
                         rules: [
-                            { required: true , message: '请输入手机号码!'},
+                            { required: true, message: '请输入手机号码!' },
                             {
                                 pattern: /^1[34578]\d{9}$/,
                                 message: '手机号码格式不正确！',
-                            }]
+                            },
+                            { validator: verify({ model: 'User', name: '手机号码', field: 'info.mobile' }) }]
                     })(<Input />)}
                 </FormItem>
             </Form>

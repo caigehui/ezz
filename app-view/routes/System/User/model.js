@@ -4,7 +4,7 @@ import { mapLocaleString } from 'utils/helper';
 export default {
     namespace: 'user',
     state: {
-        users: [],
+        list: [],
         count: 0,
         err: null
     },
@@ -15,14 +15,19 @@ export default {
             yield put({
                 type: 'save',
                 payload: {
-                    users: mapLocaleString(data.users, ['lastLoginTime']),
+                    list: mapLocaleString(data.list, ['lastLoginTime']),
                     count: data.count
                 }
             })
         },
-        * create({ payload }, { call, put }) {
+        * create({ payload: { username, mobile, name, password } }, { call, put }) {
             const { data, err } = yield call(request, '/api/users', { post: {
-                ...payload,
+                username,
+                password,
+                info: {
+                    name,
+                    mobile
+                },
                 role: {
                     name: '系统管理员',
                     rolePrivileges: ['1']

@@ -5,6 +5,7 @@ import { ENCRYPT_KEY } from 'constant';
 import { routerRedux } from 'dva/router';
 import enquire from 'enquire.js';
 import Cookies from 'js-cookie';
+import _ from 'lodash';
 
 const getInitState = () => ({
     // 用户数据
@@ -53,7 +54,11 @@ export default {
                     user: data.user,
                     menu: data.menu,
                     // 整合权限，并去重
-                    privileges: Array.from(new Set([...data.user.role.rolePrivileges, ...data.user.currentCompany.jobPrivileges, ...data.user.currentCompany.userPrivileges]))
+                    privileges: _.uniq([
+                        ...data.user.role.rolePrivileges,
+                        ...data.user.currentCompany.jobPrivileges,
+                        ...data.user.currentCompany.userPrivileges]
+                    )
                 }
             })
         },
