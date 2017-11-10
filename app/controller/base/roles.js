@@ -17,33 +17,28 @@ module.exports = app => class RolesController extends app.Controller {
             model: 'Role',
             data: {
                 name: 'string',
-                description: { type: 'string', allowEmpty: true },
+                description: { type: 'string', allowEmpty: true, required: false },
                 privileges: 'array'
             }
         })
     }
     * update() {
-        const modifiedData = yield this.crud.update({
+        yield this.crud.update({
             model: 'Role',
             data: {
                 name: { type: 'string', required: false },
                 description: { type: 'string', allowEmpty: true, required: false },
                 privileges: { type: 'array', required: false },
+            },
+            then: {
+                models: ['User'],
+                wheres: [{ 'role.name': 'name' }],
+                values: [{ 'role.rolePrivileges': 'privileges', 'role.name': 'name' }]
             }
         })
-        // if(modifiedData.name) {
-        //     yield this.crud.update({
-        //         model: 'User',
-        //         conditions: {
-        //             'info.name': modifiedData.name
-        //         },
-        //         values: {
-
-        //         }
-        //     })
-        // }
     }
-    * delete() {
-        
+
+    * destroy() {
+        yield this.crud.destroy({ model: 'Role' })
     }
 };
