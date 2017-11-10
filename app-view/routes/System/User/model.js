@@ -5,8 +5,7 @@ export default {
     namespace: 'user',
     state: {
         list: [],
-        count: 0,
-        err: null
+        count: 0
     },
     effects: {
         * query({ payload: { pageSize, page } }, { call, put, select }) {
@@ -33,11 +32,7 @@ export default {
                     rolePrivileges: ['1']
                 }
             } });
-            yield put({
-                type: 'save',
-                payload: { err }
-            })
-            if(!err) return true;
+            return err;
         }
     },
     reducers: {

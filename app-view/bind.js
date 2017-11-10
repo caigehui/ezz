@@ -42,7 +42,7 @@ export default function bind() {
                     options.disableSubLayout ?
                         <EnhancedComponent {...props} />
                         :
-                        <SubLayout renderExtra={options.renderExtra} {...props}>
+                        <SubLayout button={options.button} {...props}>
                             <EnhancedComponent {...props} />
                         </SubLayout>
                 }

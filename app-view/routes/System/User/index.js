@@ -1,19 +1,19 @@
 import React from 'react';
 import bind from 'bind';
-import { CommonTable } from 'components';
-import { Layout, Table, Icon, Avatar, Button, Badge, Menu, Dropdown, Modal } from 'antd';
+import { CommonTable, Container, ModalForm } from 'components';
+import { Layout, Table, Icon, Avatar, Button, Badge, Menu, Dropdown, Modal, Input } from 'antd';
+import styles from './index.less';
 const { Column } = Table;
 const confirm = Modal.confirm;
-import styles from './index.less';
-import UserForm from './UserForm';
-import { PrivilegePicker } from 'components';
-
-const PAGE_SIZE = 10;
 
 class User extends React.Component {
 
     onFetch = (page, pageSize) => {
         this.props.dispatch({ type: 'user/query', payload: { page, pageSize } })
+    }
+
+    onSubmit = async (values) => {
+        return await this.props.dispatch({ type: 'user/create', payload: values });
     }
 
     renderName(text, record) {
@@ -70,8 +70,49 @@ class User extends React.Component {
             loading
          } = this.props;
 
+        const rows = [
+            {
+                label: '姓名',
+                id: 'name',
+                content: <Input />,
+                required: true
+            },
+            {
+                label: '登录账号',
+                id: 'username',
+                content: <Input />,
+                required: true,
+                unique: {
+                    from: 'User',
+                    field: 'username'
+                }
+            },
+            {
+                label: '密码',
+                id: 'password',
+                content: <Input type="password" autoComplete="new-password"/>,
+                required: true
+            },
+            {
+                label: '手机号码',
+                id: 'mobile',
+                content: <Input type="number" />,
+                required: true,
+                unique: {
+                    from: 'User',
+                    field: 'info.mobile'
+                },
+                otherRules: [
+                    {
+                        pattern: /^1[34578]\d{9}$/,
+                        message: '手机号码格式不正确！',
+                    }
+                ]
+            } 
+        ]
+
         return (
-            <Layout style={{ height: '100%', background: 'white', padding: 24 }}>
+            <Container>
                 <CommonTable
                     onFetch={this.onFetch}
                     totalCount={count}
@@ -86,23 +127,24 @@ class User extends React.Component {
                     <Column title="上次登录时间" dataIndex="lastLoginTime" key="lastLoginTime" />
                     <Column title="操作" key="action" render={this.renderAction} />
                 </CommonTable>
-                <UserForm />
-                <PrivilegePicker />
-            </Layout>
+                <ModalForm 
+                    id="UserForm"
+                    title="新增用户"
+                    onSubmit={this.onSubmit}
+                    rows={rows}
+                    />
+            </Container>
         );
     }
 }
 
-
-function renderExtra({ item, dispatch }) {
-    return (
-        <div className={styles.header}>
-            <h1>{item.name}</h1>
-            <Button type="primary" icon="plus" onClick={() => dispatch({ type: 'modal/open', payload: 'UserForm' })}>
-                新增用户
-            </Button>
-        </div>
-    )
-}
-
-export default bind(({ loading, user }) => ({ loading, ...user }), { renderExtra })(User);
+export default bind(
+    ({ loading, user }) => ({ loading, ...user }),
+    {
+        button: {
+            iconType: 'plus',
+            title: '新增用户',
+            onClick: (dispatch) => dispatch({ type: 'modal/open', payload: 'UserForm' }),
+        }
+    }
+)(User);

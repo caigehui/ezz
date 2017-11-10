@@ -76,8 +76,8 @@ export function mapLocaleString(arr, keys) {
 }
 
 // form校验函数
-async function validator({value, callback, model, name, field}) {
-    const { data } = await request('/api/verify', { post: { model, field, value } });
+async function validator({value, callback, from, name, field}) {
+    const { data } = await request('/api/verify', { post: { model: from, field, value } });
     if (data.exist) callback(`${name}已重复，请重新输入`);
     callback();
 }
@@ -89,7 +89,7 @@ const throttleValidator = _.throttle(validator, 1500, { leading: false })
  * 验证字段是否已存在
  * @param {object} options  
  */
-export function verify(options) {
+export function unique(options) {
     return (rule, value, callback) => {
         throttleValidator({rule, value, callback, ...options});
     }

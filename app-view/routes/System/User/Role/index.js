@@ -1,15 +1,17 @@
 import React from 'react';
 import bind from 'bind';
-import QueueAnim from 'rc-queue-anim';
+import { Button } from 'antd';
+import { Container, CommonTable } from 'components';
+import styles from './index.less';
+
 function Role({ }) {
 
     return (
-        <QueueAnim>
-            <div key="1">enter in queue</div>
-            <div key="2">enter in queue</div>
-            <div key="3">enter in queue</div>
-        </QueueAnim>
+        <Container>
+
+        </Container>
     );
 }
+
 
 export default bind()(Role);
