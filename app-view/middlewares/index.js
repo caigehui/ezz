@@ -1,5 +1,5 @@
 import rehydrateMiddleware from './rehydrate';
-import authenticationMiddleware from './authentication'
+import authenticationMiddleware from './authentication';
 import loadingMiddleware from './loading';
 import routingMiddleware from './routing';
 
@@ -8,4 +8,4 @@ export {
     authenticationMiddleware,
     loadingMiddleware,
     routingMiddleware
-}
+};

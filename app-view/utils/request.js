@@ -16,7 +16,7 @@ async function checkStatus(response) {
 		return response;
 	}else if(response.status === 401) {
 		// 未登录，可能是session过期
-		//window.location.replace('/login');
+		// window.location.replace('/login');
 	}
 	const { error, detail } = await response.json();
 	message.error(error || response.statusText, ERROR_MSG_DURATION);

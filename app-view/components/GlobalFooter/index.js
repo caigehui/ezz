@@ -25,7 +25,7 @@ function GlobalFooter({ className, links, copyright}) {
       {copyright && <div className={styles.copyright}>{copyright}</div>}
     </div>
   );
-};
+}
 
 const links = [{
   title: '帮助',
@@ -45,6 +45,6 @@ const copyright = <div>Copyright <Icon type="copyright" /> 2000-2017 WxSoft ZhuH
 GlobalFooter.defaultProps = {
   links,
   copyright
-}
+};
 
-export default GlobalFooter
+export default GlobalFooter;

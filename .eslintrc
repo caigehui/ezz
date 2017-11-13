@@ -43,6 +43,7 @@
 		"no-unreachable": 2,
 		"react/prop-types": 0,
 		"react/display-name": 0,
+		"react/react-in-jsx-scope": 0,
 		"array-bracket-spacing": [
 			"error",
 			"never"

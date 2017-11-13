@@ -34,7 +34,7 @@ export default function bind() {
             <UserLayout>
                 <EnhancedComponent {...props} />
             </UserLayout>
-        )
+        );
         // 默认情况
         return (props) => (
             <MainLayout match={props.match}>
@@ -47,6 +47,6 @@ export default function bind() {
                         </SubLayout>
                 }
             </MainLayout>
-        )
+        );
     };
 }

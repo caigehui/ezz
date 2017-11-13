@@ -1,4 +1,4 @@
-const LOCATION_CHANGE = '@@router/LOCATION_CHANGE'
+const LOCATION_CHANGE = '@@router/LOCATION_CHANGE';
 
 const routingMiddleware = store => next => action => {
 	const state = store.getState();
@@ -15,7 +15,7 @@ const routingMiddleware = store => next => action => {
 		 */ 
 		let paramsRouting = false;
 		if(state[model]._pathname.indexOf(':') > -1) {
-			paramsRouting = action.payload.pathname.indexOf(state[model]._pathname.slice(0, state[model]._pathname.indexOf(':'))) > -1
+			paramsRouting = action.payload.pathname.indexOf(state[model]._pathname.slice(0, state[model]._pathname.indexOf(':'))) > -1;
 		}
 		if (state[model]._pathname === action.payload.pathname || paramsRouting) {
 			store.dispatch({

@@ -15,18 +15,18 @@ const authenticationMiddleware = store => next => action => {
             // 校验身份
             return store.dispatch(routerRedux.replace({
                 pathname: '/login'
-            }))
+            }));
         } else if (!routing.location) {
             // 初始化获取偏好设置
-            store.dispatch({ type: 'app/init' })
+            store.dispatch({ type: 'app/init' });
         }
         // 检查菜单访问的权限
         const item = getMenuItemByKey(app.menu, action.payload.pathname);
         if (item && !checkAuth(app.privileges, action.payload.pathname)) {
-            store.dispatch({ type: 'app/resetFunctionPathForMenu', payload: item.key })
+            store.dispatch({ type: 'app/resetFunctionPathForMenu', payload: item.key });
             return store.dispatch(routerRedux.replace({
                 pathname: '/notallow'
-            }))
+            }));
         }
     }
     next(action);

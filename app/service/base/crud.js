@@ -27,7 +27,7 @@ module.exports = app => class Crud extends app.Service {
     }) {
         const ctx = this.ctx;
         ctx.validate(data);
-        const bodyData = _.mapValues(data, (value, key) => ctx.request.body[key])
+        const bodyData = _.mapValues(data, (value, key) => ctx.request.body[key]);
         const result = yield this.ctx.model[model].create({
             ...bodyData,
             ...extra
@@ -42,9 +42,7 @@ module.exports = app => class Crud extends app.Service {
         conditions,
         data,
         values,
-        then,
-        within,
-        without
+        then
     }) {
         const ctx = this.ctx;
         const uConditions = conditions || { _id: mongoose.Types.ObjectId(ctx.params.id) };
@@ -62,7 +60,7 @@ module.exports = app => class Crud extends app.Service {
                 yield ctx.model[thenModel].update(
                     _.mapValues(thenWhere, value => old[value]),
                     _.mapValues(thenValues, value => uData[value] || old[value])
-                )
+                );
             }
         }
         this.ctx.body = { msg: '更新成功' };
@@ -74,7 +72,7 @@ module.exports = app => class Crud extends app.Service {
         model,
         conditions
     }) {
-        yield this.ctx.model[model].remove(conditions || { _id: mongoose.Types.ObjectId(this.ctx.params.id) })
+        yield this.ctx.model[model].remove(conditions || { _id: mongoose.Types.ObjectId(this.ctx.params.id) });
         this.ctx.body = { msg: '删除成功' };
         this.ctx.status = 200;
     }

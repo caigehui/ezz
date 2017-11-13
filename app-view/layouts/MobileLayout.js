@@ -1,13 +1,11 @@
 import React from 'react';
-import { Layout, Icon, Avatar, Menu, Switch, Row, Col, } from 'antd';
-import { Route, Link } from 'dva/router';
+import { Layout, Icon, Avatar, Menu } from 'antd';
 import { connect } from 'dva';
 import { getMenuItemByKey } from 'utils/helper';
 import { Loader, GlobalFooter } from 'components';
 import styles from './MobileLayout.less';
 import classNames from 'classnames';
-const { Sider, Content, Header } = Layout;
-const { SubMenu, Item } = Menu;
+const { Content, Header } = Layout;
 
 function MobileLayout({
     children,
@@ -42,7 +40,7 @@ function MobileLayout({
                         mode="inline"
                         openKeys={openKeys}
                         onSelect={() => setTimeout(() => {
-                            dispatch({ type: 'app/toggleMobileMenu' })
+                            dispatch({ type: 'app/toggleMobileMenu' });
                         }, 200)}
                         onOpenChange={(openKeys) => dispatch({ type: 'app/save', payload: { openKeys } })}
                         defaultSelectedKeys={menuItem ? [menuItem.key] : []}>

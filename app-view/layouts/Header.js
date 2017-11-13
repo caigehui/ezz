@@ -1,13 +1,11 @@
 import React from 'react';
-import { Layout, Menu, Dropdown, Row, Col, Icon, Avatar, Input, AutoComplete, Badge, Popover } from 'antd';
-import { Link, routerRedux } from 'dva/router';
+import { Layout, Row, Col, Icon, Avatar, AutoComplete, Badge, Popover } from 'antd';
+import { routerRedux } from 'dva/router';
 import { connect } from 'dva';
-import delay from 'utils/delay';
 import styles from './Header.less';
 import classNames from 'classnames';
+import { delay } from '../utils/helper';
 const { Header } = Layout;
-const { SubMenu, ItemGroup } = Menu;
-const { Search } = Input;
 const Option = AutoComplete.Option;
 const OptGroup = AutoComplete.OptGroup;
 
@@ -30,10 +28,8 @@ const dataSource = [{
 
 function MyHeader({ dispatch, user, collapsed, match }) {
 
-	function onMenuClick({ key }) {
-		if (key === 'logout') {
-			dispatch({ type: 'app/logout' });
-		}
+	function toggleCollapsed() {
+		dispatch({ type: 'app/toggleCollapsed' });
 	}
 
 	function renderTitle(title) {
@@ -65,13 +61,9 @@ function MyHeader({ dispatch, user, collapsed, match }) {
 		</OptGroup>
 	)).concat([
 		<Option disabled key="all" className={styles.showAll}>
-			<a
-				href="https://www.google.com/search?q=antd"
+			<a href="https://www.google.com/search?q=antd"
 				target="_blank"
-				rel="noopener noreferrer"
-			>
-				查看所有结果
-		  </a>
+				rel="noopener noreferrer">查看所有结果</a>
 		</Option>,
 	]);
 
@@ -79,8 +71,8 @@ function MyHeader({ dispatch, user, collapsed, match }) {
 		<Header className={styles.header}>
 			<Row type="flex" justify="right">
 				<Col span={1}>
-				<div className={styles.buttonWrapper} onClick={() => dispatch({ type: 'app/toggleCollapsed' })}>
-						<Icon type={collapsed ? 'menu-unfold' : 'menu-fold'}/>
+					<div className={styles.buttonWrapper} onClick={toggleCollapsed}>
+						<Icon type={collapsed ? 'menu-unfold' : 'menu-fold'} />
 					</div>
 				</Col>
 				<Col span={4} className={styles.searchCol}>
@@ -97,7 +89,7 @@ function MyHeader({ dispatch, user, collapsed, match }) {
 					</AutoComplete>
 				</Col>
 				<Col span={19} className={styles.menuCol}>
-					<Me user={user} dispatch={dispatch} match={match}/>
+					<Me user={user} dispatch={dispatch} match={match} />
 					<div className={styles.buttonWrapper}>
 						<Badge dot>
 							<Icon type="notification" style={{ fontSize: 20 }} />
@@ -112,7 +104,7 @@ function MyHeader({ dispatch, user, collapsed, match }) {
 				</Col>
 			</Row>
 		</Header>
-	)
+	);
 }
 
 class Me extends React.Component {
@@ -167,7 +159,7 @@ class Me extends React.Component {
 					<span> {user ? user.info.name : '未知用户'} </span>
 				</div>
 			</Popover>
-		)
+		);
 	}
 }
 

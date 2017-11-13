@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Icon, Menu, Switch } from 'antd';
+import { Layout, Icon, Menu } from 'antd';
 import { Link } from 'dva/router';
 import { connect } from 'dva';
 import { checkAuth, getMenuItemByKey } from 'utils/helper';
@@ -9,7 +9,7 @@ import { Loader, GlobalFooter } from 'components';
 import styles from './MainLayout.less';
 import isarray from 'isarray';
 import MobileLayout from './MobileLayout';
-const { Sider, Content } = Layout;
+const { Sider } = Layout;
 const { SubMenu, Item } = Menu;
 
 function MainLayout({
@@ -38,7 +38,7 @@ function MainLayout({
                     title={<span><Icon type={node.iconType} /><span>{node.name}</span></span>}>
                     {node.children.map(node => getMenu(node))}
                 </SubMenu>
-            )
+            );
         } else {
             return (
                 <Item key={node.key}>
@@ -47,7 +47,7 @@ function MainLayout({
                         <span>{node.name}</span>
                     </Link>
                 </Item>
-            )
+            );
         }
     }
     const menuItem = getMenuItemByKey(menu, match.url);
@@ -98,7 +98,7 @@ function MainLayout({
                     <GlobalFooter />
                 </Layout>
             </Layout>
-    )
+    );
 }
 
 export default connect(({ app, loading }) => ({ ...app, loading }))(MainLayout);

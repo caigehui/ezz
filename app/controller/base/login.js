@@ -37,7 +37,7 @@ module.exports = app => class LoginController extends app.Controller {
                 ...user.currentCompany.jobPrivileges,
                 ...user.currentCompany.userPrivileges]
             ),
-        }
+        };
         yield this.ctx.model.User.update({ _id: mongoose.Types.ObjectId(this.ctx.session.user._id) }, { '$set': { lastLoginTime: Date() } });
         this.ctx.body = { user, menu };
     }

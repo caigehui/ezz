@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.less';
 import Bread from './Bread';
-import { withRouter } from 'react-router'
+import { withRouter } from 'react-router';
 import { getBreadItemByKey } from 'utils/helper';
 import { connect } from 'dva';
 import { Button } from 'antd';
@@ -10,7 +10,6 @@ function PageHeader({
     location: { pathname },
     match: { path },
     menu,
-    renderExtra,
     children,
     dispatch,
     button
@@ -27,7 +26,7 @@ function PageHeader({
             </div>
             {children}
         </div>
-    )
+    );
 }
 
 export default connect(({ app }) => ({ menu: app.menu }))(withRouter(PageHeader));

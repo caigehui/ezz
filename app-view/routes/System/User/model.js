@@ -8,7 +8,7 @@ export default {
         count: 0
     },
     effects: {
-        * query({ payload: { pageSize, page } }, { call, put, select }) {
+        * query({ payload: { pageSize, page } }, { call, put }) {
             const { data, err } = yield call(request, `/api/users?page=${page}&pagesize=${pageSize}`);
             if(err) return;
             yield put({
@@ -17,10 +17,10 @@ export default {
                     list: mapLocaleString(data.list, ['lastLoginTime']),
                     count: data.count
                 }
-            })
+            });
         },
-        * create({ payload: { username, mobile, name, password } }, { call, put }) {
-            const { data, err } = yield call(request, '/api/users', { post: {
+        * create({ payload: { username, mobile, name, password } }, { call }) {
+            const { err } = yield call(request, '/api/users', { post: {
                 username,
                 password,
                 info: {
@@ -40,7 +40,7 @@ export default {
             return { ...state, ...action.payload };
         },
         toggleModal(state) {
-            return { ...state, visible: !state.visible }
+            return { ...state, visible: !state.visible };
         }
     },
 };

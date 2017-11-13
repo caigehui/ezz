@@ -30,6 +30,6 @@ function Exception({ className, linkElement = 'a', type, title, desc, img, actio
       </div>
     </div>
   );
-};
+}
 
 export default Exception;

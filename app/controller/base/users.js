@@ -33,6 +33,6 @@ module.exports = app => class UsersController extends app.Controller {
                 companies: [this.ctx.session.user.currentCompany],
                 currentCompany: this.ctx.session.user.currentCompany
             }
-        })
+        });
     }
 };

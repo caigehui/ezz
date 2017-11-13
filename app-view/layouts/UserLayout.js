@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Link, Route } from 'dva/router';
-import { Icon } from 'antd';
+import { Link } from 'dva/router';
 import GlobalFooter from 'components/GlobalFooter';
 import styles from './UserLayout.less';
 

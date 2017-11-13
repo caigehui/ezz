@@ -9,7 +9,7 @@
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "build": "roadhog build && mv app/public/index.html app/view/index.html",
-    "lint": "eslint --ext .js app --fix",
+    "lint": "eslint --ext .js app app-view --fix",
     "stop": "egg-scripts stop",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

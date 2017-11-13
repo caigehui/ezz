@@ -7,15 +7,6 @@ import SparkMD5 from 'spark-md5';
 
 const MD5_VERIFY_API = '/api/files/verify';
 
-const options = {
-    name: 'file',
-    action: '/api/files',
-    headers: {
-        'x-csrf-token': Cookies.get('csrfToken')
-    },
-    withCredentials: true
-};
-
 export default class Uploader extends React.Component {
 
     static propTypes = {
@@ -27,7 +18,7 @@ export default class Uploader extends React.Component {
         super(props);
         this.state = {
             fileList: []
-        }
+        };
     }
 
     /**
@@ -57,13 +48,13 @@ export default class Uploader extends React.Component {
                     end = ((start + chunkSize) >= file.size) ? file.size : start + chunkSize;
 
                 fileReader.readAsArrayBuffer(blobSlice.call(file, start, end));
-            }
+            };
 
             loadNext();
         });
     }
 
-    beforeUpload = (file, fileList) => {
+    beforeUpload = (file) => {
         return new Promise((resolve, reject) => {
             this.getHash(file).then(hash => {
                 request(MD5_VERIFY_API, {
@@ -81,9 +72,9 @@ export default class Uploader extends React.Component {
                     } else {
                         resolve();
                     }
-                })
+                });
             });
-        })
+        });
     }
 
     onChange = ({ file, fileList }) => {
@@ -105,7 +96,7 @@ export default class Uploader extends React.Component {
         this.props.onChange && this.props.onChange(this.props.files.removeByCondition(i => i.uid === file.uid));
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps) {
         if(nextProps.files.length !== this.props.files.length) return false;
         return true;
     }
@@ -125,6 +116,6 @@ export default class Uploader extends React.Component {
                     <Icon type="upload" />上传
                 </Button>
             </Upload>
-        )
+        );
     }
 } 

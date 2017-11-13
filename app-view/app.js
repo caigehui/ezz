@@ -1,17 +1,15 @@
 import React from 'react';
-import { routerRedux, Switch, Route, Link, Redirect } from 'dva/router';
+import { routerRedux, Switch, Route } from 'dva/router';
 import dva from 'dva';
 import dynamic from 'dva/dynamic';
-import bind from './bind';
 import { message, LocaleProvider } from 'antd';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import createHistory from 'history/createBrowserHistory';
 import createLoading from 'dva-loading';
 import { persistStore, autoRehydrate } from 'redux-persist';
-import createActionBuffer from 'redux-action-buffer'
+import createActionBuffer from 'redux-action-buffer';
 import { asyncSessionStorage } from 'redux-persist/storages';
 import { REHYDRATE } from 'redux-persist/constants';
-import { isReactComponent } from 'utils/isReact';
 import invariant from 'invariant';
 import { ERROR_MSG_DURATION } from 'constant';
 import {

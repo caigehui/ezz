@@ -8,7 +8,7 @@ module.exports = app => class VerifyController extends app.Controller {
             value: { allowEmpty: true, type: 'string' }
         });
         const { model, field, value } = ctx.request.body;
-        const result = yield ctx.model[model].find({ [field]: value })
-        ctx.body = { exist: result.length > 0  }
+        const result = yield ctx.model[model].find({ [field]: value });
+        ctx.body = { exist: result.length > 0 };
     }
 };

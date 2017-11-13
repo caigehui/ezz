@@ -45,7 +45,7 @@ export function getMenuItemByKey(menu, path) {
  * @param {string} key 
  */
 export function checkAuth(privileges, key) {
-    return privileges.find(i => i === key)
+    return privileges.find(i => i === key);
 }
 
 /**
@@ -83,7 +83,7 @@ async function validator({value, callback, from, name, field}) {
 }
 
 // 1.5秒内最多调用一次
-const throttleValidator = _.throttle(validator, 1500, { leading: false })
+const throttleValidator = _.throttle(validator, 1500, { leading: false });
 
 /**
  * 验证字段是否已存在
@@ -92,5 +92,14 @@ const throttleValidator = _.throttle(validator, 1500, { leading: false })
 export function unique(options) {
     return (rule, value, callback) => {
         throttleValidator({rule, value, callback, ...options});
-    }
+    };
+}
+
+
+/**
+* 延时
+* @param {number} timeout 
+*/
+export function delay(timeout) {
+    return new Promise(resolve => setTimeout(resolve,timeout));
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import bind from '../../../bind';
 import { ModalForm, Container, CommonTable } from '../../../components';
-import { Layout, Table, Icon, Avatar, Button, Badge, Menu, Dropdown, Modal, Input } from 'antd';
+import { Table, Avatar, Badge, Modal, Input } from 'antd';
 import styles from './index.less';
 const { Column } = Table;
 const confirm = Modal.confirm;
@@ -9,7 +9,7 @@ const confirm = Modal.confirm;
 class User extends React.Component {
 
     onFetch = (page, pageSize) => {
-        this.props.dispatch({ type: 'user/query', payload: { page, pageSize } })
+        this.props.dispatch({ type: 'user/query', payload: { page, pageSize } });
     }
 
     onSubmit = async (values) => {
@@ -22,17 +22,17 @@ class User extends React.Component {
                 <Avatar src={record.info.avatar} icon="user" />
                 <span>{record.info.name}</span>
             </div>
-        )
+        );
     }
 
     renderStatus(text, record) {
         switch (record.status) {
             case '使用中':
-                return <span><Badge status="success" />使用中</span>
+                return <span><Badge status="success" />使用中</span>;
             case '禁用中':
-                return <span><Badge status="error" />禁用中</span>
+                return <span><Badge status="error" />禁用中</span>;
             case '冻结中':
-                return <span><Badge status="warning" />冻结中</span>
+                return <span><Badge status="warning" />冻结中</span>;
         }
     }
 
@@ -52,15 +52,15 @@ class User extends React.Component {
                         okType: 'danger',
                         cancelText: '取消',
                         onOk() {
-
+                            //
                         },
                         onCancel() {
-
+                            //
                         }
-                    })
+                    });
                 }}>注销</a>
             </div>
-        )
+        );
     }
 
     render() {
@@ -108,7 +108,7 @@ class User extends React.Component {
                     }
                 ]
             } 
-        ]
+        ];
 
         return (
             <Container>

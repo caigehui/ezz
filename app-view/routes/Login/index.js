@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import bind from 'bind';
-import { routerRedux, Link } from 'dva/router';
 import { Form, Input, Tabs, Button, Icon, Checkbox, Row, Col, Alert } from 'antd';
 import styles from './index.less';
 
@@ -43,7 +42,6 @@ export default class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { type } = this.state;
     this.props.form.validateFields({ force: true },
       (err, values) => {
         if (!err) {

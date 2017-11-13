@@ -1,4 +1,4 @@
-import delay from 'utils/delay';
+import { delay } from '../utils/helper';
 import request from 'utils/request';
 import sjcl from 'sjcl';
 import { ENCRYPT_KEY } from 'constant';
@@ -60,11 +60,11 @@ export default {
                         ...data.user.currentCompany.userPrivileges]
                     )
                 }
-            })
+            });
         },
         *login({ payload }, { call, put }) {
             // 登录
-            const { data, err } = yield call(request,
+            const { err } = yield call(request,
                 '/api/login',
                 {
                     post: {
@@ -84,14 +84,14 @@ export default {
             return false;
         },
         *logout(action = {}, { call, put }) {
-            const { data, err } = yield call(request, '/api/signin', { post: {} });
+            yield call(request, '/api/signin', { post: {} });
             yield put(routerRedux.replace({
                 pathname: '/login'
             }));
             yield put({
                 type: 'save',
                 payload: getInitState()
-            })
+            });
             // 清除Cookies
             Cookies.set('EGG_SESS', null);
         }
@@ -106,11 +106,11 @@ export default {
         toggleMobileMenu(state) {
             return { ...state, openMobileMenu: !state.openMobileMenu };
         },
-        changeToMobile(state, action) {
+        changeToMobile(state) {
             if (state.isMobile) return state;
             return { ...state, isMobile: true };
         },
-        changeToDesktop(state, action) {
+        changeToDesktop(state) {
             if (!state.isMobile) return state;
             return { ...state, isMobile: false };
         },
@@ -121,7 +121,7 @@ export default {
                     ...state.functionPathForMenu,
                     [action.payload]: action.payload
                 }
-            }
+            };
         }
     }
 };

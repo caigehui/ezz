@@ -5,7 +5,7 @@ import { Exception } from 'components';
 class NotAllow extends React.Component {
 
     render() {
-        return <Exception type="403" />
+        return <Exception type="403" />;
     }
 
 }

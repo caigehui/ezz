@@ -1,8 +1,7 @@
 import React from 'react';
 import bind from 'bind';
-import { Uploader } from 'components';
 
-function Dashboard({ dispatch, files }) {
+function Dashboard() {
 
     return (
         <div style={{height: '100%', backgroundColor: 'white'}}>

@@ -6,4 +6,4 @@ export {
     MainLayout,
     SubLayout,
     UserLayout
-}
+};

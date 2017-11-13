@@ -9,7 +9,7 @@ module.exports = app => class RolesController extends app.Controller {
     }
 
     * index() {
-        yield this.crud.query({ model: 'Role' })
+        yield this.crud.query({ model: 'Role' });
     }
 
     * create() {
@@ -20,7 +20,7 @@ module.exports = app => class RolesController extends app.Controller {
                 description: { type: 'string', allowEmpty: true, required: false },
                 privileges: 'array'
             }
-        })
+        });
     }
     * update() {
         yield this.crud.update({
@@ -35,10 +35,10 @@ module.exports = app => class RolesController extends app.Controller {
                 wheres: [{ 'role.name': 'name' }],
                 values: [{ 'role.rolePrivileges': 'privileges', 'role.name': 'name' }]
             }
-        })
+        });
     }
 
     * destroy() {
-        yield this.crud.destroy({ model: 'Role' })
+        yield this.crud.destroy({ model: 'Role' });
     }
 };

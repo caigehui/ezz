@@ -41,7 +41,7 @@ class CommonTable extends React.Component {
     reload = (page, pageSize) => {
         this.page = page || this.page;
         this.pageSize = pageSize || this.pageSize;
-        this.props.onFetch && this.props.onFetch(this.page, this.pageSize)
+        this.props.onFetch && this.props.onFetch(this.page, this.pageSize);
     }
 
     page = 1
@@ -55,12 +55,12 @@ class CommonTable extends React.Component {
             total: this.props.totalCount,
             onChange: this.reload,
             onShowSizeChange: this.reload
-        }
+        };
 
         const mobileProps = this.props.isMobile ? {
             scroll: { x: 1000 },
             style: { WebkitOverflowScrolling: 'touch' }
-        } : {}
+        } : {};
 
         return (
             <Table
@@ -69,7 +69,7 @@ class CommonTable extends React.Component {
                 {...this.props} >
                 {this.props.children}
             </Table>
-        )
+        );
     }
 
 }

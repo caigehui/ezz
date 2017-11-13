@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Modal, message, Alert, Checkbox, Icon, Button } from 'antd';
+import { Modal, Alert, Checkbox, Icon, Button } from 'antd';
 import { connect } from 'dva';
 import CommonTable from '../CommonTable';
 import _ from 'lodash';
@@ -29,7 +29,7 @@ export default class PrivilegePicker extends React.Component {
     }
 
     onOk = () => {
-        this.props.onConfirm && this.props.onConfirm(privileges);
+        this.props.onConfirm && this.props.onConfirm(this.state.privileges);
     }
 
     /**
@@ -40,10 +40,10 @@ export default class PrivilegePicker extends React.Component {
         let temp = [];
         for (let i of menu) {
             if (i.hidden) continue;
-            else if (i.children && i.children.length > 0) temp = [...temp, { ...i, children: this.wrapMenuData(i.children) }]
-            else if (i.extraFunctions) temp = [...temp, { ...i, children: i.extraFunctions }]
+            else if (i.children && i.children.length > 0) temp = [...temp, { ...i, children: this.wrapMenuData(i.children) }];
+            else if (i.extraFunctions) temp = [...temp, { ...i, children: i.extraFunctions }];
         }
-        return temp
+        return temp;
     }
 
     render() {
@@ -73,13 +73,13 @@ export default class PrivilegePicker extends React.Component {
                             })}>
                             {action.name}
                         </Checkbox>
-                    ))
+                    ));
                 }
             }
-        ]
+        ];
 
         const rowSelection = {
-            onSelect: (record, selected, selectedRows) => {
+            onSelect: (record, selected) => {
                 this.setState({
                     privileges: selected
                         ?
@@ -131,7 +131,7 @@ export default class PrivilegePicker extends React.Component {
                     dataSource={this.wrapMenuData(menu)}
                     defaultExpandAllRows />
             </Modal>
-        )
+        );
     }
 
 }

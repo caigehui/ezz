@@ -11,4 +11,4 @@ export default [
         component: require('./Person'),
         models: [require('./Person/model')]
     }
-]
+];

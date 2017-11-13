@@ -5,7 +5,7 @@ const DVA_LOADING_HIDE = '@@DVA_LOADING/HIDE';
 /**
  * 自动执行NProgress
  */
-const loadingMiddleware = store => next => action => {
+const loadingMiddleware = () => next => action => {
     if(action.type === DVA_LOADING_SHOW) {
         !NProgress.isStarted() && NProgress.start();
     }

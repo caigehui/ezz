@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Input, InputNumber, Modal, message, Alert } from 'antd';
+import { Form, Modal, message, Alert } from 'antd';
 import { connect } from 'dva';
 import { unique } from 'utils/helper';
 import _ from 'lodash';
@@ -13,7 +13,7 @@ const formItemLayout = {
     wrapperCol: {
         span: 14,
     },
-}
+};
 
 @connect(({ modal }) => ({ modal }))
 @Form.create()
@@ -43,7 +43,7 @@ export default class ModalForm extends React.Component {
         if (nextProps.modal[this.props.id] &&
             _.isObject(nextProps.modal[this.props.id]) &&
             !_.isObject(this.props.modal[this.props.id])) {
-            this.props.form.resetFields()
+            this.props.form.resetFields();
         }
     }
 
@@ -58,26 +58,25 @@ export default class ModalForm extends React.Component {
                 else {
                     message.success(`${title}成功！`, 1.5);
                     resetFields();
-                    dispatch({ type: 'modal/close', payload: id })
+                    dispatch({ type: 'modal/close', payload: id });
                     this.setState({ loading: false });
                 }
             }
-        })
+        });
     }
 
     onCancel = () => {
         // 如果是编辑状态，重置
         if (_.isObject(this.props.modal[this.props.id])) {
-            this.props.form.resetFields()
+            this.props.form.resetFields();
         }
-        dispatch({ type: 'modal/close', payload: id })
+        this.props.dispatch({ type: 'modal/close', payload: this.props.id });
     }
 
 
     render() {
 
         const {
-            dispatch,
             infoMessage,
             rows,
             title,
@@ -130,14 +129,14 @@ export default class ModalForm extends React.Component {
                             }
                             return (
                                 <FormItem key={index} label={row.label} hasFeedback {...formItemLayout}>
-                                    {getFieldDecorator(row.id, _.omitBy({ rules, initialValue }, value => !!!value))(row.content)}
+                                    {getFieldDecorator(row.id, _.omitBy({ rules, initialValue }, value => !value))(row.content)}
                                 </FormItem>
-                            )
+                            );
                         })
                     }
                 </Form>
             </Modal>
-        )
+        );
 
     }
 

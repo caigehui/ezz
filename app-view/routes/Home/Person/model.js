@@ -4,14 +4,14 @@ export default {
         info: null    
     },
     effects: {
-        * init(action = {}, { put, select, take }) {
-            const { info } = yield select(({ app }) => app.user );
+        * init(action = {}, { put, select }) {
+            const { info } = yield select(({ app }) => app.user);
             yield put({
                 type: 'save',
                 payload: {
                     info
                 }
-            })
+            });
         }
     },
     reducers: {
