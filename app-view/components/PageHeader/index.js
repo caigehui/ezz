@@ -21,7 +21,7 @@ function PageHeader({
             <Bread pathname={pathname} path={path} menu={menu} />
             <div className={styles.header}>
                 <h1>{item.name}</h1>
-                <Button type="primary" icon={button.iconType} onClick={() => button.onClick(dispatch)}>
+                <Button type="primary" icon={button.iconType || 'plus'} onClick={() => button.onClick(dispatch)}>
                     {button.title}
                 </Button>
             </div>

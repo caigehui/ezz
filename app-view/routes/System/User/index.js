@@ -1,6 +1,6 @@
 import React from 'react';
-import bind from 'bind';
-import { CommonTable, Container, ModalForm } from 'components';
+import bind from '../../../bind';
+import { ModalForm, Container, CommonTable } from '../../../components';
 import { Layout, Table, Icon, Avatar, Button, Badge, Menu, Dropdown, Modal, Input } from 'antd';
 import styles from './index.less';
 const { Column } = Table;
@@ -69,7 +69,6 @@ class User extends React.Component {
             count,
             loading
          } = this.props;
-
         const rows = [
             {
                 label: '姓名',
