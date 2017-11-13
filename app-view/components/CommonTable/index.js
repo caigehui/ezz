@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Table } from 'antd';
 import { connect } from 'dva';
 
-class CommonTable extends React.Component {
+class CommonTable extends React.PureComponent {
 
 
     static propTypes = {
@@ -26,7 +26,7 @@ class CommonTable extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.reloadTriggers.toString() !== this.reloadTriggers.toString()) {
             for (let i = 0; i < nextProps.reloadTriggers.length; i++) {
-                if (nextProps.reloadTriggers[i] === false && this.reloadTriggers[i] === true) {
+                if (!nextProps.reloadTriggers[i] && this.reloadTriggers[i]) {
                     this.reload(1);
                 }
                 this.reloadTriggers[i] = nextProps.reloadTriggers[i];

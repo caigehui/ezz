@@ -6,7 +6,21 @@ import styles from './index.less';
 const { Column } = Table;
 const confirm = Modal.confirm;
 
-class User extends React.Component {
+
+@bind(
+    ({ loading, user }) => ({ 
+        loading: loading.effects['user/query'],
+        trigger: loading.effects['user/create'],
+        ...user }),
+    {
+        button: {
+            iconType: 'plus',
+            title: '新增用户',
+            onClick: (dispatch) => dispatch({ type: 'modal/open', payload: 'UserForm' }),
+        }
+    }
+)
+export default class User extends React.Component {
 
     onFetch = (page, pageSize) => {
         this.props.dispatch({ type: 'user/query', payload: { page, pageSize } });
@@ -67,48 +81,9 @@ class User extends React.Component {
         const {
             list,
             count,
-            loading
+            loading,
+            trigger
          } = this.props;
-        const rows = [
-            {
-                label: '姓名',
-                id: 'name',
-                content: <Input />,
-                required: true
-            },
-            {
-                label: '登录账号',
-                id: 'username',
-                content: <Input />,
-                required: true,
-                unique: {
-                    from: 'User',
-                    field: 'username'
-                }
-            },
-            {
-                label: '密码',
-                id: 'password',
-                content: <Input type="password" autoComplete="new-password"/>,
-                required: true
-            },
-            {
-                label: '手机号码',
-                id: 'mobile',
-                content: <Input type="number" />,
-                required: true,
-                unique: {
-                    from: 'User',
-                    field: 'info.mobile'
-                },
-                otherRules: [
-                    {
-                        pattern: /^1[34578]\d{9}$/,
-                        message: '手机号码格式不正确！',
-                    }
-                ]
-            } 
-        ];
 
         return (
             <Container>
@@ -117,8 +92,8 @@ class User extends React.Component {
                     totalCount={count}
                     dataSource={list}
                     rowKey={record => record._id}
-                    loading={loading.effects['user/query']}
-                    reloadTriggers={[loading.effects['user/create']]}>
+                    loading={loading}
+                    reloadTriggers={[trigger]}>
                     <Column title="姓名" key="name" render={this.renderName} />
                     <Column title="手机号码" dataIndex="info.mobile" key="mobile" />
                     <Column title="角色" dataIndex="role.name" key="role" />
@@ -137,13 +112,44 @@ class User extends React.Component {
     }
 }
 
-export default bind(
-    ({ loading, user }) => ({ loading, ...user }),
+
+const rows = [
     {
-        button: {
-            iconType: 'plus',
-            title: '新增用户',
-            onClick: (dispatch) => dispatch({ type: 'modal/open', payload: 'UserForm' }),
+        label: '姓名',
+        id: 'name',
+        content: <Input />,
+        required: true
+    },
+    {
+        label: '登录账号',
+        id: 'username',
+        content: <Input />,
+        required: true,
+        unique: {
+            from: 'User',
+            field: 'username'
         }
-    }
-)(User);
+    },
+    {
+        label: '密码',
+        id: 'password',
+        content: <Input type="password" autoComplete="new-password"/>,
+        required: true
+    },
+    {
+        label: '手机号码',
+        id: 'mobile',
+        content: <Input type="number" />,
+        required: true,
+        unique: {
+            from: 'User',
+            field: 'info.mobile'
+        },
+        otherRules: [
+            {
+                pattern: /^1[34578]\d{9}$/,
+                message: '手机号码格式不正确！',
+            }
+        ]
+    } 
+];

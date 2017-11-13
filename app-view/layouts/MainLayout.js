@@ -25,7 +25,7 @@ function MainLayout({
     isMobile,
     functionPathForMenu
 }) {
-    if (!user) return null;
+    if(!user) return null;
     function getMenu(node) {
         // 校验权限
         if (!checkAuth(privileges, node.key)) return null;
@@ -56,7 +56,7 @@ function MainLayout({
             ? <MobileLayout children={children} match={match} getMenu={getMenu} />
             :
             <Layout>
-                <Loader spinning={loading.effects['app/init']} fullScreen />
+                <Loader spinning={loading} fullScreen />
                 <Sider
                     width={256}
                     trigger={null}
@@ -93,7 +93,7 @@ function MainLayout({
                     }
                 </Sider>
                 <Layout className={styles.layout}>
-                    <Header user={user} match={match} />
+                    <Header match={match} />
                     {children}
                     <GlobalFooter />
                 </Layout>
@@ -101,5 +101,5 @@ function MainLayout({
     );
 }
 
-export default connect(({ app, loading }) => ({ ...app, loading }))(MainLayout);
+export default connect(({ app, loading }) => ({ ...app, loading: loading.effects['app/init'] }))(MainLayout);
 
