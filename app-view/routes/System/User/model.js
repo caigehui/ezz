@@ -1,6 +1,7 @@
 import request from 'utils/request';
 import { mapLocaleString } from 'utils/helper';
 
+
 export default {
     namespace: 'user',
     state: {
@@ -38,9 +39,6 @@ export default {
     reducers: {
         save(state, action) {
             return { ...state, ...action.payload };
-        },
-        toggleModal(state) {
-            return { ...state, visible: !state.visible };
         }
     },
 };
