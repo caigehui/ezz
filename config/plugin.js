@@ -14,3 +14,8 @@ exports.mongoose = {
     enable: true,
     package: 'egg-mongoose',
 };
+
+exports.proxy = {
+    enable: true,
+    package: 'egg-proxy',
+};
