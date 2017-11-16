@@ -3,3 +3,8 @@ module.security = {
         enable: true
     }
 };
+
+// module.proxy = {
+//     host: 'http://oa.cnwxsoft.com', 
+//     match: /^\/wxoa$/ig
+// };

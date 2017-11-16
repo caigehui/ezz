@@ -44,11 +44,6 @@ module.exports = function (appInfo) {
     config.saveSession = {
         match: /^\/api(?!\/login).*$/ig
     };
-
-    // config.proxy = {
-    //     host: 'http://oa.cnwxsoft.com', 
-    //     match: /^\/wxoa$/ig
-    // };
     
     config.encryptKey = appName + '_Dn2OjAzKUdejXnq';
 
